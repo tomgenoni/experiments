@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loader</title>
+    <style>
+
+        body {
+            margin: 50px;
+        }
+
+        .box {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .flex {
+            height: 100px;
+            border: 1px solid #ddd;
+            width: 200px;
+            margin-bottom: 20px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .reverse {
+            background: #222;
+            border: none;
+        }
+
+
+        .tpLoader {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .tpLoader li {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            animation: tpLoader .9s alternate infinite;
+            background: green;
+            opacity: 0;
+        }
+
+        .tpLoader li:nth-child(2) {
+            animation-delay: 0.2s;
+            margin: 0 10px;
+        }
+
+        .tpLoader li:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        /*
+            Keyframe notes
+            1. Older versions of IE will not scale but will animate opacity
+            2. Need to rotate for FF to transform smoothly, it's a FF bug
+        */
+
+        @keyframes tpLoader {
+            0% {
+                opacity: 0;
+                transform: scale(0); /* 1 */
+                -moz-transform: scale(0) rotate(0.01deg); /* 2 */
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                -moz-transform: scale(1) rotate(0.01deg);
+            }
+        }
+
+        .tpLoaderSmall li {
+            width: 8px;
+            height: 8px;
+        }
+
+        .tpLoader li:nth-child(2) {
+            margin: 0 5px;
+        }
+
+        .tpLoaderReverse li {
+            background: #fff;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="flex">
+        <ul class="tpLoader">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="flex">
+        <ul class="tpLoader tpLoaderSmall">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="flex reverse">
+        <ul class="tpLoader tpLoaderSmall tpLoaderReverse">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template</title>
+</head>
+<body>
+
+    <div id="comments"></div>
+
+    <template id="comment-template">
+      <li class="comment">
+        <div data-ref="author"></div>
+        <div data-ref="body"></div>
+        <div class="comment-actions">
+          <a href="#reply" class="reply">Reply</a>
+        </div>
+      </li>
+    </template>
+
+    <script>
+
+        var comments = [
+          {'author': 'Joe', 'body': 'I love this product.'},
+          {'author': 'Mary', 'body': 'Great idea. I have got to get me one of these!'},
+          {'author': 'Eric', 'body': 'These things are fantastic. I bought three.'}
+        ];
+
+        var commentsList = document.getElementById('comments');
+        var docfrag = document.createDocumentFragment();
+
+        comments.forEach(function(comment, i){
+            var comment = comments[i];
+            var tmpl = document.getElementById('comment-template').content.cloneNode(true);
+            setString(tmpl, 'author', comment.author);
+            setString(tmpl, 'body', comment.body);
+            docfrag.appendChild(tmpl);
+        });
+
+        commentsList.appendChild(docfrag);
+
+        function setString(template, selector, data) {
+            template.querySelectorAll('[data-ref='+selector+']').forEach(function(item){
+                item.innerText = data;
+            })
+        }
+
+    </script>
+
+</body>
+</html>

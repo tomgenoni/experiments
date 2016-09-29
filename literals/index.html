@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Literal</title>
+</head>
+<body>
+
+    <div id="comments"></div>
+
+    <template id="comment-template">
+      <li class="comment">
+        <div class="comment-author">{{author}}</div>
+        <div class="comment-body"></div>
+        <div class="comment-actions">
+          <a href="#reply" class="reply">Reply</a>
+        </div>
+      </li>
+    </template>
+
+    <script>
+
+        var animal = {
+          name: 'cow',
+          type: 'bovine'
+        }
+
+        foo(animal);
+
+        var str = `The ${data.name}`
+        function foo(data) {
+            console.log(str);
+        }
+
+
+
+    </script>
+
+</body>
+</html>
