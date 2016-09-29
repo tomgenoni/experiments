@@ -5,57 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Loader</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
     <style>
 
         body {
             margin: 50px;
+            font-family: -apple-system, BlinkMacSystemFont;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 100px;
+            margin-bottom: 40px;
+            font-weight: 300;
         }
 
         .box {
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .flex {
             height: 100px;
             border: 1px solid #ddd;
             width: 200px;
+            margin: auto;
             margin-bottom: 20px;
-            justify-content: center;
+            display: -ms-flexbox;
             display: flex;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -ms-flex-align: center;
             align-items: center;
         }
 
         .reverse {
-            background: #222;
+            background: #555;
             border: none;
         }
 
-
-        .tpLoader {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin: 0 auto;
-            padding: 0;
+        button {
+            background: #3f93f3;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            cursor: pointer;
         }
 
-        .tpLoader li {
+        button:hover {
+            opacity: .9;
+        }
+
+
+
+        .tp-Loader {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: center;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tp-Loader li {
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            animation: tpLoader .9s alternate infinite;
-            background: green;
+            animation: tp-Loader .9s alternate infinite;
+            background: #f27802;
             opacity: 0;
         }
 
-        .tpLoader li:nth-child(2) {
+        .tp-Loader li:nth-child(2) {
             animation-delay: 0.2s;
             margin: 0 10px;
         }
 
-        .tpLoader li:nth-child(3) {
+        .tp-Loader li:nth-child(3) {
             animation-delay: 0.4s;
         }
 
@@ -65,7 +91,7 @@
             2. Need to rotate for FF to transform smoothly, it's a FF bug
         */
 
-        @keyframes tpLoader {
+        @keyframes tp-Loader {
             0% {
                 opacity: 0;
                 transform: scale(0); /* 1 */
@@ -78,48 +104,90 @@
             }
         }
 
-        .tpLoaderSmall li {
+        .tp-Loader--small li {
             width: 8px;
             height: 8px;
         }
 
-        .tpLoader li:nth-child(2) {
+        .tp-Loader--small li:nth-child(2) {
             margin: 0 5px;
         }
 
-        .tpLoaderReverse li {
+        .tp-Loader--reverse li {
             background: #fff;
         }
 
 
 
     </style>
+
+
+    <script>
+
+    $(document).ready(function() {
+        $(".button-demo").click(function(e) {
+            e.preventDefault();
+            var trigger = $(this);
+            var loaderHTML = '<ul class="tp-Loader tp-Loader--small tp-Loader--reverse"><li></li><li></li><li></li></ul>'
+
+            trigger.css({
+                height: trigger.outerHeight(),
+                width: trigger.outerWidth()
+            }).html(loaderHTML);
+        })
+    });
+
+    </script>
+
 </head>
 <body>
 
-    <div class="flex">
-        <ul class="tpLoader">
+    <h2>CSS Only Loader</h2>
+
+    <div class="box">
+        <ul class="tp-Loader">
             <li></li>
             <li></li>
             <li></li>
         </ul>
     </div>
 
-    <div class="flex">
-        <ul class="tpLoader tpLoaderSmall">
+    <div class="box">
+        <ul class="tp-Loader tp-Loader--small">
             <li></li>
             <li></li>
             <li></li>
         </ul>
     </div>
 
-    <div class="flex reverse">
-        <ul class="tpLoader tpLoaderSmall tpLoaderReverse">
+    <div class="box reverse">
+        <ul class="tp-Loader tp-Loader--reverse">
             <li></li>
             <li></li>
             <li></li>
         </ul>
     </div>
+
+    <div class="box reverse">
+        <ul class="tp-Loader tp-Loader--small tp-Loader--reverse">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+    <h2>Button to Loader</h2>
+
+    <div class="box">
+        <button class="button-demo">Please Click Me</button>
+    </div>
+
+    <div class="box">
+        <button class="button-demo">Or Me</button>
+    </div>
+
+    <p>Buttons maintain size.</p>
 
 
 </body>
