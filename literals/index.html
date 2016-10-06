@@ -22,17 +22,29 @@
 
     <script>
 
-        var animal = {
-          name: 'cow',
-          type: 'bovine'
+        var body = document.querySelector('body');
+
+        var animal = [
+            { name: 'cow', type: 'bovine'},
+            { name: 'cat', type: 'feline'}
+        ]
+
+        function createMarkup(data) {
+            return `
+                <article class="animal">
+                    <h3>${data.name}</h3>
+                    <p>This is of the type ${data.name}</p>
+                </article>
+            `
         }
 
-        foo(animal);
+        html = "";
 
-        var str = `The ${data.name}`
-        function foo(data) {
-            console.log(str);
-        }
+        animal.forEach(function(value){
+            html = html + createMarkup(value);
+        })
+
+        console.log(html)
 
 
 

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Icons</title>
+    <link rel="stylesheet" href="thumbprint.css">
+    <link rel="import" id="svg-import" href="svg-symbols.svg">
+
+    <style>
+
+        body {
+            padding: 100px 5px 20px 20px;
+        }
+
+        #iconsWrap {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 14px;
+        }
+
+        .icon__item {
+            padding-top: 20px;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            margin: 0 10px 10px 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background: #fff;
+            transition: border-color 120ms;
+            min-width: 140px;
+        }
+
+        .icon__item:hover {
+            border-color: #eee;
+        }
+
+        .icon__item:hover .icon-tools {
+            opacity: 1;
+        }
+
+        .icon__item > .icon {
+            margin-bottom: 10px;
+            width: 32px;
+            height: 32px;
+        }
+
+        .title {
+            font-size: 12px;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .icon-tools {
+            opacity: 0;
+            display: flex;
+            transition: opacity 120ms;
+            width: 100%;
+        }
+
+        button {
+            -webkit-appearance: none;
+            border: none;
+            background: #fff;
+            padding: 5px 10px;
+            border-top: 1px solid #eee;
+            cursor: pointer;
+            color: #444;
+            font-size: 12px;
+            transition: color 120ms;
+            flex: 1;
+            border-radius: 0 0 3px 3px;
+        }
+
+        button:first-child {
+            border-right: 1px solid #eee;
+        }
+
+        button:first-child svg {
+            transform: rotate(180deg);
+        }
+
+        button:hover {
+            background: #f9f9f9;
+            fill: #3f93f3;
+        }
+
+        button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+
+
+        #tools {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+        }
+
+        .is-hidden {
+            display: none;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<div id="tools">
+    <input type="text" name="" id="search" class="tp-TextInput" placeholder="Type name of icon" />
+</div>
+
+<ul id="iconsWrap"></ul>
+
+<script>
+
+    var search = document.querySelector('#search');
+
+    search.addEventListener('keyup', searchFilter);
+
+    function searchFilter() {
+        var searchValue = search.value;
+        if (searchValue == null || searchValue == ' ') return;
+
+        var filterItems = document.querySelectorAll('.icon__item');
+        filterItems.forEach(function(item, index){
+            item.classList.remove('is-hidden');
+            // Both strings lowercase to equalize
+            var name = item.dataset.name.toLowerCase();
+            if ( !name.includes(searchValue.toLowerCase()) ) {
+                item.classList.add('is-hidden');
+            }
+        });
+    }
+
+    function clearFilter() {
+        search.value = '';
+        searchFilter();
+    }
+
+
+    window.addEventListener('load', function(e) {
+        var link = document.querySelector('#svg-import');
+        var importedDoc = link.import;
+        var sprite = importedDoc.querySelector('svg');
+        document.body.appendChild(sprite);
+        renderIcons(sprite);
+    });
+
+    function iconTemplate(ref, name) {
+        var template = `
+            <li class="icon__item" data-name="${name}">
+                <svg class="icon">
+                    <use xlink:href="#${ref}"</use>
+                </svg>
+                <div class="title">${name}</div>
+                <div class="icon-tools">
+                    <button class="clipboard">
+                        <svg class="icon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#upload-16">s</use>
+                        </svg>
+                    </button>
+                    <button class="clipboard">
+                        <svg class="icon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#clipboard-16">s</use>
+                        </svg>
+                    </button>
+                </div>
+            </li>
+        `
+        return template;
+    }
+
+    function getName(item) {
+        var name = item.substring(0, item.length - 3);
+        return name;
+    }
+
+    function renderIcons(sprite) {
+        var iconsWrap = document.querySelector("#iconsWrap");
+        var icons = sprite.querySelectorAll('symbol');
+        var iconsHTML = "";
+        icons.forEach(function(item){
+            var name = getName(item.id);
+            var icon = iconTemplate(item.id, name);
+            iconsHTML = iconsHTML + icon;
+        });
+        iconsWrap.innerHTML = iconsHTML;
+    }
+
+</script>
+
+
+</body>
+</html>
