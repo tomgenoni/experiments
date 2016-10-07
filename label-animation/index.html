@@ -16,7 +16,7 @@
 
         .tp-FormFields {
             width: 300px;
-            margin-right: 20px;
+            margin-right: 60px;
             position: relative;
         }
 
@@ -36,19 +36,19 @@
 
         .label-animate .is-active .tp-Label {
             color: #444;
-            transform: translateY(3px) translateX(10px) scale(.85);
+            transform: translateY(3px) translateX(8px) scale(.85);
             transform-origin: 0 0;
         }
 
         .label-animate .tp-TextInput,
         .label-animate .tp-Textarea {
-            padding-top: 12px;
-            padding-bottom: 12px;
+            padding-top: 13px;
+            padding-bottom: 13px;
         }
 
         .label-animate .is-active .tp-TextInput,
         .label-animate .is-active .tp-Textarea {
-            padding-top: 18px;
+            padding-top: 20px;
             padding-bottom: 6px;
         }
 
@@ -69,6 +69,14 @@
             <input type="text" class="tp-TextInput">
         </li>
         <li class="tp-FormField-Item">
+            <label class="tp-Label">Last Name</label>
+            <input type="text" class="tp-TextInput">
+        </li>
+        <li class="tp-FormField-Item">
+            <label class="tp-Label">Email</label>
+            <input type="text" class="tp-TextInput">
+        </li>
+        <li class="tp-FormField-Item">
             <label class="tp-Label">Message</label>
             <textarea class="tp-Textarea"></textarea>
         </li>
@@ -80,6 +88,14 @@
             <input type="text" class="tp-TextInput">
         </li>
         <li class="tp-FormField-Item">
+            <label class="tp-Label">Last Name</label>
+            <input type="text" class="tp-TextInput">
+        </li>
+        <li class="tp-FormField-Item">
+            <label class="tp-Label">Email</label>
+            <input type="text" class="tp-TextInput">
+        </li>
+        <li class="tp-FormField-Item">
             <label class="tp-Label">Message</label>
             <textarea class="tp-Textarea"></textarea>
         </li>
@@ -88,11 +104,19 @@
 
     <script>
 
-        document.querySelector('.label-animate .tp-TextInput').addEventListener('keydown', labelActive);
-        document.querySelector('.label-animate .tp-TextInput').addEventListener('blur', checkInput);
+        var inputs = document.querySelectorAll('.label-animate .tp-TextInput');
+        var textareas = document.querySelectorAll('.label-animate .tp-Textarea');
 
-        document.querySelector('.label-animate .tp-Textarea').addEventListener('keydown', labelActive);
-        document.querySelector('.label-animate .tp-Textarea').addEventListener('blur', checkInput);
+
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('keydown', labelActive, false);
+            inputs[i].addEventListener('blur', checkInput, false);
+        }
+
+        for (var i = 0; i < textareas.length; i++) {
+            textareas[i].addEventListener('keydown', labelActive, false);
+            textareas[i].addEventListener('blur', checkInput, false);
+        }
 
         function labelActive(e) {
             var parent = e.target.closest('li');
