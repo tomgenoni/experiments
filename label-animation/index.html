@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Labels</title>
+    <link rel="stylesheet" href="thumbprint.css">
+
+    <style>
+
+        body {
+            margin: 100px;
+            display: flex;
+        }
+
+        .tp-FormFields {
+            width: 300px;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .tp-Textarea {
+            height: 100px;
+        }
+
+        .label-animate  .tp-Label  {
+            position: absolute;
+            transform: translateY(12px) translateX(10px) scale(1);
+            transition: transform 100ms, color 100ms;
+            color: #777;
+            font-weight: 400;
+            pointer-events: none;
+            font-size: 14px;
+        }
+
+        .label-animate .is-active .tp-Label {
+            color: #444;
+            transform: translateY(3px) translateX(10px) scale(.85);
+            transform-origin: 0 0;
+        }
+
+        .label-animate .tp-TextInput,
+        .label-animate .tp-Textarea {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .label-animate .is-active .tp-TextInput,
+        .label-animate .is-active .tp-Textarea {
+            padding-top: 18px;
+            padding-bottom: 6px;
+        }
+
+        .label-animate .tp-FormField-Item {
+            margin-bottom: 10px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <ol class="tp-FormFields">
+        <li class="tp-FormField-Item">
+            <label class="tp-Label">First Name</label>
+            <input type="text" class="tp-TextInput">
+        </li>
+        <li class="tp-FormField-Item">
+            <label class="tp-Label">Message</label>
+            <textarea class="tp-Textarea"></textarea>
+        </li>
+    </ol>
+
+    <ol class="tp-FormFields label-animate">
+        <li class="tp-FormField-Item">
+            <label class="tp-Label">First Name</label>
+            <input type="text" class="tp-TextInput">
+        </li>
+        <li class="tp-FormField-Item">
+            <label class="tp-Label">Message</label>
+            <textarea class="tp-Textarea"></textarea>
+        </li>
+    </ol>
+
+
+    <script>
+
+        document.querySelector('.label-animate .tp-TextInput').addEventListener('keydown', labelActive);
+        document.querySelector('.label-animate .tp-TextInput').addEventListener('blur', checkInput);
+
+        document.querySelector('.label-animate .tp-Textarea').addEventListener('keydown', labelActive);
+        document.querySelector('.label-animate .tp-Textarea').addEventListener('blur', checkInput);
+
+        function labelActive(e) {
+            var parent = e.target.closest('li');
+            parent.classList.add('is-active');
+        }
+
+        function checkInput(e) {
+            var text = e.target.value;
+            var parent = e.target.closest('li');
+            if (text != '') {
+                parent.classList.add('is-active');
+            } else {
+                parent.classList.remove('is-active');
+            }
+        }
+
+    </script>
+
+</body>
+</html>
