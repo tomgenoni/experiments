@@ -15,19 +15,12 @@ html {
     align-items: center;
     text-align: center;
     color: #fff !important;
-}
-
-.intro__docs {
     background: #f27802;
-}
-
-.intro__icons {
-    background: #f78e29;
-    color: #fff;
+    transition: background 120ms;
 }
 
 .intro__side:hover {
-    opacity: .95;
+    background: #f78e29;
 }
 
 
