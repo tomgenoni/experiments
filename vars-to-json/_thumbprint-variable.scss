@@ -1,0 +1,512 @@
+// Thumbprint Variables
+// Variables for all elements and objects in Thumbprint should be listed
+
+// General Rules
+
+// Spacing Unit
+// Defines spacing for paddings and margins using `spacer` function.
+
+$spacer-unit                   : 8px;
+
+// Transitions
+
+$transition-duration: (
+    fast                       : 0.1s,
+    base                       : 0.3s,
+    slow                       : 0.5s
+);
+
+// Borders
+
+$border: (
+    radius: (
+        base                   : 4px,
+        big                    : 6px,
+        full                   : 50%
+    )
+);
+
+// Shadows
+
+$shadow: (
+    base                       : 4px rgba(0, 0, 0, 0.2),
+    light                      : 3px rgba(0, 0, 0, 0.1),
+    big                        : 8px rgba(0, 0, 0, 0.3)
+);
+
+// Opacity
+
+$opacity: (
+    medium                     : 0.5
+);
+
+// Colors
+
+$root-color: (
+    black                      : #000,
+    white                      : #fff,
+    brand                      : #f27802,
+    brand-light                : #f0913a,
+    brand-faint                : #f0a86e,
+    sky                        : #3f93f3,
+    sky-light                  : #70acf1,
+    sky-faint                  : #94beee,
+    sky-dark                   : #287ddd,
+    danger                     : #ff4847,
+    danger-light               : #ff6e6d,
+    danger-faint               : #ff9796,
+    good                       : #63cb76,
+    good-light                 : #8acd96,
+    good-faint                 : #a6d5ae,
+    award                      : #fbb90e,
+    award-light                : #f9cf62,
+    award-faint                : #f7db92,
+    // Grays
+    chalkboard                 : #312f2f,
+    slate                      : #4e4d4d,
+    steel                      : #8d9494,
+    aluminum                   : #bdc4c4,
+    cinder                     : #e1e3e3,
+    pebble                     : #edeeee,
+    fog                        : #f4f4f4,
+    snow                       : #fafafa
+);
+
+// Base Colors
+// These are colors can be used on UI elements like borders.
+
+$color: (
+
+    ui: (
+        base                   : map-fetch($root-color, cinder),
+        good                   : map-fetch($root-color, good),
+        brand                  : map-fetch($root-color, brand),
+        sky                    : map-fetch($root-color, sky),
+        danger                 : map-fetch($root-color, danger),
+        white                  : map-fetch($root-color, white)
+    ),
+
+    link: (
+        base                   : map-fetch($root-color, sky),
+        light                  : map-fetch($root-color, sky-light),
+        faint                  : map-fetch($root-color, sky-faint),
+        danger                 : map-fetch($root-color, danger),
+        white                  : map-fetch($root-color, white)
+    ),
+
+    text: (
+        base                   : map-fetch($root-color, chalkboard),
+        muted                  : map-fetch($root-color, steel),
+        light                  : map-fetch($root-color, cinder),
+        faint                  : map-fetch($root-color, pebble),
+        good                   : map-fetch($root-color, good),
+        brand                  : map-fetch($root-color, brand),
+        sky                    : map-fetch($root-color, sky),
+        danger                 : map-fetch($root-color, danger),
+        white                  : map-fetch($root-color, white)
+    ),
+
+    background: (
+        base                   : map-fetch($root-color, pebble),
+        light                  : map-fetch($root-color, fog),
+        faint                  : map-fetch($root-color, snow),
+        dark                   : map-fetch($root-color, chalkboard),
+        white                  : map-fetch($root-color, white),
+        sky                    : map-fetch($root-color, sky),
+        sky-light              : map-fetch($root-color, sky-light),
+        sky-faint              : map-fetch($root-color, sky-faint),
+        good                   : map-fetch($root-color, good),
+        good-light             : map-fetch($root-color, good-light),
+        good-faint             : map-fetch($root-color, good-faint),
+        danger                 : map-fetch($root-color, danger),
+        danger-light           : map-fetch($root-color, danger-light),
+        danger-faint           : map-fetch($root-color, danger-faint),
+        brand                  : map-fetch($root-color, brand),
+        brand-light            : map-fetch($root-color, brand-light),
+        brand-faint            : map-fetch($root-color, brand-faint)
+    )
+);
+
+// Font Sizes
+// These defaults can be overriden by custom variables.
+// Sizes are "mobile", versions with "r" indicate
+// responsive size for "desktop"
+
+$font: (
+
+    body: (
+        1: (
+            size               : 20px,
+            line-height        : 28px,
+            responsive: (
+                size           : 24px,
+                line-height    : 32px
+            )
+        ),
+        2: (
+            size               : 16px,
+            line-height        : 24px
+        ),
+        3: (
+            size               : 14px,
+            line-height        : 20px
+        ),
+        4: (
+            size               : 12px,
+            line-height        : 16px
+        )
+    ),
+
+    super: (
+        1: (
+            size               : 56px,
+            line-height        : 64px,
+            weight             : 500,
+            responsive: (
+                size           : 64px,
+                line-height    : 72px,
+                weight         : 500
+            )
+        )
+    ),
+
+    heading: (
+        1: (
+            size               : 32px,
+            line-height        : 38px,
+            weight             : 500,
+            responsive: (
+                size           : 48px,
+                line-height    : 56px,
+                weight         : 500
+            )
+        ),
+        2: (
+            size               : 32px,
+            line-height        : 40px,
+            weight             : 500,
+            responsive: (
+                size           : 40px,
+                line-height    : 48px,
+                weight         : 500
+            )
+        ),
+        3: (
+            size               : 24px,
+            line-height        : 32px,
+            weight             : 500,
+            responsive: (
+                size           : 32px,
+                line-height    : 40px,
+                weight         : 500
+            )
+        ),
+        4: (
+            size               : 20px,
+            line-height        : 28px,
+            weight             : 500,
+            responsive: (
+                size           : 24px,
+                line-height    : 32px,
+                weight         : 500
+            )
+        )
+    ),
+
+    title: (
+        1: (
+            size               : 16px,
+            line-height        : 22px,
+            weight             : 500,
+            responsive: (
+                size           : 20px,
+                line-height    : 28px,
+                weight         : 500
+            )
+        ),
+        2: (
+            size               : 14px,
+            line-height        : 20px,
+            weight             : 500,
+            responsive: (
+                size           : 16px,
+                line-height    : 24px,
+                weight         : 500
+            )
+        ),
+        3: (
+            size               : 14px,
+            line-height        : 20px,
+            weight             : 500
+        ),
+        4: (
+            size               : 12px,
+            line-height        : 16px,
+            weight             : 500
+        )
+    ),
+
+    line-height: (
+        base                   : 1.7,
+        tight                  : 1.4,
+        loose                  : 1.9
+    ),
+
+    family: (
+        base                   : unquote('Avenir, Helvetica, Arial, sans-serif'),
+        monospace              : monospace
+    ),
+
+    letter-spacing: (
+        loose                  : 1px,
+        tight                  : -1px,
+        extra-tight            : -2px
+    )
+
+);
+
+// Buttons
+
+$button: (
+
+    transition: (
+        base                   : 0.2s
+    ),
+
+    size: (
+        base: (
+            height             : 38px,
+            line-height        : 38px,
+            font-size          : 14px,
+            padding            : 0 24px,
+            font-weight        : 500,
+            border-radius      : 4px
+        ),
+        large: (
+            height             : 48px,
+            line-height        : 48px,
+            font-size          : 15px,
+            padding            : 0 48px,
+            font-weight        : 500,
+            border-radius      : 4px
+        ),
+        small: (
+            height             : 28px,
+            line-height        : 28px,
+            font-size          : 11px,
+            padding            : 0 24px,
+            font-weight        : 500,
+            border-radius      : 2px
+        )
+    ),
+
+    type: (
+        base: (
+            background         : map-fetch($root-color, sky),
+            border             : map-fetch($root-color, sky),
+            color              : map-fetch($color, text, white),
+            hover: (
+                background     : map-fetch($root-color, sky-dark)
+            ),
+            disabled: (
+                background     : map-fetch($root-color, sky-light)
+            )
+        ),
+        secondary: (
+            background         : map-fetch($root-color, white),
+            border             : map-fetch($root-color, cinder),
+            color              : map-fetch($root-color, sky),
+            hover: (
+                color          : map-fetch($root-color, sky-dark)
+            ),
+            disabled: (
+                color          : map-fetch($root-color, sky-light)
+            )
+        ),
+        tertiary: (
+            background         : map-fetch($root-color, white),
+            border             : map-fetch($root-color, cinder),
+            color              : map-fetch($root-color, steel),
+            hover: (
+                color          : map-fetch($root-color, slate)
+            ),
+            disabled: (
+                color          : map-fetch($root-color, cinder)
+            )
+        ),
+        danger: (
+            background         : map-fetch($root-color, white),
+            border             : map-fetch($root-color, cinder),
+            color              : map-fetch($root-color, danger-light),
+            hover: (
+                color          : map-fetch($root-color, danger)
+            ),
+            disabled: (
+                color          : map-fetch($root-color, danger-faint)
+            )
+        ),
+        plain: (
+            background         : map-fetch($root-color, white),
+            border             : map-fetch($root-color, white),
+            color              : map-fetch($root-color, steel),
+            hover: (
+                color          : map-fetch($root-color, slate)
+            ),
+            disabled: (
+                color          : map-fetch($root-color, cinder)
+            )
+        )
+    )
+);
+
+// Avator
+
+$avatar: (
+    xsmall: (
+        size: 20px
+    ),
+    small: (
+        size: 32px,
+        badge: (
+            size: 20px,
+            font-size: 10px
+        )
+    ),
+    medium: (
+        size: 48px,
+        badge: (
+            size: 20px,
+            font-size: 10px
+        )
+    ),
+    large: (
+        size: 72px,
+        badge: (
+            size: 24px,
+            font-size: 12px
+        )
+    ),
+    xlarge: (
+        size: 124px,
+        badge: (
+            size: 30px,
+            font-size: 15px
+        )
+    )
+);
+
+// Pill
+
+$pill: (
+    size                       : 16px,
+    min-width                  : 20px,
+    letter-spacing             : 0.5px,
+    padding                    : 0 5px,
+    font: (
+        weight                 : 600,
+        size                   : 12px
+    )
+);
+
+// Forms
+
+$form: (
+    input: (
+        padding: (
+            all                : 6px 12px,
+            sides              : 12px,
+            ends               : 6px
+        ),
+        line-height            : 1.5
+    )
+);
+
+// Dropdowns
+
+$dropdown: (
+    max-height                 : 320px
+);
+
+// Dialog widths
+
+$dialog: (
+    width: (
+        base                   : 700px,
+        narrow                 : 500px,
+        wide                   : 900px
+    )
+);
+
+// Popover
+
+$popover: (
+    max-width                  : 350px
+);
+
+// Tooltip
+
+$tooltip: (
+    max-width                  : 250px
+);
+
+// Progress Bar
+
+$progress-bar: (
+    height: (
+        base                   : 4px,
+        large                  : 12px
+    ),
+    bar: (
+        min-width              : 10px
+    )
+);
+
+// Loader dots
+
+$loader: (
+    speed                      : 1300ms,
+    background: (
+        base                   : #f27802,
+        reverse                : #fff,
+        muted                  : map-fetch($root-color, aluminum)
+    ),
+    size: (
+        base                   : 16px,
+        small                  : 8px
+    ),
+    spacing: (
+        base                   : 10px,
+        small                  : 5px
+    )
+);
+
+// Z-index Values
+
+$z-index: (
+    tooltip                     : 100
+);
+
+// Breakpoints
+// Used with `@include larger-than()`
+
+$breakpoint: (
+    size: (
+        large                   : 1025px,
+        medium                  : 700px,
+        small                   : 481px
+    ),
+    splitView: (
+        medium                  : 1060px,
+        small                   : 769px
+    )
+);
+
+// Grid Snap
+// This establishes a layout where the content width 'snaps'
+// to spcific max-widths rather than responding fluidly
+
+$grid-snap: (
+    large                   : 946px,
+    medium                  : 668px,
+    small                   : 449px
+);

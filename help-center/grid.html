@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="thumbprint.min.css">
+    <title>Document</title>
+
+    <style>
+
+        .tp-grid-snap {
+            background: #ddd;
+            margin-bottom: 40px;
+        }
+
+        li {
+            background: yellow;
+            width: 40px;
+            text-align: center;
+        }
+
+        @media (min-width: 481px) {
+
+            .old-category-nav {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .old-category-nav > li:nth-child(n+6) {
+                display: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .old-category-nav > li:nth-child(6),
+            .old-category-nav > li:nth-child(7) {
+                display: block;
+            }
+
+        }
+
+        @media (min-width: 1025px) {
+            .old-category-nav > li:nth-child(8) {
+                display: block;
+            }
+        }
+
+
+        .get-started {
+            display: block;
+        }
+
+        .get-started .tp-text-input,
+        .get-started .tp-button {
+            display: block;
+            width: 100%;
+        }
+
+        .get-started .tp-text-input  {
+            margin-bottom: 16px;
+        }
+
+
+        @media (min-width: 768px) {
+            .get-started {
+                display: flex;
+                max-width: 728px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .get-started .tp-text-input,
+            .get-started .tp-button {
+                width: auto;
+            }
+
+        }
+
+        .category-nav__item {
+            height: 40px;
+            background: orange;
+            margin-bottom: 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="tp-grid-snap">
+        <div class="tp-input-group get-started">
+          <input type="text" class="tp-text-input">
+          <button class="tp-button tp-button--highlight">Get Started</button>
+        </div>
+    </div>
+
+    <div class="tp-grid-snap">
+        <ul class="old-category-nav">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+
+    <div class="tp-grid-snap">
+        <div class="tp-grid category-nav">
+            <div class="tp-col tp-col--12 tp-col--sm-4 tp-col--lg-2">
+                <div class="category-nav__item"></div>
+            </div>
+            <div class="tp-col tp-col--12 tp-col--sm-4 tp-col--lg-2">
+                <div class="category-nav__item"></div>
+            </div>
+            <div class="tp-col tp-col--12 tp-col--sm-4 tp-col--lg-2">
+                <div class="category-nav__item"></div>
+            </div>
+            <div class="tp-col tp-col--12 tp-col--sm-4 tp-col--lg-2">
+                <div class="category-nav__item"></div>
+            </div>
+            <div class="tp-col tp-col--12 tp-col--sm-4 tp-col--lg-2">
+                <div class="category-nav__item"></div>
+            </div>
+            <div class="tp-col tp-col--12 tp-col--sm-4 tp-col--lg-2">
+                <div class="category-nav__item"></div>
+            </div>
+            <div class="tp-col tp-col--12 tp-col--sm-4 tp-col--lg-2">
+                <div class="category-nav__item"></div>
+            </div>
+            <div class="tp-col tp-col--12 tp-col--sm-4 tp-col--lg-2">
+                <div class="category-nav__item"></div>
+            </div>
+            <div class="tp-col tp-col--12 tp-col--sm-4 tp-col--lg-2">
+                <div class="category-nav__item"></div>
+            </div>
+            <div class="tp-col tp-col--12 tp-col--sm-4 tp-col--lg-2">
+                <div class="category-nav__item"></div>
+            </div>
+            <div class="tp-col tp-col--12 tp-col--sm-4 tp-col--lg-2">
+                <div class="category-nav__item"></div>
+            </div>
+            <div class="tp-col tp-col--12 tp-col--sm-4 tp-col--lg-2">
+                <div class="category-nav__item"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

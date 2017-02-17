@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="thumbprint.min.css">
+    <title>Help</title>
+
+
+    <style>
+
+        html {
+            background: #f9f9f9;
+        }
+
+        body {
+            margin-top: 50px;
+        }
+
+        .vid-block {
+            margin-bottom: 16px;
+            display: flex;
+        }
+
+        .vid-block__img {
+            margin-bottom: 8px;
+            margin-right: 16px;
+            position: relative;
+
+        }
+
+        .vid-block__img img {
+            display: block;
+            width: 120px;
+        }
+
+        .vid-block__img:hover img {
+            opacity: .6;
+        }
+
+        .vid-block__description {
+            color: #222;
+            font-size: 15px;
+        }
+
+        .vid-block__icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            width: 24px;
+            height: 24px;
+            background: #000;
+            border-radius: 50%;
+        }
+
+        @media (min-width:700px) {
+
+            .vid-block {
+                margin-right: 0;
+                display: block;
+            }
+
+            .vid-block__img img {
+                width: 100%;
+            }
+
+            .vid-block__description {
+                font-size: 16px;
+            }
+        }
+
+        .dropdown-results {
+            background: #fff;
+            border-top: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .tp-input-wrap {
+            position: relative;
+        }
+
+        .tp-input-wrap .tp-text-input {
+            padding-right: 48px;
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            background: green;
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+        }
+
+        .tp-input-icon__icon {
+            width: 16px;
+            height: 16px;
+            background: green;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+    <div class="tp-grid-snap">
+
+        <div class="tp-input-icon">
+            <input type="text" class="tp-text-input" placeholder="Search by keyword">
+            <div class="tp-input-icon__icon"></div>
+        </div>
+
+        <div class="tp-input-wrap">
+            <input type="text" class="tp-text-input" placeholder="Search by keyword">
+            <div class="icon"></div>
+        </div>
+
+
+        <ul class="tp-block-list-group dropdown-results">
+            <li>
+                <a href="#" class="tp-block-list__link">
+                    <div>Thumbtack Guarantee Terms and Conditions</div>
+                    <div class="tp-text-body-3--static tp-color--base">Get more details about the Thumbtack Guarantee here.</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="tp-block-list__link">
+                    <div>Thumbtack Guarantee Terms and Conditions</div>
+                    <div class="tp-text-body-3--static tp-color--base">Get more details about the Thumbtack Guarantee here.</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="tp-block-list__link">
+                    <div>Thumbtack Guarantee Terms and Conditions</div>
+                    <div class="tp-text-body-3--static tp-color--base">Get more details about the Thumbtack Guarantee here.</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="tp-block-list__link tp-text--center tp-text-body-3--static tp-color--muted">
+                    More results
+                </a>
+            </li>
+        </ul>
+
+        <br>
+        <br>
+
+        <form>
+            <fieldset class="tp-fieldset">
+                <ol class="tp-form-fields">
+                    <li class="tp-form-field__item">
+                        <label class="tp-label">Select a suggestion topic</label>
+                        <select class="tp-select tp-width--1-1">
+                            <option disabled value selected>Select one…</option>
+                            <option value="0">One</option>
+                            <option value="1">Two</option>
+                            <option value="2">Three</option>
+                        </select>
+                    </li>
+                    <li class="tp-form-field__item">
+                        <label class="tp-label tp-label--disabled">Select a suggestion subtopic</label>
+                        <select class="tp-select tp-width--1-1" disabled>
+                            <option disabled value selected>Select one…</option>
+                            <option value="0">One</option>
+                            <option value="1">Two</option>
+                            <option value="2">Three</option>
+                        </select>
+                    </li>
+                    <li class="tp-form-field__item">
+                        <label class="tp-label">Textarea</label>
+                        <textarea class="tp-textarea tp-min-height--150"></textarea>
+                    </li>
+                </ol>
+            </fieldset>
+            <div class="tp-button-row tp-button-row--right">
+                <button class="tp-button tp-button--tertiary">Cancel</button>
+                <button class="tp-button">Submit</button>
+            </div>
+        </form>
+
+
+    </div>
+</body>
+</html>

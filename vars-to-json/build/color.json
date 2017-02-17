@@ -1,0 +1,15 @@
+[
+    {
+        "title" : "ui",
+        "values" : [
+            {
+                "hex": "#222",
+                "name": "base"
+            },
+            {
+                "hex": "#3f93f3",
+                "name": "dark"
+            },
+        ]
+    }
+]

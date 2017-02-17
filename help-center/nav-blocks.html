@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="thumbprint.min.css">
+    <title>Help</title>
+
+
+    <style>
+
+        html {
+            background: #f9f9f9;
+        }
+
+        .nav-block {
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px 0 rgba(49,47,47,.1);
+            min-height: 200px;
+            color: inherit;
+            position: relative;
+            transition: all .1s ease-in-out;
+            text-align: center;
+            padding: 16px;
+        }
+
+        .nav-block:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px 0 rgba(49,47,47,.25);
+            color: #f27802
+        }
+
+        .is-active {
+            background: #999;
+            color: #fff !important;
+        }
+
+        .is-active:hover {
+            color: #fff;
+        }
+
+        .is-active:after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 85%;
+            transform: translateX(-50%);
+            border-style: solid;
+            border-width: 12px 12px 0;
+            border-color: #999 transparent transparent;
+        }
+
+        .nav-grid .tp-col:nth-child(2n) .is-active:after {
+            left: 15%;
+        }
+
+        .nav-block__content {
+            display: none;
+            padding: 16px;
+            padding-top: 32px;
+            position: relative;
+            text-align: center;
+        }
+
+        .is-active + .nav-block__content {
+            display: block;
+            width: calc(200% + 16px);
+        }
+
+        .nav-grid .tp-col:nth-child(2n) .nav-block__content  {
+            margin-left: calc(-100% - 16px);
+        }
+
+        /*:nth-child(n) selects all and maintains specifity with :nth-child(2n), overriding it without using !important */
+
+        @media (min-width:700px) {
+            .nav-grid .tp-col:nth-child(n) .nav-block__content {
+                width: auto;
+                margin-left: 0;
+            }
+
+            .nav-grid .tp-col:nth-child(n) .is-active:after {
+                left: 50%;
+            }
+
+        }
+
+        .nav-block__title {
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .nav-block__links > li {
+            margin-bottom: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="tp-grid-snap">
+        <ul class="tp-grid nav-grid">
+            <li class="tp-col tp-col--6 tp-col--md-4">
+                <a href="#0" class="nav-block">
+                    Create and update my account
+                </a>
+                <div class="nav-block__content">
+                    <div class="nav-block__title">Choose a subtopic:</div>
+                    <ul class="nav-block__links">
+                        <li>
+                            <a href="#0">How credits work</a>
+                        </li>
+                        <li>
+                            <a href="#0">Buy Credits</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="tp-col tp-col--6 tp-col--md-4">
+                <a href="#0" class="nav-block">
+                    Create and update my account
+                </a>
+                <div class="nav-block__content">
+                    <div class="nav-block__title">Choose a subtopic:</div>
+                    <ul class="nav-block__links">
+                        <li>
+                            <a href="#0">Foobar</a>
+                        </li>
+                        <li>
+                            <a href="#0">Funzone</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="tp-col tp-col--6 tp-col--md-4">
+                <a href="#0" class="nav-block is-active">
+                    Create and update my account
+                </a>
+                <div class="nav-block__content">
+                    <div class="nav-block__title">Choose a subtopic:</div>
+                    <ul class="nav-block__links">
+                        <li>
+                            <a href="#0">How credits work</a>
+                        </li>
+                        <li>
+                            <a href="#0">Buy Credits</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="tp-col tp-col--6 tp-col--md-4">
+                <a href="#0" class="nav-block">
+                    Create and update my account
+                </a>
+                <div class="nav-block__content">
+                    <div class="nav-block__title">Choose a subtopic:</div>
+                    <ul class="nav-block__links">
+                        <li>
+                            <a href="#0">How credits work</a>
+                        </li>
+                        <li>
+                            <a href="#0">Buy Credits</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="tp-col tp-col--6 tp-col--md-4">
+                <a href="#0" class="nav-block">
+                    Create and update my account
+                </a>
+                <div class="nav-block__content">
+                    <div class="nav-block__title">Choose a subtopic:</div>
+                    <ul class="nav-block__links">
+                        <li>
+                            <a href="#0">How credits work</a>
+                        </li>
+                        <li>
+                            <a href="#0">Buy Credits</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="tp-col tp-col--6 tp-col--md-4">
+                <a href="#0" class="nav-block">
+                    Create and update my account
+                </a>
+                <div class="nav-block__content">
+                    <div class="nav-block__title">Choose a subtopic:</div>
+                    <ul class="nav-block__links">
+                        <li>
+                            <a href="#0">How credits work</a>
+                        </li>
+                        <li>
+                            <a href="#0">Buy Credits</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="tp-col tp-col--6 tp-col--md-4">
+                <a href="#0" class="nav-block">
+                    Create and update my account
+                </a>
+                <div class="nav-block__content">
+                    <div class="nav-block__title">Choose a subtopic:</div>
+                    <ul class="nav-block__links">
+                        <li>
+                            <a href="#0">How credits work</a>
+                        </li>
+                        <li>
+                            <a href="#0">Buy Credits</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script>
+    $(".nav-block").click(function() {
+        var $trigger = $(this);
+        $trigger.toggleClass("is-active");
+        $(".nav-block").not($trigger).removeClass("is-active");
+    });
+
+    </script>
+
+
+</body>
+</html>

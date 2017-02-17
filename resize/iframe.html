@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="thumbprint.css">
+    <title>Resize</title>
+
+
+<style>
+
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+
+    #iframe {
+        width: 100%;
+        border: none;
+        height: 200px;
+    }
+
+    body {
+        margin: 50px;
+
+    }
+
+
+    .ruler {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(90deg,
+      rgba(73, 73, 73, 0.5) 0,
+      rgba(73, 73, 73, 0.5) 2%,
+      transparent 2%
+    ),
+    linear-gradient(180deg,
+      #ffffff 50%,
+      transparent 50%
+    ),
+    linear-gradient(90deg,
+      transparent 50%,
+      rgba(73, 73, 73, 0.5) 50%,
+      rgba(73, 73, 73, 0.5) 52%,
+      transparent 52%
+    ),
+    linear-gradient(180deg,
+      #ffffff 70%,
+      transparent 70%
+    ),
+    linear-gradient(90deg,
+      transparent 10%,
+      rgba(73, 73, 73, 0.4) 10%,
+      rgba(73, 73, 73, 0.4) 12%,
+      transparent 12%,
+
+      transparent 20%,
+      rgba(73, 73, 73, 0.4) 20%,
+      rgba(73, 73, 73, 0.4) 22%,
+      transparent 22%,
+
+      transparent 30%,
+      rgba(73, 73, 73, 0.4) 30%,
+      rgba(73, 73, 73, 0.4) 32%,
+      transparent 32%,
+
+      transparent 40%,
+      rgba(73, 73, 73, 0.4) 40%,
+      rgba(73, 73, 73, 0.4) 42%,
+      transparent 42%,
+
+      transparent 60%,
+      rgba(73, 73, 73, 0.4) 60%,
+      rgba(73, 73, 73, 0.4) 62%,
+      transparent 62%,
+
+      transparent 70%,
+      rgba(73, 73, 73, 0.4) 70%,
+      rgba(73, 73, 73, 0.4) 72%,
+      transparent 72%,
+
+      transparent 80%,
+      rgba(73, 73, 73, 0.4) 80%,
+      rgba(73, 73, 73, 0.4) 82%,
+      transparent 82%,
+
+      transparent 90%,
+      rgba(73, 73, 73, 0.4) 90%,
+      rgba(73, 73, 73, 0.4) 92%,
+      transparent 92%
+    );
+  background-size: 50px 20px;
+  background-repeat: repeat-x;
+  min-height: 20px;
+
+  /* only needed for labels */
+  white-space:nowrap;
+  font-size:0;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+}
+label {
+  font-size:9px;
+  display:inline-block;
+  width:100px;
+  text-indent:3px;
+  font-family: Helvetica;
+  line-height: 1;
+  color: #aaa;
+}
+
+</style>
+
+
+</head>
+<body>
+
+    <div class="ruler">
+        <label>0</label>
+        <label>100</label>
+        <label>200</label>
+        <label>300</label>
+        <label>400</label>
+        <label>500</label>
+        <label>600</label>
+        <label>700</label>
+        <label>800</label>
+        <label>900</label>
+        <label>1000</label>
+        <label>1100</label>
+        <label>1200</label>
+        <label>1300</label>
+        <label>1400</label>
+        <label>1500</label>
+        <label>1600</label>
+        <label>1700</label>
+        <label>1800</label>
+        <label>1900</label>
+        <label>2000</label>
+    </div>
+
+
+    <iframe id="iframe"></iframe>
+
+<script>
+
+    var iframe = document.querySelector('#iframe');
+
+    var cssLink = document.createElement("link")
+    cssLink.href = "http://dgnpk3tk2z1f1.cloudfront.net/asset/css/thumbprint.css";
+    cssLink.rel = "stylesheet";
+    cssLink.type = "text/css";
+
+    iframe.contentDocument.head.appendChild(cssLink);
+    iframe.contentDocument.body.innerHTML = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quos, excepturi temporibus doloremque assumenda libero, aliquid, voluptatum ipsum iste animi facilis odit nemo distinctio vel pariatur explicabo quidem obcaecati quibusdam!</p>"
+
+
+
+</script>
+
+</body>
+</html>
