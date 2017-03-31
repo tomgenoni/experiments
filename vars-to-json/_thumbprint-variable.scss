@@ -77,15 +77,6 @@ $root-color: (
 
 $color: (
 
-    ui: (
-        base                   : map-fetch($root-color, cinder),
-        good                   : map-fetch($root-color, good),
-        brand                  : map-fetch($root-color, brand),
-        sky                    : map-fetch($root-color, sky),
-        danger                 : map-fetch($root-color, danger),
-        white                  : map-fetch($root-color, white)
-    ),
-
     link: (
         base                   : map-fetch($root-color, sky),
         light                  : map-fetch($root-color, sky-light),
@@ -106,8 +97,8 @@ $color: (
         white                  : map-fetch($root-color, white)
     ),
 
-    background: (
-        base                   : map-fetch($root-color, pebble),
+    ui: (
+        base                   : map-fetch($root-color, cinder),
         light                  : map-fetch($root-color, fog),
         faint                  : map-fetch($root-color, snow),
         dark                   : map-fetch($root-color, chalkboard),
