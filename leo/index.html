@@ -9,17 +9,21 @@
 
     <style>
 
+        /*Ignore these styles*/
         .Tooltip {
-            left: 50px;
+            top: 100px;
+            left: 100px;
+            right: 100px;
         }
 
-        .Tooltip-pointer {
+        /*Use these styles, have to use */
+        .Tooltip.theme-larger-white .Tooltip-pointer {
             width: 19px;
             height: 19px;
             background: #fff;
-            border: 1px solid #ddd !important;
-            border-bottom: 0 !important;
-            border-right: 0 !important;
+            border: 1px solid #ddd;
+            border-bottom: 0;
+            border-right: 0;
             transform: rotate(45deg);
 
         }
@@ -37,7 +41,7 @@
             'pointer-overlap': pointerOverlap,
             'theme-transparent': themeTransparent,
             'theme-larger-white': themeLargerWhite,
-        }" style="top: 48px; right: 0px;">
+        }" style="">
         <div class="Tooltip-pointer" style="right: 20px;"></div>
         <!-- ngIf: !tooltip.options.hideCloseButton --><div class="Tooltip-closeWrapper ng-scope" ng-if="!tooltip.options.hideCloseButton">
             <svg-icon class="Tooltip-close ng-scope theme-small IconContainer" type="close2" size="sm" ng-click="tooltip.onCloseButtonClick()"><svg class="Icon" viewBox="0 0 16 16">
