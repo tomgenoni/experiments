@@ -1,0 +1,116 @@
+body {
+    margin: 100px;
+}
+
+.box {
+    position: relative;
+    width: 500px;
+    height: 700px;
+    background: #eee;
+    margin: auto;
+}
+
+.user {
+    position: absolute;
+}
+
+.user-icon {
+    height: 50px;
+    width: 50px;
+    background: red;
+    border-radius: 50%;
+    transform: scale(0);
+}
+
+.user-quote {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    height: 20px;
+    width: 50px;
+    background: orange;
+    transform: scale(0);
+}
+
+.user-quote--left {
+    right: 10px;
+}
+
+.box.is-active .user--1 .user-icon,
+.box.is-active .user--1 .user-quote,
+.box.is-active .user--2 .user-icon,
+.box.is-active .user--2 .user-quote,
+.box.is-active .user--3 .user-icon,
+.box.is-active .user--3 .user-quote,
+.box.is-active .user--4 .user-icon,
+.box.is-active .user--4 .user-quote,
+.box.is-active .user--5 .user-icon,
+.box.is-active .user--5 .user-quote {
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.box.is-active .user--1 .user-icon {
+    transition-delay: 0;
+}
+
+.box.is-active .user--1 .user-quote {
+    transition-delay: 0.3s;
+}
+
+.box.is-active .user--2 .user-icon {
+    transition-delay: 0.6s;
+}
+
+.box.is-active .user--2 .user-quote {
+    transition-delay: 0.9s;
+}
+
+.box.is-active .user--3 .user-icon {
+    transition-delay: 1.2s;
+}
+
+.box.is-active .user--3 .user-quote {
+    transition-delay: 1.5s;
+}
+
+.box.is-active .user--4 .user-icon {
+    transition-delay: 1.8s;
+}
+
+.box.is-active .user--4 .user-quote {
+    transition-delay: 2.1s;
+}
+
+.box.is-active .user--5 .user-icon {
+    transition-delay: 2.4s;
+}
+
+.box.is-active .user--5 .user-quote {
+    transition-delay: 2.7s;
+}
+
+.user--1 {
+    right: 20px;
+    bottom: 50px;
+}
+
+.user--2 {
+    left: 100px;
+    bottom: 200px;
+}
+
+.user--3 {
+    left: 200px;
+    top: 200px;
+}
+
+.user--4 {
+    left: 100px;
+    top: 100px;
+}
+
+.user--5 {
+    left: 300px;
+    top: 250px;
+}
