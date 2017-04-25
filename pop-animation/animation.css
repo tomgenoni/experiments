@@ -1,12 +1,13 @@
 body {
-    margin: 100px;
+    margin: 50px;
 }
 
 .box {
     position: relative;
-    width: 500px;
-    height: 700px;
-    background: #eee;
+    width: 360px;
+    height: 300px;
+    background: url(i/bkg.jpg);
+    background-size: cover;
     margin: auto;
 }
 
@@ -17,23 +18,25 @@ body {
 .user-icon {
     height: 50px;
     width: 50px;
-    background: red;
+    background: url(i/avatar.svg) no-repeat;
+    background-size: 100% auto;
     border-radius: 50%;
     transform: scale(0);
 }
 
 .user-quote {
     position: absolute;
-    top: -20px;
-    right: -10px;
-    height: 20px;
+    top: -40px;
+    right: -23px;
+    height: 40px;
     width: 50px;
-    background: orange;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     transform: scale(0);
 }
 
 .user-quote--left {
-    right: 10px;
+    right: 15px;
 }
 
 .box.is-active .user--1 .user-icon,
@@ -54,63 +57,101 @@ body {
     transition-delay: 0;
 }
 
-.box.is-active .user--1 .user-quote {
-    transition-delay: 0.3s;
-}
-
 .box.is-active .user--2 .user-icon {
-    transition-delay: 0.6s;
-}
-
-.box.is-active .user--2 .user-quote {
-    transition-delay: 0.9s;
+    transition-delay: 0.2s;
 }
 
 .box.is-active .user--3 .user-icon {
-    transition-delay: 1.2s;
-}
-
-.box.is-active .user--3 .user-quote {
-    transition-delay: 1.5s;
+    transition-delay: 0.4s;
 }
 
 .box.is-active .user--4 .user-icon {
-    transition-delay: 1.8s;
+    transition-delay: 0.6s;
+}
+
+.box.is-active .user--5 .user-icon {
+    transition-delay: 0.8s;
+}
+
+
+
+.box.is-active .user--1 .user-quote {
+    transition-delay: 1.5s;
+    background-image: url(i/bubble-1.svg);
+}
+
+.box.is-active .user--2 .user-quote {
+    transition-delay: 1.7s;
+    background-image: url(i/bubble-2.svg);
+}
+
+.box.is-active .user--3 .user-quote {
+    transition-delay: 1.9s;
+    background-image: url(i/bubble-1.svg);
 }
 
 .box.is-active .user--4 .user-quote {
     transition-delay: 2.1s;
-}
-
-.box.is-active .user--5 .user-icon {
-    transition-delay: 2.4s;
+    background-image: url(i/bubble-3.svg);
 }
 
 .box.is-active .user--5 .user-quote {
-    transition-delay: 2.7s;
+    transition-delay: 2.3s;
+    background-image: url(i/bubble-2.svg);
 }
 
 .user--1 {
-    right: 20px;
-    bottom: 50px;
+    top: 72%;
+    left: 15%;
 }
 
 .user--2 {
-    left: 100px;
-    bottom: 200px;
+    top: 75%;
+    left: 78%;
 }
 
 .user--3 {
-    left: 200px;
-    top: 200px;
+    top: 43%;
+    left: 45%;
 }
 
 .user--4 {
-    left: 100px;
-    top: 100px;
+    top: 18%;
+    left: 20%;
 }
 
 .user--5 {
-    left: 300px;
-    top: 250px;
+    top: 18%;
+    left: 78%;
+}
+
+@media (min-width: 700px) {
+    .box {
+        height: 700px;
+    }
+
+    .user--1 {
+        top: 9%;
+        left: 74%;
+    }
+
+    .user--2 {
+        top: 40%;
+        left: 75%;
+    }
+
+    .user--3 {
+        top: 80%;
+        left: 23%;
+    }
+
+    .user--4 {
+        top: 20%;
+        left: 11%;
+    }
+
+    .user--5 {
+        top: 55%;
+        left: 40%;
+    }
 }
