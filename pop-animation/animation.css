@@ -51,6 +51,7 @@ body {
 .box.is-active .user--5 .user-quote {
     transform: scale(1);
     transition: transform 0.3s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .box.is-active .user--1 .user-icon {
@@ -73,30 +74,28 @@ body {
     transition-delay: 0.8s;
 }
 
-
-
 .box.is-active .user--1 .user-quote {
-    transition-delay: 1.5s;
+    transition-delay: 1.2s;
     background-image: url(i/bubble-1.svg);
 }
 
 .box.is-active .user--2 .user-quote {
-    transition-delay: 1.7s;
+    transition-delay: 1.4s;
     background-image: url(i/bubble-2.svg);
 }
 
 .box.is-active .user--3 .user-quote {
-    transition-delay: 1.9s;
+    transition-delay: 1.6s;
     background-image: url(i/bubble-1.svg);
 }
 
 .box.is-active .user--4 .user-quote {
-    transition-delay: 2.1s;
+    transition-delay: 1.8s;
     background-image: url(i/bubble-3.svg);
 }
 
 .box.is-active .user--5 .user-quote {
-    transition-delay: 2.3s;
+    transition-delay: 2s;
     background-image: url(i/bubble-2.svg);
 }
 
