@@ -4,22 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="tui.css">
     <title>Modal</title>
 
     <style>
 
-        html,
         body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, Helvetica;
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
             background: red;
         }
 
@@ -80,19 +70,21 @@
             text-align: center;
             font-size: 24px;
             font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 20px;
         }
 
         .modal__body {
             flex: 1;
-            min-height: 200px;
-            max-height: 300px;
+            height: 50vh;
             overflow-y: auto;
             color: #999;
-            border: 1px solid red;
+            padding: 0 !important;
         }
 
         .modal__foot {
             flex: none;
+            background: #eee;
         }
 
     </style>
@@ -105,24 +97,24 @@
 <div class="modal-wrap">
     <div class="modal">
         <div class="modal__head">head</div>
-        <div class="modal__title">This is where the question would go for this step and could run two lines</div>
+        <div class="modal__title">This is where the question would go for this stee question would go for this stee question would go for this stee question would go for this step and could run two lines</div>
         <div class="modal__body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
+            <ul class="tp-block-list tp-block-list--all">
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+                <li><a href="#" class="tp-block-list__link">Item Fours</a></li>
+            </ul>
         </div>
         <div class="modal__foot">foot</div>
     </div>
