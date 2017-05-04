@@ -22,7 +22,7 @@
             background: red;
         }
 
-        .foo {
+        .modal-bkg {
             position: fixed;
             top: 0;
             left: 0;
@@ -32,6 +32,10 @@
         }
 
         .modal-wrap {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 16px;
+            padding-right: 16px;
             position: absolute;
             top: 0;
             left: 0;
@@ -39,20 +43,27 @@
             bottom: 0;
             display: flex;
             justify-content: center;
-            padding-top: 50px;
         }
 
         .modal {
+            position: relative;
             display: flex;
             flex-direction: column;
-            margin-top: auto;
-            margin-bottom: auto;
+            margin: auto;
             background: #fff;
             border-radius: 4px;
-            min-width: 400px;
+            min-width: 350px;
             max-width: 600px;
-            min-height: 300px;
-            max-height: 600px;
+        }
+
+        /*needed to have 50px of bottom scroll, padding-bottom on container won't do it */
+        .modal:after {
+            content:'';
+            position: absolute;
+            left: 0;
+            bottom: -50px;
+            width: 1px;
+            height: 50px;
         }
 
         .modal > div {
@@ -72,6 +83,8 @@
 
         .modal__body {
             flex: 1;
+            min-height: 200px;
+            max-height: 300px;
             overflow-x: auto;
             color: #999;
         }
@@ -86,27 +99,19 @@
 </head>
 <body>
 
-<div class="foo"></div>
+<div class="modal-bkg"></div>
 <div class="modal-wrap">
     <div class="modal">
         <div class="modal__head">head</div>
         <div class="modal__title">This is where the question would go for this step and could run two lines</div>
         <div class="modal__body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
-
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consectetur dignissimos est consequuntur commodi amet, veritatis eaque dolores velit nulla hic, voluptate maiores officiis animi illum, magni in consequatur. Sint.
         </div>
         <div class="modal__foot">foot</div>
     </div>
