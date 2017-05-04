@@ -85,11 +85,16 @@
         .modal__foot {
             flex: none;
             background: #eee;
+            border-radius: 0 0 4px 4px;
         }
 
         .tp-block-list > li {
             padding-left: 20px;
             padding-right: 20px;
+        }
+
+        .tp-button-row--spread {
+            justify-content: space-between;
         }
 
     </style>
@@ -205,7 +210,12 @@
                 </li>
             </ul>
         </div>
-        <div class="modal__foot">foot</div>
+        <div class="modal__foot">
+            <div class="tp-button-row tp-button-row--spread">
+                <button class="tp-button tp-button--tertiary">Back</button>
+                <button class="tp-button">Click Me</button>
+            </div>
+        </div>
     </div>
 </div>
 
