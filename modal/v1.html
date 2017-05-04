@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal</title>
+
+    <style>
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, Helvetica;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+    +       -moz-osx-font-smoothing: grayscale;
+            background: red;
+        }
+
+        .foo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #222;
+        }
+
+        .modal-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .modal {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background: #fff;
+            border-radius: 4px;
+            min-width: 400px;
+            max-width: 600px;
+            min-height: 300px;
+            max-height: 600px;
+        }
+
+        .modal > div {
+            padding: 15px 20px;
+        }
+
+        .modal__head {
+            flex: none;
+        }
+
+        .modal__title {
+            flex: none;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .modal__body {
+            flex: 1;
+            overflow-x: auto;
+            color: #999;
+        }
+
+        .modal__foot {
+            flex: none;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="foo"></div>
+<div class="modal-wrap">
+    <div class="modal">
+        <div class="modal__head">head</div>
+        <div class="modal__title">This is where the question would go for this step and could run two lines</div>
+        <div class="modal__body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur doloremque totam. Placeat molestiae, accusantium omnis error, impedit assumenda iste suscipit minima ea doloribus facere praesentium iusto incidunt alias nam.
+
+        </div>
+        <div class="modal__foot">foot</div>
+    </div>
+</div>
+
+</body>
+</html>

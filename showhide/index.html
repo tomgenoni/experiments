@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Show/Hide</title>
+    <link rel="stylesheet" href="tui.css">
+
+    <style>
+
+        body {
+            margin: 50px;
+        }
+
+        .wrap {
+            border: 1px solid #222;
+            min-height: 37px;
+            margin-bottom: 15px;
+        }
+
+        .example-none {
+            padding: 5px 10px;
+            background: orange;
+        }
+
+        .example-block {
+            padding: 5px 10px;
+            background: yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="example-none tp-display--none--small">I'm hidden only at small</div>
+    </div>
+
+    <div class="wrap">
+        <div class="example-none tp-display--none--medium">I'm hidden only at medium</div>
+    </div>
+    <div class="wrap">
+        <div class="example-none tp-display--none--large">I'm hidden only at large</div>
+    </div>
+    <div class="wrap">
+        <div class="example-none tp-display--none--large-plus">I'm hidden only above large</div>
+    </div>
+
+    <div class="wrap">
+        <div class="example-block tp-display--block--small block">I'm shown only at small</div>
+    </div>
+    <div class="wrap">
+        <div class="example-block tp-display--block--medium block">I'm shown only at medium</div>
+    </div>
+    <div class="wrap">
+        <div class="example-block tp-display--block--large block">I'm shown only at large</div>
+    </div>
+    <div class="wrap">
+        <div class="example-block tp-display--block--large-plus block">I'm shown only above large</div>
+    </div>
+
+</body>
+</html>
