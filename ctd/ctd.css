@@ -54,6 +54,6 @@ body {
 
 @media (max-width: 480px) {
     .ctd__button {
-        width: 100% !important;
+        width: 100%;
     }
 }
