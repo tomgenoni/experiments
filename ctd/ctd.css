@@ -52,8 +52,8 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 481px) {
     .ctd__button {
-        width: 100%;
+        width: auto;
     }
 }
