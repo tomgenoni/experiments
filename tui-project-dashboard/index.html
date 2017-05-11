@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="tui.css">
+
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        .latest {
+            font-weight: 600;
+        }
+
+        .nope {
+            color: red;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
+    <script type="text/javascript">
+        Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
+            switch (operator) {
+                case '==':
+                    return (v1 == v2) ? options.fn(this) : options.inverse(this);
+                case '===':
+                    return (v1 === v2) ? options.fn(this) : options.inverse(this);
+                case '!=':
+                    return (v1 != v2) ? options.fn(this) : options.inverse(this);
+                default:
+                    return options.inverse(this);
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <table class="tp-table tp-table--rule" id="project-dashboard"></table>
+
+    <script id="hlb-table-body" type="text/x-handlebars-template">
+        <tr>
+            <th class="tp-width--1-1">Package</th>
+            <th>tui</th>
+        {{#each projects}}
+            <th>{{this}}</th>
+        {{/each}}
+        </tr>
+
+        {{#each packages}}
+        <tr>
+            <td>{{@key}}</td>
+            <td class="latest">{{latest}}</td>
+            {{#each projects}}
+                {{#ifCond this '!=' ../latest}}
+                <td class="nope">{{this}}</td>
+                {{else}}
+                <td>{{this}}</td>
+                {{/ifCond}}
+            {{/each}}
+        </tr>
+        {{/each}}
+    </script>
+
+    <script>
+
+        var data = {
+            "projects": [
+                "website",
+                "email"
+            ],
+            "packages": {
+                "tp-ui-element-button": {
+                    "latest": "0.1.7",
+                    "projects": {
+                        "website": "",
+                        "email": "0.1.2"
+                    }
+                },
+                "tp-ui-element-checkbox": {
+                    "latest": "0.1.8",
+                    "projects": {
+                        "website": "0.0.6",
+                        "email": "0.1.8"
+                    }
+                }
+            }
+        }
+
+        var table = document.querySelector('#project-dashboard');
+        var hlbTable = document.querySelector('#hlb-table-body');
+
+        var template = Handlebars.compile(hlbTable.textContent);
+        var html = template(data);
+        table.innerHTML = html;
+
+
+    </script>
+
+
+</body>
+
+</html>
