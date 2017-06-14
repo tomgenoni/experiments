@@ -16,7 +16,6 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 12px;
-    position: relative;
 }
 
 .ctd__item__number {

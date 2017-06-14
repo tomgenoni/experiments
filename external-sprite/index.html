@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            margin: 50px;
+            color: #666;
+            font-family: Helvetica Neue, Helvetica;
+            font-size: 15px;
+        }
+
+        .wrap {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .wrap:hover {
+            color: red;
+            transition: color 500ms;
+        }
+
+        .text {
+            margin-left: 8px;
+        }
+
+
+        .icon {
+            height: 16px;
+            width: 16px;
+            fill: currentColor;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="wrap">
+        <svg class="icon">
+            <use xlink:href="/icons/sprite.svg#heart"/>
+        </svg>
+        <div class="text">This is a heart</div>
+    </div>
+
+    <div class="wrap">
+        <svg class="icon">
+            <use xlink:href="/icons/sprite.svg#arrow"/>
+        </svg>
+        <div class="text">This is down arrow</div>
+    </div>
+
+    <script src="/js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+
+</body>
+</html>
