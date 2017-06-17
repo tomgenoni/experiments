@@ -43,21 +43,21 @@
 <body>
 
     <div class="wrap">
-        <svg class="tp-icon">
+        <svg class="tp-icon" title="Palette">
             <use xlink:href="https://icomoon.io/svgxuse-demo/symbol-defs.svg#icon-palette"/>
         </svg>
         <div class="text">This is an icon</div>
     </div>
 
     <div class="wrap">
-        <svg class="tp-icon">
+        <svg class="tp-icon" title="Heart">
             <use xlink:href="https://tomgenoni.github.io/experiments/external-sprite/icon/heart.svg#heart"/>
         </svg>
         <div class="text">This is a heart</div>
     </div>
 
     <div class="wrap">
-        <svg class="tp-icon">
+        <svg class="tp-icon" title="Arrow">
             <use xlink:href="https://tomgenoni.github.io/experiments/external-sprite/icon/arrow.svg#arrow"/>
         </svg>
         <div class="text">This is down arrow</div>
@@ -66,6 +66,7 @@
     <script src="js/svg4everybody.min.js"></script>
     <script>
         svg4everybody({
+            attributeName: 'data-href',
             polyfill: true
         });
     </script>
