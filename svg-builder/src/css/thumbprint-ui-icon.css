@@ -1,0 +1,19 @@
+.tp-svg-icon {
+    display: inline-block;
+    fill: currentColor;
+}
+
+.tp-svg-icon--small {
+    width: 16px;
+    height: 16px;
+}
+
+.tp-svg-icon--medium {
+    width: 20px;
+    height: 20px;
+}
+
+.tp-svg-icon--large {
+    width: 28px;
+    height: 28px;
+}
