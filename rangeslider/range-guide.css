@@ -1,0 +1,17 @@
+.range-guide {
+    height: 30px;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.range-guide:after {
+    content:'';
+    display: block;
+    height: 1px;
+    background: #aaa;
+    width: 100%;
+}
