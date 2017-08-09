@@ -1,0 +1,19 @@
+{
+    "label": "width",
+    "anchor": "tp-button",
+    "type": "group",
+    "options": [
+        {
+            "name": "default",
+            "value": "tp-button"
+        },
+        {
+            "name": "full",
+            "value": "tp-button--full"
+        },
+        {
+            "name": "bleed",
+            "value": "tp-button--bleed"
+        }
+    ]
+}

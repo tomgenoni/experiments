@@ -1,0 +1,19 @@
+{
+    "label": "size",
+    "anchor": "tp-button",
+    "type": "group",
+    "options": [
+        {
+            "name": "default",
+            "value": "tp-button"
+        },
+        {
+            "name": "large",
+            "value": "tp-button--large"
+        },
+        {
+            "name": "small",
+            "value": "tp-button--small"
+        }
+    ]
+}

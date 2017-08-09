@@ -1,0 +1,37 @@
+{
+    "label": "type",
+    "anchor": "tp-button",
+    "type": "group",
+    "options": [
+        {
+            "name": "default",
+            "value": "tp-button"
+        },
+        {
+            "name": "secondary",
+            "value": "tp-button--secondary"
+        },
+        {
+            "name": "tertiary",
+            "value": "tp-button--tertiary"
+        },
+        {
+            "name": "bad news",
+            "value": "tp-button--bad-news"
+        },
+        {
+            "name": "clear",
+            "value": "tp-button--clear"
+        },
+        {
+            "name": "reverse",
+            "value": "tp-button--reverse",
+            "reverse": true
+        },
+        {
+            "name": "line",
+            "value": "tp-button--line",
+            "reverse": true
+        }
+    ]
+}
