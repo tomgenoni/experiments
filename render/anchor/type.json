@@ -1,0 +1,24 @@
+{
+    "label": "type",
+    "anchor": "a",
+    "type": "group",
+    "options": [
+        {
+            "name": "default",
+            "value": false
+        },
+        {
+            "name": "reverse",
+            "value": "tp-link--reverse",
+            "reverse": true
+        },
+        {
+            "name": "bad news",
+            "value": "tp-link--bad-news"
+        },
+        {
+            "name": "disabled",
+            "value": "tp-link--disabled"
+        }
+    ]
+}

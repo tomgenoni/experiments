@@ -1,11 +1,11 @@
 {
     "label": "width",
-    "anchor": "tp-button",
+    "anchor": "button",
     "type": "group",
     "options": [
         {
             "name": "default",
-            "value": "tp-button"
+            "value": ""
         },
         {
             "name": "full",

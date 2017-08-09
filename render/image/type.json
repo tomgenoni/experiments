@@ -1,0 +1,23 @@
+{
+    "label": "type",
+    "anchor": "img",
+    "type": "group",
+    "options": [
+        {
+            "name": "default",
+            "value": ""
+        },
+        {
+            "name": "round",
+            "value": "tp-img--round"
+        },
+        {
+            "name": "border",
+            "value": "tp-img--border"
+        },
+        {
+            "name": "circle",
+            "value": "tp-img--circle"
+        }
+    ]
+}

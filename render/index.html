@@ -24,6 +24,28 @@
         <div class="tp-garden__control"></div>
     </div>
 
+    <div class="tp-garden" data-source="anchor" data-controls="type">
+        <div class="tp-garden__browser">
+            <ul class="tp-garden__top">
+                <li></li>
+            </ul>
+            <div class="tp-garden__window"></div>
+            <pre class="tp-garden__code"><code class="html"></code></pre>
+        </div>
+        <div class="tp-garden__control"></div>
+    </div>
+
+    <div class="tp-garden" data-source="image" data-controls="type">
+        <div class="tp-garden__browser">
+            <ul class="tp-garden__top">
+                <li></li>
+            </ul>
+            <div class="tp-garden__window"></div>
+            <pre class="tp-garden__code"><code class="html"></code></pre>
+        </div>
+        <div class="tp-garden__control"></div>
+    </div>
+
 
 
     <script id="hlb-radio" type="text/x-handlebars-template">
@@ -37,6 +59,7 @@
                                 name="{{../anchor}}-{{../label}}"
                                 value="{{value}}"
                                 data-anchor="{{../anchor}}"
+                                data-reverse="{{reverse}}"
                                 {{#if @first}} checked="checked" {{/if}}>
                         <label for="{{../anchor}}-{{../label}}-{{@index}}">{{name}}</label>
                     </li>

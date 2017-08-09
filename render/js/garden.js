@@ -11,14 +11,28 @@ $(document).ready(function(){
 
     function setClass(garden, options, anchor, classValue, reverse) {
         options.forEach(function(item){
-            garden.find('.tp-garden__window .tp-button').removeClass(item);
+            garden.find('.tp-garden__window ' + anchor).removeClass(item);
         })
-        garden.find('.tp-garden__window .tp-button').addClass(classValue);
-        garden.find('.tp-garden__window').removeClass('tp-garden__window--dark')
-        if (reverse) {
-            garden.find('.tp-garden__window').addClass('tp-garden__window--dark')
+        garden.find('.tp-garden__window ' + anchor).addClass(classValue);
+        if (classValue == "false") {
+            garden.find('.tp-garden__window ' + anchor).removeAttr("class");
         }
         renderCode(garden);
+    }
+
+    function checkReverse(garden) {
+        var allInputs = garden.find('.tp-garden__control__group input');
+        var htmlRender = garden.find('.tp-garden__window');
+        htmlRender.removeClass('tp-garden__window--dark');
+
+        allInputs.each(function(index, item){
+            var reverse = $(item).data("reverse");
+            var checked = item.checked;
+            if ( reverse && checked ) {
+                htmlRender.addClass('tp-garden__window--dark');
+                return;
+            }
+        });
     }
 
     $('.tp-garden').each(function(item){
@@ -47,7 +61,6 @@ $(document).ready(function(){
         var garden = $(this).closest('.tp-garden');
         var options = [];
         var anchor = $(this).data('anchor');
-        var reverse = $(this).data('reverse');
         var classValue = $(this).val();
         var groupInputs = $(this).closest('.tp-garden__control__group').find('input');
 
@@ -57,7 +70,8 @@ $(document).ready(function(){
             }
         });
 
-        setClass(garden, options, anchor, classValue, reverse);
+        setClass(garden, options, anchor, classValue);
+        checkReverse(garden);
     });
 
 });
