@@ -29,6 +29,7 @@
         }
 
         .panel-container {
+            position: relative;
             display: flex;
             min-height: 100%;
         }
@@ -42,12 +43,9 @@
             transform: translateX(-100%);
         }
 
-        .panel-container.is-staged-backward {
-            transform: translateX(-100%);
-        }
-
         .panel-container.is-moving-backward {
-            transform: translateX(0);
+            left: -100%;
+            transform: translateX(100%);
         }
 
         .pane {
@@ -78,30 +76,22 @@
             $('.tp-button').click(function(e) {
                 e.preventDefault();
 
-                const way = $(this).data('way');
-                const panel = $(this).closest('.panel');
+                const way         = $(this).data('way');
                 const currentPane = $(this).closest('.pane');
-                const container = panel.find('.panel-container');
+                const container   = $(this).closest('.panel-container');
 
                 if ( way == "forward") {
                     currentPane.next().addClass('is-shown');
-                    container.addClass('is-moving-forward');
                 } else {
                     currentPane.prev().addClass('is-shown');
-                    container.addClass('is-staged-backward');
-
-                    const containerTransition = setTimeout(function(){
-                        container.removeClass('is-staged-backward');
-                        container.addClass('is-moving-backward');
-                    }, 70);
                 }
+
+                container.addClass('is-moving-' + way);
 
                 setTimeout(function(){
                     currentPane.removeClass('is-shown');
-                    container.removeClass('is-moving-forward is-moving-backward');
+                    container.removeClass('is-moving-' + way);
                 }, 300);
-
-
             })
         });
 
@@ -115,12 +105,20 @@
         <div class="panel-container">
             <div class="pane is-shown">
                 <h2 class="tp-heading-4 tp-margin-bottom--double">I'm the first pane</h2>
-                <p class="tp-margin-bottom--quad">A bunch of content that will go here and will ask a person to do something.</p>
+                <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
+                <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
+                <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
+                <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
+                <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
+                <label class="tp-label" for="pane-1">Basic Input</label>
+                <input type="text" class="tp-text-input tp-margin-bottom--quad" id="pane-1" name="pane-1" placeholder="placeholder text">
                 <button data-way="forward" class="tp-button tp-button--bleed button-bottom">Next</button>
             </div>
             <div class="pane">
                 <h2 class="tp-heading-4 tp-margin-bottom--double">I'm the second pane</h2>
                 <p class="tp-margin-bottom--quad">More content</p>
+                <label class="tp-label" for="pane-2">Basic Input</label>
+                <input type="text" class="tp-text-input tp-margin-bottom--quad" id="pane-2" name="pane-2" placeholder="placeholder text">
                 <button data-way="forward" class="tp-button tp-button--bleed button-bottom">Next</button>
                 <button data-way="backward" class="tp-button">Back</button>
             </div>
