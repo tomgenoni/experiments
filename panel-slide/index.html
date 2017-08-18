@@ -13,7 +13,6 @@
 
         html {
             box-sizing: border-box;
-            background: #222;
         }
 
         *, *:before, *:after {
@@ -21,9 +20,8 @@
         }
 
         .panel {
-            margin: 100px auto 0;
-            width: 300px;
-            height: 500px;
+            margin: 50px auto 0;
+            width: 400px;
             overflow: hidden;
             border-radius: 4px;
         }
@@ -31,8 +29,6 @@
         .panel-container {
             position: relative;
             display: flex;
-            min-height: 100%;
-            max-height: 100%;
         }
 
         .panel-container.is-moving-forward,
@@ -55,19 +51,10 @@
             position: relative;
             min-width: 100%;
             width: 100%;
-            padding: 20px;
-            overflow-x: auto;
         }
 
         .pane.is-shown {
             display: block;
-        }
-
-        .button-bottom {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
         }
 
     </style>
@@ -78,21 +65,21 @@
             $('.tp-button').click(function(e) {
                 e.preventDefault();
 
-                const way         = $(this).data('way');
+                const direction         = $(this).data('direction');
                 const currentPane = $(this).closest('.pane');
                 const container   = $(this).closest('.panel-container');
 
-                if ( way == "forward") {
+                if ( direction == "forward") {
                     currentPane.next().addClass('is-shown');
                 } else {
                     currentPane.prev().addClass('is-shown');
                 }
 
-                container.addClass('is-moving-' + way);
+                container.addClass('is-moving-' + direction);
 
                 setTimeout(function(){
                     currentPane.removeClass('is-shown');
-                    container.removeClass('is-moving-' + way);
+                    container.removeClass('is-moving-' + direction);
                 }, 300);
             })
         });
@@ -118,30 +105,41 @@
                     <h2 class="tp-heading-4 tp-margin-bottom--double">I'm the first pane</h2>
                     <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
                     <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
-                    <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
-                    <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
-                    <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
-                    <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
                     <label class="tp-label" for="pane-1">Basic Input</label>
                     <input type="text" class="tp-text-input tp-margin-bottom--quad" id="pane-1" name="pane-1" placeholder="placeholder text">
-                    <button data-way="forward" class="tp-button tp-button--bleed button-bottom">Next</button>
+
+                    <div class="tp-button-row">
+                        <div class="tp-button-row__right">
+                            <button data-direction="forward" class="tp-button">Next</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="pane">
                 <div class="pane__content">
                     <h2 class="tp-heading-4 tp-margin-bottom--double">I'm the second pane</h2>
                     <p class="tp-margin-bottom--quad">More content</p>
-                    <label class="tp-label" for="pane-2">Basic Input</label>
+                    <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
                     <input type="text" class="tp-text-input tp-margin-bottom--quad" id="pane-2" name="pane-2" placeholder="placeholder text">
-                    <button data-way="forward" class="tp-button tp-button--bleed button-bottom">Next</button>
-                    <button data-way="backward" class="tp-button">Back</button>
+                    <div class="tp-button-row">
+                        <div class="tp-button-row__left">
+                            <button data-direction="backward" class="tp-button tp-button--tertiary">Back</button>
+                        </div>
+                        <div class="tp-button-row__right">
+                            <button data-direction="forward" class="tp-button">Next</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="pane">
                 <div class="pane__content">
                     <h2 class="tp-heading-4 tp-margin-bottom--double">Third</h2>
                     <p class="tp-margin-bottom--quad">We are done here.</p>
-                    <button data-way="backward" class="tp-button">Back</button>
+                    <div class="tp-button-row">
+                        <div class="tp-button-row__left">
+                            <button data-direction="backward" class="tp-button tp-button--tertiary">Back</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
