@@ -7,5 +7,5 @@
         "js": ["inject.js"],
         "matches": ["https://www.thumbtack.com/*"]
     }],
-    "web_accessible_resources": ["style.css", "javascript.js"]
+    "web_accessible_resources": ["https://tomgenoni.github.io/experiments/injecto/style.css", "javascript.js"]
 }

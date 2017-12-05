@@ -9,7 +9,8 @@
     link.id   = 'local-css';
     link.rel  = 'stylesheet';
     link.type = 'text/css';
-    link.href = chrome.extension.getURL('style.css');
+    link.href = 'https://tomgenoni.github.io/experiments/injecto/style.css';
+    //link.href = chrome.extension.getURL('https://tomgenoni.github.io/experiments/injecto/style.css');
     link.media = 'all';
     head.appendChild(link);
 
