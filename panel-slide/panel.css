@@ -1,0 +1,45 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.panel {
+    margin: 50px auto 0;
+    width: 400px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.panel-container {
+    position: relative;
+    display: flex;
+}
+
+.panel-container.is-moving-forward,
+.panel-container.is-moving-backward {
+    transition: 300ms transform cubic-bezier(0.415, 0.175, 0.125, 1.100);
+}
+
+.panel-container.is-moving-forward {
+    transform: translateX(-100%);
+}
+
+.panel-container.is-moving-backward {
+    left: -100%;
+    transform: translateX(100%);
+}
+
+.pane {
+    display: none;
+    background: #fff;
+    position: relative;
+    min-width: 100%;
+    width: 100%;
+}
+
+.pane.is-shown {
+    display: block;
+}

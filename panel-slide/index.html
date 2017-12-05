@@ -7,57 +7,8 @@
     <title>Panel Slide</title>
 
     <link rel="stylesheet" href="tui.css">
+    <link rel="stylesheet" href="panel.css">
     <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-
-    <style>
-
-        html {
-            box-sizing: border-box;
-        }
-
-        *, *:before, *:after {
-            box-sizing: inherit;
-        }
-
-        .panel {
-            margin: 50px auto 0;
-            width: 400px;
-            overflow: hidden;
-            border-radius: 4px;
-        }
-
-        .panel-container {
-            position: relative;
-            display: flex;
-        }
-
-        .panel-container.is-moving-forward,
-        .panel-container.is-moving-backward {
-            transition: 300ms transform cubic-bezier(0.415, 0.175, 0.125, 1.100);
-        }
-
-        .panel-container.is-moving-forward {
-            transform: translateX(-100%);
-        }
-
-        .panel-container.is-moving-backward {
-            left: -100%;
-            transform: translateX(100%);
-        }
-
-        .pane {
-            display: none;
-            background: #fff;
-            position: relative;
-            min-width: 100%;
-            width: 100%;
-        }
-
-        .pane.is-shown {
-            display: block;
-        }
-
-    </style>
 
     <script>
 
@@ -65,7 +16,7 @@
             $('.tp-button').click(function(e) {
                 e.preventDefault();
 
-                const direction         = $(this).data('direction');
+                const direction   = $(this).data('direction');
                 const currentPane = $(this).closest('.pane');
                 const container   = $(this).closest('.panel-container');
 
@@ -90,60 +41,52 @@
 </head>
 <body>
 
-    <div class="panel">
-        <div class="pane__content">
-
-
-        </div>
-        <div class="panel-container">
+<div class="panel">
+    <div class="panel-container">
+        <div class="pane is-shown">
             <div class="pane__content">
+                <h2 class="tp-heading-4 tp-margin-bottom--double">I'm the first pane</h2>
+                <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
+                <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
+                <label class="tp-label" for="pane-1">Basic Input</label>
+                <input type="text" class="tp-text-input tp-margin-bottom--quad" id="pane-1" name="pane-1" placeholder="placeholder text">
 
-
-            </div>
-            <div class="pane is-shown">
-                <div class="pane__content">
-                    <h2 class="tp-heading-4 tp-margin-bottom--double">I'm the first pane</h2>
-                    <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
-                    <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
-                    <label class="tp-label" for="pane-1">Basic Input</label>
-                    <input type="text" class="tp-text-input tp-margin-bottom--quad" id="pane-1" name="pane-1" placeholder="placeholder text">
-
-                    <div class="tp-button-row">
-                        <div class="tp-button-row__right">
-                            <button data-direction="forward" class="tp-button">Next</button>
-                        </div>
+                <div class="tp-button-row">
+                    <div class="tp-button-row__right">
+                        <button data-direction="forward" class="tp-button">Next</button>
                     </div>
                 </div>
             </div>
-            <div class="pane">
-                <div class="pane__content">
-                    <h2 class="tp-heading-4 tp-margin-bottom--double">I'm the second pane</h2>
-                    <p class="tp-margin-bottom--quad">More content</p>
-                    <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
-                    <input type="text" class="tp-text-input tp-margin-bottom--quad" id="pane-2" name="pane-2" placeholder="placeholder text">
-                    <div class="tp-button-row">
-                        <div class="tp-button-row__left">
-                            <button data-direction="backward" class="tp-button tp-button--tertiary">Back</button>
-                        </div>
-                        <div class="tp-button-row__right">
-                            <button data-direction="forward" class="tp-button">Next</button>
-                        </div>
+        </div>
+        <div class="pane">
+            <div class="pane__content">
+                <h2 class="tp-heading-4 tp-margin-bottom--double">I'm the second pane</h2>
+                <p class="tp-margin-bottom--quad">More content</p>
+                <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
+                <input type="text" class="tp-text-input tp-margin-bottom--quad" id="pane-2" name="pane-2" placeholder="placeholder text">
+                <div class="tp-button-row">
+                    <div class="tp-button-row__left">
+                        <button data-direction="backward" class="tp-button tp-button--tertiary">Back</button>
+                    </div>
+                    <div class="tp-button-row__right">
+                        <button data-direction="forward" class="tp-button">Next</button>
                     </div>
                 </div>
             </div>
-            <div class="pane">
-                <div class="pane__content">
-                    <h2 class="tp-heading-4 tp-margin-bottom--double">Third</h2>
-                    <p class="tp-margin-bottom--quad">We are done here.</p>
-                    <div class="tp-button-row">
-                        <div class="tp-button-row__left">
-                            <button data-direction="backward" class="tp-button tp-button--tertiary">Back</button>
-                        </div>
+        </div>
+        <div class="pane">
+            <div class="pane__content">
+                <h2 class="tp-heading-4 tp-margin-bottom--double">Third</h2>
+                <p class="tp-margin-bottom--quad">We are done here.</p>
+                <div class="tp-button-row">
+                    <div class="tp-button-row__left">
+                        <button data-direction="backward" class="tp-button tp-button--tertiary">Back</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 </body>
 </html>

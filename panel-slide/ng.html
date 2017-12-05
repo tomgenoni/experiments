@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Panel Slide</title>
+    <link rel="stylesheet" href="tui.css">
+    <link rel="stylesheet" href="panel.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+    <div class="panel" ng-controller="myCtrl">
+        <div class="panel-container">
+            <div class="pane is-shown">
+                <div class="pane__content">
+                    <h2 class="tp-heading-4 tp-margin-bottom--double">I'm the first pane</h2>
+                    <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
+                    <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
+                    <label class="tp-label" for="pane-1">Basic Input</label>
+                    <input type="text" class="tp-text-input tp-margin-bottom--quad" id="pane-1" name="pane-1" placeholder="placeholder text">
+
+                    <div class="tp-button-row">
+                        <div class="tp-button-row__right">
+                            <button class="tp-button" ng-click="myFunc($event, 'forward')">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pane">
+                <div class="pane__content">
+                    <h2 class="tp-heading-4 tp-margin-bottom--double">I'm the second pane</h2>
+                    <p class="tp-margin-bottom--quad">More content</p>
+                    <p class="tp-margin-bottom--double">A bunch of content that will go here and will ask a person to do something.</p>
+                    <input type="text" class="tp-text-input tp-margin-bottom--quad" id="pane-2" name="pane-2" placeholder="placeholder text">
+                    <div class="tp-button-row">
+                        <div class="tp-button-row__left">
+                            <button data-direction="backward" class="tp-button tp-button--tertiary">Back</button>
+                        </div>
+                        <div class="tp-button-row__right">
+                            <button data-direction="forward" class="tp-button">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pane">
+                <div class="pane__content">
+                    <h2 class="tp-heading-4 tp-margin-bottom--double">Third</h2>
+                    <p class="tp-margin-bottom--quad">We are done here.</p>
+                    <div class="tp-button-row">
+                        <div class="tp-button-row__left">
+                            <button data-direction="backward" class="tp-button tp-button--tertiary">Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+angular.module('myApp', [])
+  .controller('myCtrl', ['$scope', function($scope) {
+    $scope.myFunc = function($event, direction) {
+        const trigger     = $event.target;
+        const currentPane = trigger.closest('.pane');
+        const container   = trigger.closest('.panel-container');
+
+        console.log(currentPane);
+
+        if ( direction == "forward") {
+            currentPane.nextElementSibling().addClass('is-shown');
+        } else {
+            //currentPane.prev().addClass('is-shown');
+        }
+
+    };
+  }]);
+</script>
+</body>
+</html>

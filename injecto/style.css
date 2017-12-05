@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Mark';
+  font-weight: 400;
+  src: url(https://fonts.thumbtack.com/5423483/ec598369-4d91-4a16-9db3-6654f68d3c28.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Mark';
+  font-weight: 700;
+  src: url(https://fonts.thumbtack.com/5423411/41c8162d-c2a6-49b0-8139-8bebab187588.woff2) format("woff2"); }
+
+body,
+input, textarea, select,
+.H1-R, .H2-R, .H3-R, .H4-R,
+.T1-R, .T2-R, .T3-R, .T4-R, .T5-R,
+.T1-S, .T2-S, .T3-S, .T4-S, .T5-S,
+.B1-S, .B2-S, .B3-S, .B4-S, .B5-S,
+.B1-R, .B2-R, .B3-R, .B4-R, .B5-R,
+.Button {
+    font-family: 'Mark', Helvetica, Arial, sans-serif !important;
+}
+
+.tp-button,
+.Button {
+    font-weight: 700;
+}
