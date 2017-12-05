@@ -23,7 +23,3 @@ input, textarea, select,
 .Button {
     font-weight: 700;
 }
-
-body {
-    background: red !important;
-}
