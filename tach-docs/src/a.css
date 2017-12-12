@@ -1,0 +1,16 @@
+/*md
+# Some Floats
+
+::: warning
+Hello world! [Link](#).
+:::
+
+These float elements left or right!
+
+```html
+<div class="float--left">Floated left</div>
+<div class="float--right">Floated right</div>
+```
+*/
+.float--left { float: left; }
+.float--right { float: right; }

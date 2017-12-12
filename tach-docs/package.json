@@ -1,0 +1,24 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Tom Genoni <tom@atomeye.com> (http://atomeye.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "css-markdown": "^0.2.0",
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-markdownit": "^1.0.1",
+    "gulp-tap": "^1.0.1",
+    "gulp-util": "^3.0.8",
+    "markdown-it": "^8.4.0",
+    "markdown-it-alerts": "^0.1.0",
+    "markdown-it-container": "^2.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+/*md
+# Background
+
+Foo to the bar
+
+```html
+<div class="float--left">Floated left</div>
+<div class="float--right">Floated right</div>
+```
+*/
+body {
+    background: red;
+}

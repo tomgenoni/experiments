@@ -1,11 +1,11 @@
 {
     "manifest_version": 2,
     "name": "Injecto!",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Auto inject CSS theme",
     "content_scripts": [{
         "js": ["inject.js"],
-        "matches": ["https://www.thumbtack.com/*"]
+        "matches": ["*://*.thumbtack.com/*"]
     }],
     "web_accessible_resources": ["https://tomgenoni.github.io/experiments/injecto/style.css", "javascript.js"]
 }

@@ -1,0 +1,74 @@
+/*! TACHYONS v4.9.0 | http://tachyons.io */
+
+//@import './mod/_normalize';
+@import './new/_reset';
+@import './new/_root';
+
+/* Modules */
+@import './orig/_box-sizing';
+@import './orig/_aspect-ratios';
+@import './orig/_images';
+@import './orig/_background-size';
+@import './orig/_background-position';
+@import './orig/_outlines';
+@import './orig/_borders';
+@import './orig/_border-colors';
+@import './orig/_border-radius';
+@import './orig/_border-style';
+@import './orig/_border-widths';
+@import './orig/_box-shadow';
+@import './new/_buttons';
+@import './orig/_code';
+@import './orig/_coordinates';
+@import './orig/_clears';
+@import './orig/_display';
+@import './orig/_flexbox';
+@import './orig/_floats';
+@import './new/_font-face';
+@import './orig/_font-family';
+@import './orig/_font-style';
+@import './orig/_font-weight';
+@import './orig/_forms';
+@import './orig/_heights';
+@import './new/_input';
+@import './orig/_letter-spacing';
+@import './orig/_line-height';
+@import './orig/_links';
+@import './orig/_lists';
+@import './orig/_max-widths';
+@import './new/_nudge';
+@import './orig/_widths';
+@import './orig/_overflow';
+@import './orig/_position';
+@import './orig/_opacity';
+@import './orig/_rotations';
+@import './orig/_skins';
+@import './orig/_skins-pseudo';
+@import './orig/_spacing';
+@import './orig/_negative-margins';
+@import './orig/_tables';
+@import './orig/_text-decoration';
+@import './orig/_text-align';
+@import './orig/_text-transform';
+@import './orig/_type-scale';
+@import './orig/_typography';
+@import './orig/_utilities';
+@import './orig/_visibility';
+@import './orig/_white-space';
+@import './orig/_vertical-align';
+@import './orig/_hovers';
+@import './orig/_z-index';
+@import './orig/_nested';
+@import './orig/_styles';
+
+/* Variables */
+/* Importing here will allow you to override any variables in the modules */
+@import './orig/_colors';
+@import './orig/_media-queries';
+
+/* Debugging */
+@import './orig/_debug-children';
+@import './orig/_debug-grid';
+
+/* Uncomment out the line below to help debug layout issues */
+/* @import './orig/_debug'; */
