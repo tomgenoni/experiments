@@ -1,12 +1,14 @@
 @font-face {
-  font-family: 'Mark';
-  font-weight: 400;
-  src: url(https://fonts.thumbtack.com/5423483/ec598369-4d91-4a16-9db3-6654f68d3c28.woff2) format("woff2"); }
+    font-family: 'Mark';
+    font-weight: 400;
+    src: url(https://fonts.thumbtack.com/mark/mark-tt.woff2) format("woff2"), url(https://fonts.thumbtack.com/mark/mark-tt.woff) format("woff");
+}
 
 @font-face {
-  font-family: 'Mark';
-  font-weight: 700;
-  src: url(https://fonts.thumbtack.com/5423411/41c8162d-c2a6-49b0-8139-8bebab187588.woff2) format("woff2"); }
+    font-family: 'Mark';
+    font-weight: 700;
+    src: url(https://fonts.thumbtack.com/mark/mark-tt-bold.woff2) format("woff2"), url(https://fonts.thumbtack.com/mark/mark-tt-bold.woff) format("woff");
+}
 
 body,
 input, textarea, select,
