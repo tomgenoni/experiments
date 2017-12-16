@@ -1,6 +1,6 @@
 (function(){
 
-    console.log("injecting...");
+    console.log("injecting css and js");
 
     var head   = document.getElementsByTagName('head')[0];
     var link   = document.createElement('link');
@@ -10,7 +10,6 @@
     link.rel  = 'stylesheet';
     link.type = 'text/css';
     link.href = 'https://tomgenoni.github.io/experiments/injecto/style.css';
-    //link.href = chrome.extension.getURL('https://tomgenoni.github.io/experiments/injecto/style.css');
     link.media = 'all';
     head.appendChild(link);
 
