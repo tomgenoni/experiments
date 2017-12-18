@@ -147,8 +147,25 @@ td {
     cursor: pointer;
 }
 
+.name:hover,
+.hex:hover {
+    color: #2db783;
+}
+
 .hex {
     margin-left: auto;
+}
+
+.copied {
+    color: #2db783;
+    position: relative;
+}
+
+.copied:after {
+    content: "✓";
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    position: absolute;
+    right: -14px;
 }
 
 .swatch {

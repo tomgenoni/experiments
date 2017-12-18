@@ -4,18 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Brand Color Refresh</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
 
     <script>
+
 
         $(document).ready(function(){
             // add background color to swatch
             $( ".hex" ).each(function( index ) {
                 var hex = $(this).text();
                 $(this).next('.swatch').css({backgroundColor: hex})
+            });
+
+
+
+            var clipboard = new Clipboard('.hex, .name', {
+                text: function(trigger) {
+                    return trigger.textContent;
+                }
+            });
+
+
+            clipboard.on('success', function(e) {
+                e.trigger.classList.add('copied');
+                window.setTimeout(function() {
+                    e.trigger.classList.remove('copied');
+                }, 2000);
             });
         });
 
@@ -458,7 +477,7 @@
     </table>
 
     <h2>Deleted Colors</h2>
-    <p class="intro">The following colors have no equavalent in the new color system.</p>
+    <p class="intro">The following colors are currently not used in the website.</p>
 
     <table>
         <tbody>
