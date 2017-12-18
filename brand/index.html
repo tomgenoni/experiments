@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            // add background color to swatch
+            $( ".hex" ).each(function( index ) {
+                var hex = $(this).text();
+                $(this).next('.swatch').css({backgroundColor: hex})
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+
+    <h1>Brand Color Refresh</h1>
+
+    <h2>Mappings</h1>
+    <p class="intro">These variables and hex values can be changed via "find and replace", though they should be confirmed visually.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Old &amp; Deprecated</th>
+                <th></th>
+                <th>New</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__dark</div>
+                            <div class="hex">#333333</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__black</div>
+                            <div class="hex">#000000</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__base</div>
+                            <div class="hex">#333333</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__dark</div>
+                            <div class="hex">#333333</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__black</div>
+                            <div class="hex">#333333</div>
+                            <div class="swatch"></div>
+                            <div class="note">This will also be used as the basis for drop shadows, which will be standarized.</div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__slate</div>
+                            <div class="hex">#6d7273</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__muted</div>
+                            <div class="hex">#858b8c</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__slate</div>
+                            <div class="hex">#6d7273</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__muted</div>
+                            <div class="hex">#858b8c</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__black-200</div>
+                            <div class="hex">#526166</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__pale</div>
+                            <div class="hex">#ced6d9</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__pale</div>
+                            <div class="hex">#ced6d9</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__gray</div>
+                            <div class="hex">#d3d4d5</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__faint</div>
+                            <div class="hex">#f7fafb</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__gray-100</div>
+                            <div class="hex">#e9eced</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__base</div>
+                            <div class="hex">#e6f0f2</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__light</div>
+                            <div class="hex">#f0f6f7</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__gray-200</div>
+                            <div class="hex">#e9eced</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__white</div>
+                            <div class="hex">#ffffff</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__link__white</div>
+                            <div class="hex">#ffffff</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__white</div>
+                            <div class="hex">#ffffff</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__main</div>
+                            <div class="hex">#0abae6</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__sky</div>
+                            <div class="hex">#3f93f3</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__sky</div>
+                            <div class="hex">#3f93f3</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__link__base</div>
+                            <div class="hex">#3f93f3</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__blue</div>
+                            <div class="hex">#009fd9</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__good-news</div>
+                            <div class="hex">#3ac392</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__good-news</div>
+                            <div class="hex">#3ac392</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__green</div>
+                            <div class="hex">#2db783</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__celebrate</div>
+                            <div class="hex">#fbe002</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__celebrate</div>
+                            <div class="hex">#fbe002</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__gold</div>
+                            <div class="hex">#ff9f02</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__yellow</div>
+                            <div class="hex">#febe14</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__bad-news</div>
+                            <div class="hex">#f16a4f</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__bad-news</div>
+                            <div class="hex">#f16a4f</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__link__bad-news</div>
+                            <div class="hex">#f16a4f</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__red</div>
+                            <div class="hex">#ff5a5f</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__betterment</div>
+                            <div class="hex">#455fcf</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__betterment</div>
+                            <div class="hex">#455fcf</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__indigo</div>
+                            <div class="hex">#5968e2</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__crafty</div>
+                            <div class="hex">#8b71de</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__purple</div>
+                            <div class="hex">#a97ff0</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h2>"Brand" (Orange) Mapping</h2>
+    <p class="intro">Mapping from the old "brand" or orange color will require manual fixing and design discretion. Aaron Bailey (@aaron) will be your contact for deciding which color to use.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Old &amp; Deprecated</th>
+                <th></th>
+                <th>New</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__brand</div>
+                            <div class="hex">#f27802</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__brand</div>
+                            <div class="hex">#f27802</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <ul class="entries">
+                        <li class="or">
+                            <div class="name">$tp-color__blue</div>
+                            <div class="hex">#009fd9</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__indigo</div>
+                            <div class="hex">#5968e2</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Deleted Colors</h2>
+    <p class="intro">The following colors have no equavalent in the new color system.</p>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <ul class="entries">
+                        <li>
+                            <div class="name">$tp-color__ui__sky_light</div>
+                            <div class="hex">#70acf1</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__link__light</div>
+                            <div class="hex">#70acf1</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__sky-faint</div>
+                            <div class="hex">#94beee</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__link__faint</div>
+                            <div class="hex">#94beee</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__sky-dark</div>
+                            <div class="hex">#287ddd</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__sky-dark</div>
+                            <div class="hex">#287ddd</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__good-news-light</div>
+                            <div class="hex">#62cca7</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__good-news-faint</div>
+                            <div class="hex">#93dbc2</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__bad-news-light</div>
+                            <div class="hex">#f28974</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__text__bad-news-light</div>
+                            <div class="hex">#f28974</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__bad-news-faint</div>
+                            <div class="hex">#f2a494</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__brand-light</div>
+                            <div class="hex">#f0913a</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__brand-faint</div>
+                            <div class="hex">#f0a86e</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__gold-light</div>
+                            <div class="hex">#ffb742</div>
+                            <div class="swatch"></div>
+                        </li>
+                        <li>
+                            <div class="name">$tp-color__ui__gold-faint</div>
+                            <div class="hex">#ffcb78</div>
+                            <div class="swatch"></div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td>
+                    <h3>Don't use em, dingus!</h3>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
