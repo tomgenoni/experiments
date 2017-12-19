@@ -1,4 +1,20 @@
 @font-face {
+  font-family: 'tt-avenir';
+  font-weight: 400;
+  src: url(https://fonts.thumbtack.com/721263/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff2) format("woff2"), url(https://fonts.thumbtack.com/721263/1e9892c0-6927-4412-9874-1b82801ba47a.woff) format("woff"); }
+
+@font-face {
+  font-family: 'tt-avenir';
+  font-weight: 500;
+  src: url(https://fonts.thumbtack.com/721275/627fbb5a-3bae-4cd9-b617-2f923e29d55e.woff2) format("woff2"), url(https://fonts.thumbtack.com/721275/f26faddb-86cc-4477-a253-1e1287684336.woff) format("woff"); }
+
+@font-face {
+  font-family: 'tt-avenir';
+  font-weight: 600;
+  src: url(https://fonts.thumbtack.com/721269/aad99a1f-7917-4dd6-bbb5-b07cedbff64f.woff2) format("woff2"), url(https://fonts.thumbtack.com/721269/91b50bbb-9aa1-4d54-9159-ec6f19d14a7c.woff) format("woff"); }
+
+
+@font-face {
     font-family: 'Mark';
     font-weight: 400;
     src: url(https://fonts.thumbtack.com/mark/mark-tt.woff2) format("woff2"), url(https://fonts.thumbtack.com/mark/mark-tt.woff) format("woff");
@@ -54,6 +70,30 @@ table {
     border-spacing: 0;
 }
 
+.f3 {
+    font-size: 30px;
+}
+
+.tt-avenir {
+    font-family: 'tt-avenir';
+}
+
+.weight--400 {
+    font-weight: 400;
+}
+
+.weight--500 {
+    font-weight: 500;
+}
+
+.weight--600 {
+    font-weight: 600;
+}
+
+.weight--700 {
+    font-weight: 700;
+}
+
 body {
     margin: 50px 70px;
     font-family: 'mark';
@@ -83,6 +123,10 @@ h3 {
 
 p {
     max-width: 700px;
+}
+
+.w-a {
+    width: auto;
 }
 
 .w-100 {
@@ -210,9 +254,10 @@ td {
 
 .arrow {
     border-bottom: 1px solid #e9eced;
-    width: 70%;
-    margin-left: 15%;
+    min-width: 100px;
+    width: 90%;
     position: relative;
+    margin: auto;
 }
 
 .arrow:after {

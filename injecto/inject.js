@@ -14,7 +14,8 @@
     head.appendChild(link);
 
     script.type = "text/javascript";
-    script.src = chrome.extension.getURL('javascript.js');
+    //script.src = chrome.extension.getURL('javascript.js');
+    script.src = 'https://tomgenoni.github.io/experiments/injecto/javascript.js';
     script.onload = function() {
         this.remove();
     };

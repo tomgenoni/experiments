@@ -4,48 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Brand Color Refresh</title>
+    <title>Brand Refresh</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
 
-    <script>
-
-
-        $(document).ready(function(){
-            // add background color to swatch
-            $( ".hex" ).each(function( index ) {
-                var hex = $(this).text();
-                $(this).next('.swatch').css({backgroundColor: hex})
-            });
-
-
-
-            var clipboard = new Clipboard('.hex, .name', {
-                text: function(trigger) {
-                    return trigger.textContent;
-                }
-            });
-
-
-            clipboard.on('success', function(e) {
-                e.trigger.classList.add('copied');
-                window.setTimeout(function() {
-                    e.trigger.classList.remove('copied');
-                }, 2000);
-            });
-        });
-
-    </script>
+    <script src="js/swatches.js" type="text/javascript"></script>
 
 </head>
 <body>
 
-    <h1>Brand Color Refresh</h1>
+    <h1>Brand Refresh</h1>
 
-    <h2>Core Colors</h1>
+    <h2>Fonts</h2>
+    <p class="intro">Our new font, Mark, comes in two weights, regular and bold. All references to Avenir 600 will be changed to Mark 700. Changes from Avenir 500 to Mark 400 or 700 will require design discretion.</p>
+
+    <table class="w-a">
+        <thead>
+            <tr>
+                <th>Old Font</th>
+                <th></th>
+                <th>New Font</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tt-avenir f3 weight--400">Avenir 400</td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td class="f3">Mark 400</td>
+            </tr>
+            <tr>
+                <td class="tt-avenir f3 weight--500">Avenir 500</td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td class="f3">
+                    <span>Mark 400</span>
+                    <span style="font-size:21px">or</span>
+                    <span class="weight--700">Mark 700</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="tt-avenir f3 weight--600">Avenir 600</td>
+                <td>
+                    <div class="arrow"></div>
+                </td>
+                <td class="f3 weight--700">Mark 700</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h2>Core Colors</h2>
     <p class="intro">We’ve greatly simplified the color palette both in number and naming. Usage rules for the new colors are being developed now and will be shared soon.</p>
 
     <table class="new-swatches">
@@ -131,7 +145,7 @@
     </table>
 
 
-    <h2>Old → New Mappings</h1>
+    <h2>Old → New Color Mappings</h1>
     <p class="intro">These variables and hex values can be changed via "find and replace", though they should be confirmed visually.</p>
 
     <table>
@@ -562,8 +576,8 @@
         </tbody>
     </table>
 
-    <h2>Deleted Colors</h2>
-    <p class="intro">The following colors are currently not used in the website.</p>
+    <h2>Colors To Be Deleted</h2>
+    <p class="intro">The following colors are either not used in the website or used sparingly. For most use cases these colors should be converted to the core color palette. In some cases we use darker/ligher tints for hover states and illustrations. If you need access to those colors please contact Tom Genoni @tom.</p>
 
     <table>
         <tbody>
@@ -648,11 +662,8 @@
                     </ul>
                 </td>
                 <td>
-                    <div class="arrow"></div>
                 </td>
-                <td style="text-align:center;">
-                    <img src="brule.png" alt="">
-                    <h3>Don't use em, Dingus!</h3>
+                <td>
                 </td>
             </tr>
         </tbody>
