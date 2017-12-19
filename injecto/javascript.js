@@ -60,7 +60,7 @@ var colorMap = [
     }
 ]
 
-var els = ['html','body','div','span','strong','form','h1','h2','h3','h4','h5','h6','a','table','tr','td','figure','nav','ol','ul','li'];
+var els = ['html','body','div','span','strong','form','h1','h2','h3','h4','h5','h6','a','button','table','tr','td','figure','nav','ol','ul','li'];
 
 // Functions
 
@@ -95,7 +95,8 @@ function testSelectors(arr) {
         var color = rgbToHex(window.getComputedStyle(el).color);
         var bkgColor = rgbToHex(window.getComputedStyle(el).backgroundColor);
 
-        // Only get borderColor value if border width something other than "0px"
+        // Only assign borderColor value if borderWidth is something other than "0px"
+        // "0px" is returned when no borderWidth has been declared
         if (window.getComputedStyle(el).borderWidth != "0px") {
             var borderColor = rgbToHex(window.getComputedStyle(el).borderColor);
         } else {
