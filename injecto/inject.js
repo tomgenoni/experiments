@@ -1,6 +1,6 @@
 (function(){
 
-    console.log("injecting css and js");
+    console.log("inj: css start");
 
     var head   = document.getElementsByTagName('head')[0];
     var link   = document.createElement('link');
@@ -13,9 +13,11 @@
     link.media = 'all';
     head.appendChild(link);
 
+    console.log("inj: css loaded");
+
     script.type = "text/javascript";
-    //script.src = chrome.extension.getURL('javascript.js');
-    script.src = 'https://tomgenoni.github.io/experiments/injecto/javascript.js';
+    script.src = chrome.extension.getURL('javascript.js');
+    //script.src = 'https://tomgenoni.github.io/experiments/injecto/javascript.js';
     script.onload = function() {
         this.remove();
     };

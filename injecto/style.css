@@ -35,7 +35,8 @@ input, textarea, select,
     font-weight: 700;
 }
 
-/* .B1-S, .B2-S, .B3-S, .B4-S, .B5-S,
-.B1-R, .B2-R, .B3-R, .B4-R, .B5-R {
-    font-weight: 400;
-} */
+.tp-button,
+.Button {
+    background-color: #009fd9;
+    border-color: #009fd9;
+}
