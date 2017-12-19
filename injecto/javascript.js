@@ -60,6 +60,10 @@ var colorMap = [
     }
 ]
 
+var els = ['html','body','div','span','strong','form','h1','h2','h3','h4','h5','h6','a'];
+
+// Functions
+
 function rgbToHex(rgb) {
     var a = rgb.split("(")[1].split(")")[0];
     a = a.split(",");
@@ -88,9 +92,15 @@ function doConsole(property, el, oldColor, newColor, newVarName, spacer) {
 function testSelectors(arr) {
     arr.forEach(function(el) {
 
-        var color = rgbToHex(getComputedStyle(el).color);
-        var bkgColor = rgbToHex(getComputedStyle(el).backgroundColor);
-        var borderColor = rgbToHex(getComputedStyle(el).borderColor);
+        var color = rgbToHex(window.getComputedStyle(el).color);
+        var bkgColor = rgbToHex(window.getComputedStyle(el).backgroundColor);
+
+        // Only get borderColor value if border width something other than "0px"
+        if (window.getComputedStyle(el).borderWidth != "0px") {
+            var borderColor = rgbToHex(window.getComputedStyle(el).borderColor);
+        } else {
+            borderColor = false;
+        }
 
         colorMap.forEach(function(colorData){
             var newColor = colorData.new;
@@ -99,23 +109,23 @@ function testSelectors(arr) {
             colorData.old.forEach(function(oldColor){
                 if (color == oldColor) {
                     el.style.color = newColor;
-                    doConsole("color", el, oldColor, newColor, newVarName, "          ")
+                    doConsole("color", el, oldColor, newColor, newVarName, "          ");
                 }
                 if (bkgColor == oldColor) {
                     el.style.backgroundColor = newColor;
-                    doConsole("backgroud-color", el, oldColor, newColor, newVarName, "")
+                    doConsole("backgroud-color", el, oldColor, newColor, newVarName, "");
                 }
-                if (borderColor == oldColor) {
+                // If borderWidth value is not "0px"
+                if (borderColor && borderColor == oldColor) {
                     el.style.borderColor = newColor;
-                    doConsole("border-color", el, oldColor, newColor, newVarName, "   ")
+                    doConsole("border-color", el, oldColor, newColor, newVarName, "   ");
                 }
             })
         })
     })
 }
 
-
-var els = ['html','body','div','span','strong','form','h1','h2','h3','h4','h5','h6'];
+// Start the script
 getSelectors(els);
 
 console.log("---------");
