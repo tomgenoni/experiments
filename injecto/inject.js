@@ -13,7 +13,7 @@
     link.media = 'all';
     head.appendChild(link);
 
-    console.log("inj: css loaded");
+    console.log("inj: css complete");
 
     script.type = "text/javascript";
     script.src = chrome.extension.getURL('javascript.js');

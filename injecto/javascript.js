@@ -1,4 +1,6 @@
+console.log("---------");
 console.log("inj: js start");
+console.log("---------");
 
 var colorMap = [
     {
@@ -8,6 +10,18 @@ var colorMap = [
     {
         "old": ["#6d7273", "#858b8c"],
         "new": "#526166"
+    },
+    {
+        "old": ["#ced6d9"],
+        "new": "#d3d4d5"
+    },
+    {
+        "old": ["#e6f0f2", "#f0f6f7"],
+        "new": "#e9eced"
+    },
+    {
+        "old": ["#f7fafb"],
+        "new": "#fafafa"
     }
 ]
 
@@ -32,22 +46,33 @@ function getSelectors() {
     })
 }
 
+function doConsole(property, el, oldColor, newColor, spacer) {
+    //console.log("inj: " + property + " on " + el.tagName + ", class: '" + el.classList + "', " + oldColor + " > " + newColor );
+    console.log("inj: " + property + spacer + " : " + oldColor + " > " + newColor + " on " + el.tagName + ", class: '" + el.classList + "'" );
+}
+
 function testSelectors(arr) {
     arr.forEach(function(el) {
 
         var color = rgbToHex(getComputedStyle(el).color);
         var bkgColor = rgbToHex(getComputedStyle(el).backgroundColor);
+        var borderColor = rgbToHex(getComputedStyle(el).borderColor);
+
 
         colorMap.forEach(function(pair){
             var newColor = pair.new;
             pair.old.forEach(function(oldColor){
                 if (color == oldColor) {
                     el.style.color = newColor;
-                    console.log("inj: color on " + el.tagName + ", class: '" + el.classList + "', " + oldColor + " > " + newColor );
+                    doConsole("color", el, oldColor, newColor, "          ")
                 }
                 if (bkgColor == oldColor) {
                     el.style.backgroundColor = newColor;
-                    console.log("inj: background-color on " + el.tagName + ", class: '" + el.classList + "', " + oldColor + " > " + newColor );
+                    doConsole("backgroud-color", el, oldColor, newColor, "")
+                }
+                if (borderColor == oldColor) {
+                    el.style.borderColor = newColor;
+                    doConsole("border-color", el, oldColor, newColor, "   ")
                 }
             })
         })
@@ -55,38 +80,8 @@ function testSelectors(arr) {
 }
 
 
-var els = ['html','body','div','span','strong'];
-
-
-
-// var a = document.querySelectorAll("a");
-//
-// a.forEach(function(el){
-//     var foo = getComputedStyle(el).color;
-//     if ( rgbToHex(foo) == "#3f93f3" ) {
-//         el.style.color = "red";
-//     }
-// })
-//
-// var item = document.querySelectorAll("div");
-//
-// item.forEach(function(el){
-//     var foo = getComputedStyle(el).backgroundColor;
-//     if ( rgbToHex(foo) == "#f7fafb" ) {
-//         el.style.backgroundColor = "red";
-//     }
-// })
-
-
-
-// var body = document.querySelector("body");
-//
-// var bar = getComputedStyle(body).backgroundColor;
-//
-// if ( rgbToHex(bar) == "#f7fafb" ) {
-//     body.style.backgroundColor = "red";
-// }
-
+var els = ['html','body','div','span','strong','form'];
 getSelectors(els);
 
-console.log("injecto: js loaded");
+console.log("---------");
+console.log("inj: js complete");

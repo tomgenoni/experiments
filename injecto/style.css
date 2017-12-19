@@ -40,3 +40,7 @@ input, textarea, select,
     background-color: #009fd9;
     border-color: #009fd9;
 }
+
+.tp-button--tertiary {
+    background: #fff;
+}
