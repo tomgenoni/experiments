@@ -122,9 +122,13 @@ th {
 }
 
 td {
-    padding: 0 0 70px;
+    padding: 0 20px 70px 0;
     font-size: 12px;
     vertical-align: middle;
+}
+
+.new-swatches td {
+    vertical-align: top;
 }
 
 .intro {
@@ -202,7 +206,7 @@ td {
 }
 
 .arrow {
-    border-bottom: 1px dashed #ddd;
+    border-bottom: 1px solid #ddd;
     width: 70%;
     margin-left: 15%;
     position: relative;
