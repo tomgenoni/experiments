@@ -5,7 +5,7 @@ console.log("---------");
 var colorMap = [
     {
         "name": "$tp-color__black",
-        "old": ["#333333","#000000"],
+        "old": ["#333333", "#000000"],
         "new": "#001c26"
     },
     {
@@ -30,7 +30,7 @@ var colorMap = [
     },
     {
         "name": "$tp-color__blue",
-        "old": ["#0abae6","#3f93f3"],
+        "old": ["#0abae6", "#3f93f3"],
         "new": "#009fd9"
     },
     {
@@ -40,7 +40,7 @@ var colorMap = [
     },
     {
         "name": "$tp-color__yellow",
-        "old": ["#fbe002","#ff9f02"],
+        "old": ["#fbe002", "#ff9f02"],
         "new": "#febe14"
     },
     {
@@ -60,7 +60,13 @@ var colorMap = [
     }
 ]
 
-var els = ['html','body','div','span','strong','form','h1','h2','h3','h4','h5','h6','a','button','table','tr','td','figure','nav','ol','ul','li'];
+var els = [
+    'html','body','div','span','strong','form',
+    'h1','h2','h3','h4','h5','h6',
+    'a','button','table','tr','td',
+    'figure','nav','ol','ul','li',
+    'svg'
+];
 
 // Functions
 
@@ -97,10 +103,30 @@ function testSelectors(arr) {
 
         // Only assign borderColor value if borderWidth is something other than "0px"
         // "0px" is returned when no borderWidth has been declared
-        if (window.getComputedStyle(el).borderWidth != "0px") {
-            var borderColor = rgbToHex(window.getComputedStyle(el).borderColor);
+        // Have to check each one individually as it will report an inhereted color
+
+        if (window.getComputedStyle(el).borderTopWidth != "0px") {
+            var borderTopColor = rgbToHex(window.getComputedStyle(el).borderTopColor);
         } else {
-            borderColor = false;
+            borderTopColor = false;
+        }
+
+        if (window.getComputedStyle(el).borderRightWidth != "0px") {
+            var borderRightColor = rgbToHex(window.getComputedStyle(el).borderRightColor);
+        } else {
+            borderRightColor = false;
+        }
+
+        if (window.getComputedStyle(el).borderBottomWidth != "0px") {
+            var borderBottomColor = rgbToHex(window.getComputedStyle(el).borderBottomColor);
+        } else {
+            borderBottomColor = false;
+        }
+
+        if (window.getComputedStyle(el).borderLeftWidth != "0px") {
+            var borderLeftColor = rgbToHex(window.getComputedStyle(el).borderLeftColor);
+        } else {
+            borderLeftColor = false;
         }
 
         colorMap.forEach(function(colorData){
@@ -116,10 +142,22 @@ function testSelectors(arr) {
                     el.style.backgroundColor = newColor;
                     doConsole("backgroud-color", el, oldColor, newColor, newVarName, "");
                 }
-                // If borderWidth value is not "0px"
-                if (borderColor && borderColor == oldColor) {
-                    el.style.borderColor = newColor;
-                    doConsole("border-color", el, oldColor, newColor, newVarName, "   ");
+
+                if (borderTopColor && borderTopColor == oldColor) {
+                    el.style.borderTopColor = newColor;
+                    doConsole("border-top-color", el, oldColor, newColor, newVarName, "   ");
+                }
+                if (borderRightColor && borderRightColor == oldColor) {
+                    el.style.borderRightColor = newColor;
+                    doConsole("border-right-color", el, oldColor, newColor, newVarName, "   ");
+                }
+                if (borderBottomColor && borderBottomColor == oldColor) {
+                    el.style.borderBottomColor = newColor;
+                    doConsole("border-bottom-color", el, oldColor, newColor, newVarName, "   ");
+                }
+                if (borderLeftColor && borderLeftColor == oldColor) {
+                    el.style.borderLeftColor = newColor;
+                    doConsole("border-left-color", el, oldColor, newColor, newVarName, "   ");
                 }
             })
         })

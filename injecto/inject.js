@@ -17,8 +17,8 @@
     console.log("inj: css complete");
 
     script.type = "text/javascript";
-    //script.src = chrome.extension.getURL('javascript.js');
-    script.src = 'https://tomgenoni.github.io/experiments/injecto/javascript.js';
+    script.src = chrome.extension.getURL('javascript.js');
+    //script.src = 'https://tomgenoni.github.io/experiments/injecto/javascript.js';
     script.onload = function() {
         this.remove();
     };
