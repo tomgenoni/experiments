@@ -61,7 +61,7 @@ body {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #333;
+    color: #001c26;
 }
 
 h1 {
@@ -184,7 +184,7 @@ td {
 }
 
 .note {
-    color: #666;
+    color: #526166;
     padding-top: 10px;
 }
 
