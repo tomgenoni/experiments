@@ -151,17 +151,17 @@ td {
     cursor: pointer;
 }
 
-.name:hover,
-.hex:hover {
-    color: #2db783;
-}
 
 .hex {
     margin-left: auto;
 }
 
+.name:hover,
+.hex:hover {
+    color: #009fd9;
+}
+
 .copied {
-    color: #2db783;
     position: relative;
 }
 
