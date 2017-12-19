@@ -4,24 +4,59 @@ console.log("---------");
 
 var colorMap = [
     {
+        "name": "$tp-color__black",
         "old": ["#333333","#000000"],
         "new": "#001c26"
     },
     {
+        "name": "$tp-color__black-200",
         "old": ["#6d7273", "#858b8c"],
         "new": "#526166"
     },
     {
+        "name": "$tp-color__gray",
         "old": ["#ced6d9"],
         "new": "#d3d4d5"
     },
     {
+        "name": "$tp-color__gray-200",
         "old": ["#e6f0f2", "#f0f6f7"],
         "new": "#e9eced"
     },
     {
+        "name": "$tp-color__gray-100",
         "old": ["#f7fafb"],
         "new": "#fafafa"
+    },
+    {
+        "name": "$tp-color__blue",
+        "old": ["#0abae6","#3f93f3"],
+        "new": "#009fd9"
+    },
+    {
+        "name": "$tp-color__green",
+        "old": ["#3ac392"],
+        "new": "#2db783"
+    },
+    {
+        "name": "$tp-color__yellow",
+        "old": ["#fbe002","#ff9f02"],
+        "new": "#febe14"
+    },
+    {
+        "name": "$tp-color__red",
+        "old": ["#f16a4f"],
+        "new": "#ff5a5f"
+    },
+    {
+        "name": "$tp-color__indigo",
+        "old": ["#455fcf"],
+        "new": "#5968e2"
+    },
+    {
+        "name": "$tp-color__purple",
+        "old": ["#8b71de"],
+        "new": "#a97ff0"
     }
 ]
 
@@ -46,9 +81,8 @@ function getSelectors() {
     })
 }
 
-function doConsole(property, el, oldColor, newColor, spacer) {
-    //console.log("inj: " + property + " on " + el.tagName + ", class: '" + el.classList + "', " + oldColor + " > " + newColor );
-    console.log("inj: " + property + spacer + " : " + oldColor + " > " + newColor + " on " + el.tagName + ", class: '" + el.classList + "'" );
+function doConsole(property, el, oldColor, newColor, newVarName, spacer) {
+    console.log("inj: " + property + spacer + " : " + oldColor + " > " + newColor + " (" + newVarName + ") on " + el.tagName + ", class: '" + el.classList + "'" );
 }
 
 function testSelectors(arr) {
@@ -58,21 +92,22 @@ function testSelectors(arr) {
         var bkgColor = rgbToHex(getComputedStyle(el).backgroundColor);
         var borderColor = rgbToHex(getComputedStyle(el).borderColor);
 
+        colorMap.forEach(function(colorData){
+            var newColor = colorData.new;
+            var newVarName = colorData.name;
 
-        colorMap.forEach(function(pair){
-            var newColor = pair.new;
-            pair.old.forEach(function(oldColor){
+            colorData.old.forEach(function(oldColor){
                 if (color == oldColor) {
                     el.style.color = newColor;
-                    doConsole("color", el, oldColor, newColor, "          ")
+                    doConsole("color", el, oldColor, newColor, newVarName, "          ")
                 }
                 if (bkgColor == oldColor) {
                     el.style.backgroundColor = newColor;
-                    doConsole("backgroud-color", el, oldColor, newColor, "")
+                    doConsole("backgroud-color", el, oldColor, newColor, newVarName, "")
                 }
                 if (borderColor == oldColor) {
                     el.style.borderColor = newColor;
-                    doConsole("border-color", el, oldColor, newColor, "   ")
+                    doConsole("border-color", el, oldColor, newColor, newVarName, "   ")
                 }
             })
         })
@@ -80,7 +115,7 @@ function testSelectors(arr) {
 }
 
 
-var els = ['html','body','div','span','strong','form'];
+var els = ['html','body','div','span','strong','form','h1','h2','h3','h4','h5','h6'];
 getSelectors(els);
 
 console.log("---------");
