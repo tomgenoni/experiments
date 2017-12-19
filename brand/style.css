@@ -209,7 +209,7 @@ td {
 }
 
 .arrow {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e9eced;
     width: 70%;
     margin-left: 15%;
     position: relative;
@@ -222,7 +222,7 @@ td {
     height: 0;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
-    border-left: 8px solid #ccc;
+    border-left: 8px solid #e9eced;
     position: absolute;
     right: -1px;
     top: -8px;
