@@ -188,6 +188,10 @@ td {
     flex-wrap: wrap;
 }
 
+.entry-empty {
+    height: 54px;
+}
+
 .name,
 .hex {
     font-family: 'Source Code Pro';
