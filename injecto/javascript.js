@@ -136,20 +136,20 @@ function testSelectors(arr) {
             colorData.old.forEach(function(oldColor){
                 if (color == oldColor) {
                     el.style.color = newColor;
-                    doConsole("color", el, oldColor, newColor, newVarName, "             ");
+                    doConsole("color", el, oldColor, newColor, newVarName, "              ");
                 }
                 if (bkgColor == oldColor) {
                     el.style.backgroundColor = newColor;
-                    doConsole("backgroud-color", el, oldColor, newColor, newVarName, "   ");
+                    doConsole("backgroud-color", el, oldColor, newColor, newVarName, "    ");
                 }
 
                 if (borderTopColor && borderTopColor == oldColor) {
                     el.style.borderTopColor = newColor;
-                    doConsole("border-top-color", el, oldColor, newColor, newVarName, "  ");
+                    doConsole("border-top-color", el, oldColor, newColor, newVarName, "   ");
                 }
                 if (borderRightColor && borderRightColor == oldColor) {
                     el.style.borderRightColor = newColor;
-                    doConsole("border-right-color", el, oldColor, newColor, newVarName, "");
+                    doConsole("border-right-color", el, oldColor, newColor, newVarName, " ");
                 }
                 if (borderBottomColor && borderBottomColor == oldColor) {
                     el.style.borderBottomColor = newColor;
