@@ -9,7 +9,7 @@ var colorMap = [
         "new": "#001c26"
     },
     {
-        "name": "black-200",
+        "name": "black-300",
         "old": ["#6d7273", "#858b8c"],
         "new": "#526166"
     },
@@ -19,12 +19,12 @@ var colorMap = [
         "new": "#d3d4d5"
     },
     {
-        "name": "gray-200",
+        "name": "gray-300",
         "old": ["#e6f0f2", "#f0f6f7"],
         "new": "#e9eced"
     },
     {
-        "name": "gray-100",
+        "name": "gray-200",
         "old": ["#f7fafb"],
         "new": "#fafafa"
     },
