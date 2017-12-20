@@ -1,11 +1,16 @@
 {
     "manifest_version": 2,
     "name": "Injecto!",
-    "version": "0.1.1",
-    "description": "Auto inject CSS theme",
+    "version": "1.0.0",
+    "description": "Auto inject Thumbtack JS/CSS",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
     "content_scripts": [{
         "js": ["inject.js"],
         "matches": ["*://*.thumbtack.com/*"]
     }],
-    "web_accessible_resources": ["https://tomgenoni.github.io/experiments/injecto/style.css", "javascript.js"]
+    "web_accessible_resources": ["https://tomgenoni.github.io/experiments/injecto/style.css", "https://tomgenoni.github.io/experiments/injecto/javascript.js"]
 }
