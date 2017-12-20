@@ -4,57 +4,57 @@ console.log("---------");
 
 var colorMap = [
     {
-        "name": "$tp-color__black",
+        "name": "black",
         "old": ["#333333", "#000000"],
         "new": "#001c26"
     },
     {
-        "name": "$tp-color__black-200",
+        "name": "black-200",
         "old": ["#6d7273", "#858b8c"],
         "new": "#526166"
     },
     {
-        "name": "$tp-color__gray",
+        "name": "gray",
         "old": ["#ced6d9"],
         "new": "#d3d4d5"
     },
     {
-        "name": "$tp-color__gray-200",
+        "name": "gray-200",
         "old": ["#e6f0f2", "#f0f6f7"],
         "new": "#e9eced"
     },
     {
-        "name": "$tp-color__gray-100",
+        "name": "gray-100",
         "old": ["#f7fafb"],
         "new": "#fafafa"
     },
     {
-        "name": "$tp-color__blue",
+        "name": "blue",
         "old": ["#0abae6", "#3f93f3"],
         "new": "#009fd9"
     },
     {
-        "name": "$tp-color__green",
+        "name": "green",
         "old": ["#3ac392"],
         "new": "#2db783"
     },
     {
-        "name": "$tp-color__yellow",
+        "name": "yellow",
         "old": ["#fbe002", "#ff9f02"],
         "new": "#febe14"
     },
     {
-        "name": "$tp-color__red",
+        "name": "red",
         "old": ["#f16a4f"],
         "new": "#ff5a5f"
     },
     {
-        "name": "$tp-color__indigo",
+        "name": "indigo",
         "old": ["#455fcf"],
         "new": "#5968e2"
     },
     {
-        "name": "$tp-color__purple",
+        "name": "purple",
         "old": ["#8b71de"],
         "new": "#a97ff0"
     }
