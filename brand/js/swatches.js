@@ -17,4 +17,11 @@ $(document).ready(function(){
             e.trigger.classList.remove('copied');
         }, 2000);
     });
-});
+
+    $("#color-group").change(function() {
+        var selected = $(this).val();
+        $("body").removeClass("show-expanded");
+        if ( selected == "expanded" ) {
+            $("body").addClass("show-expanded");
+        }
+    });});
