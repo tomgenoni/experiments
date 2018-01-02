@@ -50,6 +50,7 @@ input, textarea, select,
 
 /* specific overrides */
 
-a[class^="links__Anchor"] {
+a.links__Anchor-iPcyAn.idlCmN,
+a.links__Anchor-iPcyAn.fFnBNb {
     box-shadow: 0 -2px 0 #009fd9 inset;
 }
