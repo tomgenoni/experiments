@@ -5,7 +5,19 @@
 }
 
 @font-face {
+    font-family: 'AvenirNext-Regular';
+    font-weight: 400;
+    src: url(https://fonts.thumbtack.com/mark/mark-tt.woff2) format("woff2"), url(https://fonts.thumbtack.com/mark/mark-tt.woff) format("woff");
+}
+
+@font-face {
     font-family: 'Mark';
+    font-weight: 700;
+    src: url(https://fonts.thumbtack.com/mark/mark-tt-bold.woff2) format("woff2"), url(https://fonts.thumbtack.com/mark/mark-tt-bold.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'AvenirNext-Medium';
     font-weight: 700;
     src: url(https://fonts.thumbtack.com/mark/mark-tt-bold.woff2) format("woff2"), url(https://fonts.thumbtack.com/mark/mark-tt-bold.woff) format("woff");
 }
