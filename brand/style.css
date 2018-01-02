@@ -241,7 +241,7 @@ td {
 }
 
 .or:after {
-    content: "OR";
+    content: "or";
     text-align: center;
     display: block;
     width: 100%;
