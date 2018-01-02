@@ -34,3 +34,10 @@ input, textarea, select,
 .Button {
     font-weight: 700;
 }
+
+
+/* specific overrides */
+
+a[class^="links__Anchor"] {
+    background: red;
+}
