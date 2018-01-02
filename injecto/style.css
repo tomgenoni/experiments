@@ -39,5 +39,5 @@ input, textarea, select,
 /* specific overrides */
 
 a[class^="links__Anchor"] {
-    background: red;
+    box-shadow: 0 -2px 0 #009fd9 inset;
 }
