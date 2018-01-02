@@ -213,11 +213,11 @@ td {
     position: relative;
 }
 
-.copied:after {
+.copied:before {
     content: "✓";
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     position: absolute;
-    right: -14px;
+    left: -14px;
 }
 
 .swatch {
