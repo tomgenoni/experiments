@@ -1,31 +1,5 @@
 [
     {
-        "name": "black",
-        "sass": {
-            "new": "$tp-color__black",
-            "old": [
-                "$tp-color__ui__dark",
-                "$tp-color__text__base",
-                "$tp-color__text__dark",
-                "$tp-color__ui__black",
-                "$chalkboard",
-                "$slate"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#001c26",
-            "old": [
-                "#333333",
-                "#333",
-                "#000000",
-                "#000",
-                "#312f2f",
-                "#4e4d4d"
-            ]
-        }
-    },
-    {
         "name": "black-300",
         "sass": {
             "new": "$tp-color__black-300",
@@ -48,21 +22,28 @@
         }
     },
     {
-        "name": "gray",
+        "name": "black",
         "sass": {
-            "new": "$tp-color__gray",
+            "new": "$tp-color__black",
             "old": [
-                "$tp-color__ui__pale",
-                "$tp-color__text__pale",
-                "$aluminum"
+                "$tp-color__ui__dark",
+                "$tp-color__text__base",
+                "$tp-color__text__dark",
+                "$tp-color__ui__black",
+                "$chalkboard",
+                "$slate"
             ]
         },
         "js": {},
         "hex": {
-            "new": "#d3d4d5",
+            "new": "#001c26",
             "old": [
-                "#ced6d9",
-                "#bdc4c4"
+                "#333333",
+                "#333",
+                "#000000",
+                "#000",
+                "#312f2f",
+                "#4e4d4d"
             ]
         }
     },
@@ -103,8 +84,26 @@
             "new": "#fafafa",
             "old": [
                 "#f7fafb",
-                "#f4f4f4",
-                "#fafafa"
+                "#f4f4f4"
+            ]
+        }
+    },
+    {
+        "name": "gray",
+        "sass": {
+            "new": "$tp-color__gray",
+            "old": [
+                "$tp-color__ui__pale",
+                "$tp-color__text__pale",
+                "$aluminum"
+            ]
+        },
+        "js": {},
+        "hex": {
+            "new": "#d3d4d5",
+            "old": [
+                "#ced6d9",
+                "#bdc4c4"
             ]
         }
     },
@@ -213,7 +212,7 @@
         },
         "js": {},
         "hex": {
-            "new": "#C6F7DA",
+            "new": "#c6f7da",
             "old": [
                 "#93dbc2",
                 "#a6d5ae"
@@ -284,7 +283,13 @@
             ]
         },
         "js": {},
-        "hex": {}
+        "hex": {
+            "new": "#ffdd80",
+            "old": [
+                "#ffb742",
+                "#f9cf62"
+            ]
+        }
     },
     {
         "name": "yellow",
@@ -298,7 +303,14 @@
             ]
         },
         "js": {},
-        "hex": {}
+        "hex": {
+            "new": "#febe14",
+            "old": [
+                "#fbe002",
+                "#ff9f02",
+                "#fbb90e"
+            ]
+        }
     },
     {
         "name": "red-200",
@@ -310,7 +322,13 @@
             ]
         },
         "js": {},
-        "hex": {}
+        "hex": {
+            "new": "#ffd9d9",
+            "old": [
+                "#f2a494",
+                "#ff9796"
+            ]
+        }
     },
     {
         "name": "red-300",
@@ -323,7 +341,13 @@
             ]
         },
         "js": {},
-        "hex": {}
+        "hex": {
+            "new": "#ffb0b0",
+            "old": [
+                "#f28974",
+                "#ff6e6d"
+            ]
+        }
     },
     {
         "name": "red",
@@ -337,7 +361,13 @@
             ]
         },
         "js": {},
-        "hex": {}
+        "hex": {
+            "new": "#ff5a5f",
+            "old": [
+                "#f16a4f",
+                "#ff4847"
+            ]
+        }
     },
     {
         "name": "indigo",
@@ -349,7 +379,12 @@
             ]
         },
         "js": {},
-        "hex": {}
+        "hex": {
+            "new": "#5968e2",
+            "old": [
+                "#455fcf"
+            ]
+        }
     },
     {
         "name": "purple",
@@ -360,6 +395,11 @@
             ]
         },
         "js": {},
-        "hex": {}
+        "hex": {
+            "new": "#a97ff0",
+            "old": [
+                "#8b71de"
+            ]
+        }
     }
 ]
