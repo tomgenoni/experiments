@@ -1,0 +1,77 @@
+// Oranges
+$thumbtack-orange: rgb(242, 120, 2);
+$orange2: rgb(240, 145, 58);
+$orange3: rgb(240, 168, 110);
+
+// Reds
+$tp-color__red: rgb(255, 72, 71);
+$tp-color__red-300: rgb(255, 110, 109);
+$tp-color__red-200: rgb(255, 151, 150);
+$tp-color__red4: rgb(189, 37, 36);
+
+// Yellows
+$tp-color__yellow: rgb(251, 185, 14);
+$tp-color__yellow-300: rgb(249, 207, 98);
+$tp-color__yellow-200: rgb(247, 219, 146);
+
+// Blues
+$tp-color__blue: rgb(63, 147, 243);
+$tp-color__blue-300: rgb(112, 172, 241);
+$tp-color__blue-200: rgb(148, 190, 238);
+$tp-color__blue-500: rgb(40, 125, 221);
+$facebook-blue: rgb(76, 102, 164);
+$facebook-blue-hover: rgb(82, 112, 195);
+
+// Greens
+$tp-color__green: rgb(99, 203, 118);
+$tp-color__green-300: rgb(138, 205, 150);
+$tp-color__green-200: rgb(166, 213, 174);
+
+// Greys
+$black: rgb(0, 0, 0);
+$tp-color__black: rgb(49, 47, 47);
+$tp-color__black: rgb(78, 77, 77);
+$tp-color__black2: rgb(109, 116, 116);
+$tp-color__black-300: rgb(141, 148, 148);
+$tp-color__gray: rgb(189, 196, 196);
+$tp-color__gray-300: rgb(225, 227, 227);
+$tp-color__gray-300: rgb(237, 238, 238);
+$tp-color__gray-200: rgb(244, 244, 244);
+$tp-color__gray-200: rgb(250, 250, 250);
+$tp-color__white: rgb(255, 255, 255);
+
+// Transparent modal backdrop background
+$modal-backdrop: rgba(0, 0, 0, 0.8);
+
+$colorMap: (
+    "thumbtack-orange": $thumbtack-orange,
+    "orange2": $orange2,
+    "orange3": $orange3,
+    "coral": $tp-color__red,
+    "coral2": $tp-color__red-300,
+    "coral3": $tp-color__red-200,
+    "coral4": $tp-color__red4,
+    "gold": $tp-color__yellow,
+    "gold2": $tp-color__yellow-300,
+    "gold3": $tp-color__yellow-200,
+    "sky": $tp-color__blue,
+    "sky2": $tp-color__blue-300,
+    "sky3": $tp-color__blue-200,
+    "sky4": $tp-color__blue-500,
+    "facebook-blue": $facebook-blue,
+    "facebook-blue-hover": $facebook-blue-hover,
+    "fern": $tp-color__green,
+    "fern2": $tp-color__green-300,
+    "fern3": $tp-color__green-200,
+    "chalkboard": $tp-color__black,
+    "slate": $tp-color__black,
+    "slate2": $tp-color__black2,
+    "steel": $tp-color__black-300,
+    "aluminum": $tp-color__gray,
+    "cinder": $tp-color__gray-300,
+    "pebble": $tp-color__gray-300,
+    "fog": $tp-color__gray-200,
+    "snow": $tp-color__gray-200,
+    "white": $tp-color__white,
+    "modal-backdrop": $modal-backdrop,
+);

@@ -1,0 +1,63 @@
+// NOTE:  THIS FILE SHOULD BE WHITELISTED FROM ANY LINTING RULES, AND SHOULD NOT BE MODIFIED TO
+// MATCH THUMBTACK CODE STYLE GUIDES.  This file contains code blocks copy/pasted from Font Awesome.
+// We want to not make unnecessary modifications, so we can easily do a diff later to see what we
+// changed vs. original Font Awesome source code.
+//
+// The following list of imports is from Font Awesome 4.7.0.  When updating Font Awesome, you must
+// update them to the latest list:
+//
+// 1.  Update list of imports and any other code from upstream font-awesome/scss/font-awesome.scss
+// 2.  Update the customized blocks of code described below.
+// 3.  grep Font Awesome scss files for any new references to the hard-coded "FontAwesome" font
+//     family name.  If you find any, you'll need to override them by introducing new customizations
+//     similar to the ones already existing below.
+@import "../../../../node_modules/font-awesome/scss/variables";
+$fa-font-family: FontAwesome !default;
+@import "../../../../node_modules/font-awesome/scss/mixins";
+// The following overriding mixin was copied from _mixins.scss, when upgrading:
+// 1.  Make sure the old mixin definition isn't previously consumed in _mixins.scss.
+// 2.  Update the contents of this mixin to match what is in _mixins.scss, except that use of the
+//     $fa-font-family variable must be retained.
+@mixin fa-icon() {
+    display: inline-block;
+    font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base} #{$fa-font-family}; // shortening font declaration
+    font-size: inherit; // can't have font-size inherit on line above, so need to override
+    text-rendering: auto; // optimizelegibility throws things off #1094
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+// The following font-face was copied from _path.scss, when upgrading:
+// 1.  Make sure nothing else has been introduced to _path.scss that we might need to copy/include
+//     somehow.
+// 2.  Update the contents of this @font-face to reflect the current contents of _path.scss, except
+//     that the use of the $fa-font-family variable must be retained.
+@font-face {
+    font-family: '#{$fa-font-family}';
+    src: url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}');
+    src: url('#{$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'), url('#{$fa-font-path}/fontawesome-webfont.woff2?v=#{$fa-version}') format('woff2'), url('#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'), url('#{$fa-font-path}/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype'), url('#{$fa-font-path}/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg'); //  src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+    font-weight: normal;
+    font-style: normal;
+}
+// The following class was copied from _core.scss, when upgrading:
+// 1.  Make sure nothing else has been introduced to _core.scss that we might need to copy/include
+//     somehow.
+// 2.  Update the contents of this class to reflect the current contents of _core.scss, except
+//     that the use of the $fa-font-family variable must be retained.
+
+.#{$fa-css-prefix} {
+    display: inline-block;
+    font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base} #{$fa-font-family}; // shortening font declaration
+    font-size: inherit; // can't have font-size inherit on line above, so need to override
+    text-rendering: auto; // optimizelegibility throws things off #1094
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@import "../../../../node_modules/font-awesome/scss/larger";
+@import "../../../../node_modules/font-awesome/scss/fixed-width";
+@import "../../../../node_modules/font-awesome/scss/list";
+@import "../../../../node_modules/font-awesome/scss/bordered-pulled";
+@import "../../../../node_modules/font-awesome/scss/animated";
+@import "../../../../node_modules/font-awesome/scss/rotated-flipped";
+@import "../../../../node_modules/font-awesome/scss/stacked";
+@import "../../../../node_modules/font-awesome/scss/icons";
+@import "../../../../node_modules/font-awesome/scss/screen-reader";

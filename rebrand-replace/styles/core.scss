@@ -1,0 +1,100 @@
+// Globals
+@import "./_base";
+@import "./fonts/_fonts";
+@import "./_grid";
+@import "./_accessibility";
+@import "./_icons";
+@import "./_spacers";
+@import "./_layout";
+@import "./_typography";
+@import "./_links";
+@import "./_buttons";
+@import "./_forms";
+
+// Import
+@import "thumbprint-ui";
+
+// Legacy patterns
+@import "../../legacy-css/thumbprint/patterns/global/headers";
+@import "../../legacy-css/thumbprint/patterns/global/modals";
+
+@import "../../legacy-css/thumbprint/patterns/ExperimentAssignmentPane";
+
+// TODO: Move admin code to a separate file that is dynamically included.
+// No need to load this for normal users.
+@import "../../legacy-css/thumbprint/admin/debug-nav";
+@import "../../legacy-css/thumbprint/admin/footer-debug";
+
+// Potentially non-core patterns
+// TODO(GP, SL): Figure out which of these aren't actually core to
+// the Thumbtack experience.
+@import "../../legacy-css/thumbprint/patterns/DatePicker";
+@import "../../legacy-css/thumbprint/patterns/StickyHeader";
+
+// Migrated to New Directory Structure
+
+// Components
+@import "../../components/alert/styles/alert";
+@import "../../components/attach-button/styles/attach-button";
+@import "../../components/attachment-item/styles/attachment-item";
+@import "../../components/attachment-list-editor/styles/attachment-list-editor";
+@import "../../components/avatar/styles/avatar";
+@import "../../components/modal-basic/styles/modal-basic";
+@import "../../components/modal-informational/styles/modal-informational";
+@import "../../components/modal-standard/styles/modal-standard";
+@import "../../components/breadcrumbs/styles/breadcrumbs";
+@import "../../components/card/styles/card";
+@import "../../components/collapsible-box/styles/collapsible-box";
+@import "../../components/donut-chart/styles/donut-chart";
+@import "../../components/empty-state/styles/empty-state";
+@import "../../components/input-button-group/styles/input-button-group";
+@import "../../components/input-checkbox/styles/input-checkbox";
+@import "../../components/input-credit-card/styles/input-credit-card";
+@import "../../components/input-price/styles/input-price";
+@import "../../components/input-radio/styles/input-radio";
+@import "../../components/input-slider/styles/input-slider";
+@import "../../components/input-text/styles/input-text";
+@import "../../components/inline-edit/styles/inline-edit";
+@import "../../components/lazy-image/styles/lazy-image";
+@import "../../components/modals/modals-bundle";
+@import "../../components/price/styles/price";
+@import "../../components/prose/styles/prose";
+@import "../../components/progress-bar/styles/progress-bar";
+@import "../../components/select/styles/select";
+@import "../../components/star-rating/styles/star-rating";
+@import "../../components/sticky/styles/sticky";
+@import "../../components/sticky-polyfill/styles/sticky-polyfill";
+@import "../../components/toggle/styles/toggle";
+@import "../../components/toolbar/styles/toolbar";
+@import "../../components/tooltip/styles/tooltip";
+@import "../../components/tooltip-icon/styles/tooltip-icon";
+@import "../../components/trigger-popover/styles/trigger-popover";
+@import "../../components/visual-selection/styles/visual-selection";
+@import "../../components/youtube-modal/styles/youtube-modal";
+@import "../../components/zipcode-map/styles/zipcode-map";
+@import "../../components/navigation-basic/styles/navigation-basic";
+@import "../../components/search-form/styles/search-form";
+@import "../../components/loading-dots/styles/loading-dots";
+@import "../../components/loading-pulse/styles/loading-pulse";
+@import "../../components/tt-guarantee-text/styles/tt-guarantee-text";
+@import "../../components/review-stars/styles/review-stars";
+@import "../../components/calendar-selector/styles/calendar-selector";
+@import "../../components/loading-button/styles/loading-button";
+@import "../../components/pagination/styles/pagination";
+@import "../../components/credit-card-form/styles/credit-card-form";
+@import "../../components/auto-payment-summary/styles/auto-payment-summary";
+
+// Modules
+@import "../../modules/app-upsell/styles/app-upsell";
+@import "../../modules/banner-alert/styles/banner-alert";
+@import "../../modules/category-nav/styles/category-nav";
+@import "../../modules/full-footer/styles/full-footer";
+@import "../../modules/hero/styles/hero";
+@import "../../modules/hero-create-request/styles/hero-create-request";
+@import "../../modules/notification-stream/styles/notification-stream";
+@import "../../modules/post-request-interstitial/styles/post-request-interstitial";
+@import "../../modules/reduced-footer/styles/reduced-footer";
+// TODO(bryan): These styles should probably be consolidated under the request-flow CSS file
+@import "../../modules/request-form/styles/request-form";
+@import "../../modules/saved-credit-card/styles/saved-credit-card";
+@import "../../modules/sticky-request-upsell/styles/sticky-request-upsell";

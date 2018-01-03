@@ -1,0 +1,173 @@
+[
+    {
+        "new": "$tp-color__black",
+        "old": [
+            "$tp-color__ui__dark",
+            "$tp-color__text__base",
+            "$tp-color__text__dark",
+            "$tp-color__ui__black",
+            "$chalkboard",
+            "$slate"
+        ]
+    },
+    {
+        "new": "$tp-color__black-300",
+        "old": [
+            "$tp-color__ui__slate",
+            "$tp-color__ui__muted",
+            "$tp-color__text__slate",
+            "$tp-color__text__muted",
+            "$steel"
+        ]
+    },
+    {
+        "new": "$tp-color__gray",
+        "old": [
+            "$tp-color__ui__pale",
+            "$tp-color__text__pale",
+            "$aluminum"
+        ]
+    },
+    {
+        "new": "$tp-color__gray-300",
+        "old": [
+            "$tp-color__ui__base",
+            "$tp-color__ui__light",
+            "$cinder",
+            "$pebble"
+        ]
+    },
+    {
+        "new": "$tp-color__gray-200",
+        "old": [
+            "$tp-color__ui__faint",
+            "$fog",
+            "$snow"
+        ]
+    },
+    {
+        "new": "$tp-color__white",
+        "old": [
+            "$tp-color__ui__white",
+            "$tp-color__link__white",
+            "$white"
+        ]
+    },
+    {
+        "new": "$tp-color__blue-200",
+        "old": [
+            "$tp-color__ui__sky_faint",
+            "$tp-color__link__faint",
+            "$sky3"
+        ]
+    },
+    {
+        "new": "$tp-color__blue-300",
+        "old": [
+            "$tp-color__ui__sky_light",
+            "$tp-color__link__light",
+            "$sky2"
+        ]
+    },
+    {
+        "new": "$tp-color__blue-500",
+        "old": [
+            "$tp-color__ui__sky_dark",
+            "$tp-color__link__dark",
+            "$sky4"
+        ]
+    },
+    {
+        "new": "$tp-color__blue",
+        "old": [
+            "$tp-color__ui__main",
+            "$tp-color__text__main",
+            "$tp-color__ui__sky",
+            "$tp-color__text__sky",
+            "$tp-color__link__base",
+            "$sky"
+        ]
+    },
+    {
+        "new": "$tp-color__green-200",
+        "old": [
+            "$tp-color__ui__good-news-faint",
+            "$fern3"
+        ]
+    },
+    {
+        "new": "$tp-color__green-300",
+        "old": [
+            "$tp-color__ui__good-news-light",
+            "$fern2"
+        ]
+    },
+    {
+        "new": "$tp-color__green",
+        "old": [
+            "$tp-color__ui__good-news",
+            "$tp-color__text__good-news",
+            "$fern"
+        ]
+    },
+    {
+        "new": "$tp-color__yellow-200",
+        "old": [
+            "$tp-color__ui__gold-faint",
+            "$gold3"
+        ]
+    },
+    {
+        "new": "$tp-color__yellow-300",
+        "old": [
+            "$tp-color__ui__gold-light",
+            "$gold2"
+        ]
+    },
+    {
+        "new": "$tp-color__yellow",
+        "old": [
+            "$tp-color__ui__celebrate",
+            "$tp-color__text__celebrate",
+            "$tp-color__ui__gold",
+            "$gold"
+        ]
+    },
+    {
+        "new": "$tp-color__red-200",
+        "old": [
+            "$tp-color__ui__bad-news-faint",
+            "$coral3"
+        ]
+    },
+    {
+        "new": "$tp-color__red-300",
+        "old": [
+            "$tp-color__ui__bad-news-light",
+            "$tp-color__text__bad-news-light",
+            "$coral2"
+        ]
+    },
+    {
+        "new": "$tp-color__red",
+        "old": [
+            "$tp-color__ui__bad-news",
+            "$tp-color__text__bad-news",
+            "$tp-color__link__bad-news",
+            "$coral"
+        ]
+    },
+    {
+        "new": "$tp-color__indigo",
+        "old": [
+            "$tp-color__ui__betterment",
+            "$tp-color__text__betterment"
+        ]
+    },
+    {
+        "new": "$tp-color__purple",
+        "old": [
+            "$tp-color__ui__crafty"
+        ]
+    }
+]

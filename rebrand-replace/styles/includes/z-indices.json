@@ -1,0 +1,17 @@
+{
+    "zIndex": {
+        "hiddenBanner": -2,
+        "hiddenModal": -1,
+        "dropdown": 20,
+        "tooltip": 30,
+        "sticky": 40,
+        "main-nav": 60,
+        "banner": 100,
+        "notification-stream": 150,
+        "modal": 200,
+        "coachmark": 220,
+        "takeover": 240,
+        "debugNav": 400,
+        "alert": 1200
+    }
+}

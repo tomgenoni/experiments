@@ -1,0 +1,47 @@
+// This is being imported on the last line of 'core.css'
+
+// Include font weights and styles
+$tp-include-fonts: '400', '500', '600';
+
+@import "@thumbtack/tp-ui-core-font-face/_index";
+@import "@thumbtack/tp-ui-core-function/_index";
+@import "@thumbtack/tp-ui-core-mixin/_index";
+@import "@thumbtack/thumbprint-tokens/dist/scss/_index";
+
+@import "@thumbtack/tp-ui-core-reset/_index";
+
+@import "@thumbtack/tp-ui-element-a/_index";
+@import "@thumbtack/tp-ui-element-body/_index";
+@import "@thumbtack/tp-ui-element-button/_index";
+@import "@thumbtack/tp-ui-element-checkbox/_index";
+@import "@thumbtack/tp-ui-element-fieldset/_index";
+@import "@thumbtack/tp-ui-element-hr/_index";
+@import "@thumbtack/tp-ui-element-img/_index";
+@import "@thumbtack/tp-ui-element-input/_index";
+@import "@thumbtack/tp-ui-element-label/_index";
+@import "@thumbtack/tp-ui-element-list/_index";
+@import "@thumbtack/tp-ui-element-radio/_index";
+@import "@thumbtack/tp-ui-element-select/_index";
+@import "@thumbtack/tp-ui-element-table/_index";
+@import "@thumbtack/tp-ui-element-textarea/_index";
+@import "@thumbtack/tp-ui-element-type/_index";
+
+@import "@thumbtack/tp-ui-layout-block-list/_index";
+@import "@thumbtack/tp-ui-layout-button-row/_index";
+@import "@thumbtack/tp-ui-layout-form/_index";
+@import "@thumbtack/tp-ui-layout-grid/_index";
+@import "@thumbtack/tp-ui-layout-input-row/_index";
+@import "@thumbtack/tp-ui-layout-longread/_index";
+@import "@thumbtack/tp-ui-layout-wrap/_index";
+
+@import "@thumbtack/tp-ui-component-alert/_index";
+@import "@thumbtack/tp-ui-component-avatar/_index";
+@import "@thumbtack/tp-ui-component-loader/_index";
+
+@import "@thumbtack/tp-ui-utility-background/_index";
+@import "@thumbtack/tp-ui-utility-flexbox/_index";
+@import "@thumbtack/tp-ui-utility-layout/_index";
+@import "@thumbtack/tp-ui-utility-margin/_index";
+@import "@thumbtack/tp-ui-utility-padding/_index";
+@import "@thumbtack/tp-ui-utility-sizing/_index";
+@import "@thumbtack/tp-ui-utility-type/_index";

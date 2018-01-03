@@ -1,0 +1,82 @@
+@import "@thumbtack/thumbprint-tokens/dist/scss/_index";
+@import "./includes/forms";
+@import "./includes/color";
+// TODO(tim): textareas need to be spec'd
+input,
+label,
+textarea {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+input:focus {
+    outline: 0;
+}
+// webkit adds some left padding to "search" inputs
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::placeholder {
+    color: $placeholder-color;
+}
+
+input[type="date"]:not(.tp-text-input),
+input[type="datetime-local"]:not(.tp-text-input),
+input[type="email"]:not(.tp-text-input),
+input[type="number"]:not(.tp-text-input),
+input[type="password"]:not(.tp-text-input),
+input[type="search"]:not(.tp-text-input),
+input[type="tel"]:not(.tp-text-input),
+input[type="text"]:not(.tp-text-input),
+input[type="time"]:not(.tp-text-input),
+input[type="url"]:not(.tp-text-input),
+textarea:not(.tp-textarea) {
+    background: $tp-color__white;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid $tp-color__gray-300;
+    border-radius: $input-border-radius;
+    padding: 0 $padding;
+    font-size: $input-font-size;
+    color: $tp-color__black;
+    line-height: $input-text-line-height;
+    height: $input-height;
+
+    &:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+        @include focused-form-element;
+    }
+
+    &:disabled {
+        background: $tp-color__gray-200;
+    }
+    -webkit-appearance: none;
+}
+
+textarea:not(.tp-textarea) {
+    padding: $padding;
+    line-height: $input-text-line-height;
+}
+
+.InputContainer {
+    background: $tp-color__white;
+    border-bottom: 1px solid $tp-color__gray-300;
+
+    &.is-first,
+    &.theme-group-container,
+    &:first-of-type {
+        border-top: 1px solid $tp-color__gray-300;
+    }
+
+    &.theme-group-container {
+        // Note, doesn't use shorthand to avoid overriding styling
+        padding-top: 12px;
+        padding-bottom: 32px;
+    }
+}
+
+label[for] {
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+{
+    "breakpoints": {
+        "page": {
+            "md": "1023px",
+            "sm": "767px",
+            "xs": "479px"
+        },
+        "splitView": {
+            "md": "1200px",
+            "sm": "767px"
+        },
+        "threePane": {
+            "sm": "767px",
+            "md": "1279px",
+            "lg": "1365px"
+        },
+        "messengerActionsBar": {
+            "sm": "539px"
+        }
+    }
+}

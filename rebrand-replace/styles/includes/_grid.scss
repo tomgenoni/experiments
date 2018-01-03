@@ -1,0 +1,224 @@
+// $grids[<GridName>] => (<GridName>: <GridDef>, ...)
+// <GridDef> => (
+//     columns => <int>, The number of columns for the grid
+//     maxWidth => <length> (optional) max-width for the grid
+//     gutter => <length> The gutter between the columns
+//     breakpointsGrid => <string> The configuration set in `breakpoints.json` this
+//         grid corresponds to.
+//     disableSizeColumnName => <boolean> (optional) Do you not want to include the breakpoint
+//         name in the classnames for the columns
+//   )
+
+$grids: (
+    page: (
+        "lg": (
+            columns: 6,
+            columnPadding: 8px,
+            gridPadding: 16px,
+            maxWidth: 946px,
+        ),
+        "md": (
+            columns: 6,
+            columnPadding: 8px,
+            maxWidth: 728px,
+            gridPadding: 16px,
+            breakpointsGrid: "page",
+        ),
+        "sm": (
+            resetAbove: true,
+            columns: 6,
+            columnPadding: 8px,
+            maxWidth: 474px,
+            gridPadding: 16px,
+            breakpointsGrid: "page",
+        ),
+        "xs": (
+            columns: 6,
+            columnPadding: calc(2.597% - 3.479px),
+            gridPadding: 16px,
+            breakpointsGrid: "page",
+        )
+    ),
+
+    splitViewSide: (
+        "lg": (
+            columns: 6,
+            gutter: 16px,
+            maxWidth: 480px,
+        ),
+        "md": (
+            columns: 6,
+            gutter: 8px,
+            breakpointsGrid: "splitView",
+        ),
+        "sm": (
+            columns: 6,
+            gutter: 8px,
+            breakpointsGrid: "splitView",
+        )
+    ),
+    splitViewContent: (
+        "lg": (
+            columns: 6,
+            gutter: 16px,
+            maxWidth: 960px,
+        ),
+        "md": (
+            columns: 6,
+            gutter: 8px,
+            maxWidth: 90%,
+            breakpointsGrid: "splitView",
+        ),
+        "sm": (
+            columns: 6,
+            gutter: 8px,
+            maxWidth: 90%,
+            breakpointsGrid: "splitView",
+        )
+    )
+);
+
+@function get-grid-property($grid, $size, $property) {
+    @return map-get(map-get(map-get($grids, $grid), $size), $property);
+}
+
+@function column($i, $column-count) {
+    @if ($i > $column-count) {
+        @return 100%;
+    }
+    @else {
+        @return ($i / $column-count) * 100%;
+    }
+}
+
+
+@function append-to-nth($collection, $i, $value, $separator) {
+    @return set-nth($collection, $i, append(nth($collection, $i), $value, $separator));
+}
+
+@mixin generateColumns($options, $gridOptions, $gridSize) {
+
+    @if map-has-key($options, maxWidth) {
+        max-width: map-get($options, maxWidth);
+    }
+
+    @if map-has-key($options, gridPadding) {
+        padding-left: map-get($options, gridPadding);
+        padding-right: map-get($options, gridPadding);
+    }
+
+    $breakPointIdx: index(map-keys($gridOptions), $gridSize);
+    $previousColumnCount: -1;
+
+    // If this is the first breakpoint, establish its column-specific rules.
+    @if ($breakPointIdx == 1) {
+        [class*="column-"] {
+            padding-left: map-get($options, columnPadding);
+            padding-right: map-get($options, columnPadding);
+
+            &.theme-gutterless {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
+    // If this isn't the first breakpoint, we first need to override certain
+    // previous rules that were already set.
+    @else {
+        $previousBreakpoint: nth(map-keys($gridOptions), $breakPointIdx - 1);
+        $previousBreakpointMap: map-get($gridOptions, $previousBreakpoint);
+        $previousColumnPadding: map-get($previousBreakpointMap, columnPadding);
+        $previousColumnCount: map-get($previousBreakpointMap, columns);
+        $columnCount: map-get($options, columns);
+
+        // Add a new columnPadding setting, if this breakpoint's columnPadding is
+        // different than the previous breakpoint's.
+        @if ($previousColumnPadding != map-get($options, columnPadding)) {
+            [class*="column-"] {
+                padding-left: map-get($options, columnPadding);
+                padding-right: map-get($options, columnPadding);
+            }
+        }
+
+        // If the column count for this breakpoint is different than the previous
+        // breakpoint, we must add overrides for each previous breakpoint so that their
+        // columns degrade into this breakpoint's widths.
+        @if ($previousColumnCount != map-get($options, columns)) {
+            // We are grouping the classnames for the same column number so that we
+            // don't have duplicate rules.
+            $column-class-names: ();
+            $offset-class-names: ();
+
+            @for $i from 1 through $breakPointIdx - 1 {
+                $previousBreakpoint: nth(map-keys($gridOptions), $i);
+                @for $i from 1 through map-get($previousBreakpointMap, columns) {
+                    $iGroup: min($i, $columnCount);
+                    @if length($column-class-names) < $iGroup {
+                        $column-class-names: append($column-class-names, ());
+                        $offset-class-names: append($offset-class-names, ());
+                    }
+                    @if map-get($previousBreakpointMap, disableSizeColumnName) == true {
+                        $column-class-names: append-to-nth($column-class-names, $iGroup, ".column-#{$i}", comma);
+                        $offset-class-names: append-to-nth($offset-class-names, $iGroup, ".column-offset-#{$i}", comma);
+                    }
+                    @else {
+                        $column-class-names: append-to-nth($column-class-names, $iGroup, ".column-#{$previousBreakpoint}-#{$i}", comma);
+                        $offset-class-names: append-to-nth($offset-class-names, $iGroup, ".column-#{$previousBreakpoint}-offset-#{$i}", comma);
+                    }
+                }
+            }
+            @for $i from 1 through length($column-class-names) {
+                $classname: nth($column-class-names, $i);
+                #{$classname} {
+                    width: column($i, map-get($options, columns));
+                }
+            }
+
+            @for $i from 1 through length($offset-class-names) {
+                $classname: nth($offset-class-names, $i);
+                #{$classname} {
+                    margin-left: column($i, map-get($options, columns));
+                }
+            }
+        }
+
+        // If this breakpoint specifies `resetAbove`, reset all previous
+        // breakpoint rules to default settings.
+        @if (map-get($options, resetAbove) == true) {
+            @for $i from 1 through $breakPointIdx - 1 {
+                $previousBreakpoint: nth(map-keys($gridOptions), $i);
+                @for $i from 1 through map-get($previousBreakpointMap, columns) {
+                    .column-#{$previousBreakpoint}-#{$i} {
+                        width: 100%;
+                    }
+                    .column-#{$previousBreakpoint}-offset-#{$i} {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // Then, we establish the new rules for this breakpoint.
+    @for $i from 0 through map-get($options, columns) {
+
+        $column-class-name: "";
+        $offset-class-name: "";
+
+        @if map-get($options, disableSizeColumnName) == true {
+            $column-class-name: ".column-#{$i}";
+            $offset-class-name: ".column-offset-#{$i}";
+        } @else {
+            $column-class-name: ".column-#{$gridSize}-#{$i}";
+            $offset-class-name: ".column-#{$gridSize}-offset-#{$i}";
+        }
+
+        #{$column-class-name} {
+            width: column($i, map-get($options, columns));
+        }
+        #{$offset-class-name} {
+            margin-left: column($i, map-get($options, columns));
+        }
+    }
+}

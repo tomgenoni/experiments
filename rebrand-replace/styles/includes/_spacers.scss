@@ -1,0 +1,8 @@
+$spacer-size-unit: 4px;
+
+@mixin spacer($level) {
+    @if $level > 24 {
+        @error "Spacer: Spacer max level exceeded; use level <= 24.";
+    }
+    margin-bottom: $spacer-size-unit * $level;
+}

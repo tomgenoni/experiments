@@ -1,0 +1,15 @@
+//// A collection of utilities for accessibility
+//// @group Accessibility
+
+/// See https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+/// @author Seamus Leahy
+.u-visuallyHidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}

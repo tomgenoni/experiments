@@ -1,0 +1,10 @@
+@import "./z-indices.json";
+
+@function get-z-for($index) {
+    @if map-has-key($zIndex, $index) {
+        @return map-get($zIndex, $index);
+    }
+    @else {
+        @warn "z-index not set"
+    }
+}

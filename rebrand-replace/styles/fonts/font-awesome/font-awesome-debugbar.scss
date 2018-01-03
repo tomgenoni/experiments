@@ -1,0 +1,36 @@
+// Font Awesome is ONLY included here for the PHP Debug Bar to use.  It has not been approved for
+// use by design on the production Thumbtack web site.
+//
+// Unfortunately, the debug bar requires a custom font family name, which they implemented using
+// very hacky means that don't allow for other customization of Font Awesome.  They are also fairly
+// committed to using it, since stylesheets both within and external to the debug bar project are
+// hard-coded to use that non-standard font family name.
+//
+// The problem with this is that the upstream maintainers of Font Awesome are actively rejecting any
+// attempts to allow users to customize the font family name.  Their suggested "solution" is to
+// reproduce portions of the Font Awesome source code within your own source code:
+//
+//     https://github.com/FortAwesome/Font-Awesome/issues/6113
+//     https://github.com/FortAwesome/Font-Awesome/pull/10406
+//
+// We therefore implement their "solution" by setting package.json to use an EXACT Font Awesome
+// version.  To upgrade Font Awesome, you must manually update this file and dependent files, as
+// noted further below.
+
+// Get default variable values in order to get $fa-version
+@import "../../../../node_modules/font-awesome/scss/variables";
+
+// Set the prefix and font family to namespace this for PHP Debug Bar.
+$fa-css-prefix: phpdebugbar-fa;
+$fa-font-family: PhpDebugbarFontAwesome;
+
+// Use external Font Awesome CDN:
+$fa-font-path: "https://netdna.bootstrapcdn.com/font-awesome/#{$fa-version}/fonts";
+
+// Fail if we are not the expected version.  If you run into this error, you need to update the
+// font-awesome-debugbar-implementation.scss file to support the new Font Awesome version.  Follow
+// the directions in that file.
+@if $fa-version != "4.7.0" {
+    @error "Font Awesome PHP Debug Bar adaptation requires updating.";
+}
+@import "font-awesome-debugbar-implementation";
