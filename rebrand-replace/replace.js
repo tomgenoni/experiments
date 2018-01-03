@@ -2,13 +2,13 @@ const color   = require('./json/color.json');
 const replace = require('replace');
 
 color.forEach(function(entry){
-    entry.old.forEach(function(oldValue){
+    entry.sass.old.forEach(function(oldValue){
 
         replace({
           regex: "\\" + oldValue,
-          replacement: entry.new,
+          replacement: entry.sass.new,
           paths: [
-              '/Users/tom/Sites/website/thumbprint/'
+              '/Users/tom/Sites/website/thumbprint/globals'
           ],
           excludeList: 'exclude.txt',
           include: '*.scss',
