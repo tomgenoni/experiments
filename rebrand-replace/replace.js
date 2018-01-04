@@ -5,7 +5,7 @@ color.forEach(function(entry){
     entry.sass.old.forEach(function(oldValue){
 
         replace({
-          regex: "\\" + oldValue,
+          regex: "\\" + oldValue + "(?=;| )",
           replacement: entry.sass.new,
           paths: [
               '/Users/tom/Sites/website/thumbprint/globals'
@@ -19,3 +19,6 @@ color.forEach(function(entry){
 
     })
 })
+
+
+//searchText.replace(/\$foo(?=;| )/gm, "\\$bar")

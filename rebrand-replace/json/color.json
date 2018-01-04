@@ -1,6 +1,583 @@
 [
     {
+        "name": "blue-200",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__blue-200",
+            "old": [
+                "$tp-color__ui__sky_faint",
+                "$tp-color__link__faint",
+                "$sky3"
+            ]
+        },
+        "js": {
+            "new": "tpColorBlue200",
+            "old": [
+                "tpColorUiSkyFaint",
+                "tpColorLinkFaint"
+            ]
+        },
+        "hex": {
+            "new": "#b3ebff",
+            "old": [
+                "#94beee"
+            ]
+        }
+    },
+    {
+        "name": "blue-300",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__blue-300",
+            "old": [
+                "$tp-color__ui__sky_light",
+                "$tp-color__link__light",
+                "$sky2"
+            ]
+        },
+        "js": {
+            "new": "tpColorBlue300",
+            "old": [
+                "tpColorUiSkyLight",
+                "tpColorLinkLight"
+            ]
+        },
+        "hex": {
+            "new": "#79d2f2",
+            "old": [
+                "#70acf1"
+            ]
+        }
+    },
+    {
+        "name": "blue",
+        "extended": false,
+        "sass": {
+            "new": "$tp-color__blue",
+            "old": [
+                "$tp-color__ui__main",
+                "$tp-color__text__main",
+                "$tp-color__ui__sky",
+                "$tp-color__text__sky",
+                "$tp-color__link__base",
+                "$sky"
+            ]
+        },
+        "js": {
+            "new": "tpColor__blue",
+            "old": [
+                "tpColorUiMain",
+                "tpColorTextMain",
+                "tpColorUiSky",
+                "tpColorTextSky",
+                "tpColorLinkBase"
+            ]
+        },
+        "hex": {
+            "new": "#009fd9",
+            "old": [
+                "#0abae6",
+                "#3f93f3"
+            ]
+        }
+    },
+    {
+        "name": "blue-500",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__blue-500",
+            "old": [
+                "$tp-color__ui__sky_dark",
+                "$tp-color__link__dark",
+                "$sky4"
+            ]
+        },
+        "js": {
+            "new": "tpColorBlue500",
+            "old": [
+                "tpColorUiSkyDark",
+                "tpColorLinkDark"
+            ]
+        },
+        "hex": {
+            "new": "#007fad",
+            "old": [
+                "#287ddd"
+            ]
+        }
+    },
+    {
+        "name": "blue-600",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__blue-600"
+        },
+        "js": {
+            "new": "tpColorBlue600",
+        },
+        "hex": {
+            "new": "#005a7a"
+        }
+    },
+    {
+        "name": "indigo-200",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__indigo-200"
+        },
+        "js": {
+            "new": "tpColorBlue200",
+        },
+        "hex": {
+            "new": "#cce1ff"
+        }
+    },
+    {
+        "name": "indigo-300",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__indigo-300"
+        },
+        "js": {
+            "new": "tpColorBlue300",
+        },
+        "hex": {
+            "new": "#96c2ff"
+        }
+    },
+    {
+        "name": "indigo",
+        "extended": false,
+        "sass": {
+            "new": "$tp-color__indigo",
+            "old": [
+                "$tp-color__ui__betterment",
+                "$tp-color__text__betterment"
+            ]
+        },
+        "js": {
+            "new": "tpColorIndigo",
+            "old": [
+                "tpColorUiBetterment",
+                "tpColorTextBetterment"
+            ]
+        },
+        "hex": {
+            "new": "#5968e2",
+            "old": [
+                "#455fcf"
+            ]
+        }
+    },
+    {
+        "name": "indigo-500",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__indigo-500"
+        },
+        "js": {
+            "new": "tpColorBlue500",
+        },
+        "hex": {
+            "new": "#4f54b3"
+        }
+    },
+    {
+        "name": "indigo-600",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__indigo-600"
+        },
+        "js": {
+            "new": "tpColorBlue600",
+        },
+        "hex": {
+            "new": "#383c80"
+        }
+    },
+    {
+        "name": "purple-200",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__purple-200"
+        },
+        "js": {
+            "new": "tpColorPurple200",
+        },
+        "hex": {
+            "new": "#dfccff"
+        }
+    },
+    {
+        "name": "purple-300",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__purple-300"
+        },
+        "js": {
+            "new": "tpColorPurple300",
+        },
+        "hex": {
+            "new": "#d3baff"
+        }
+    },
+    {
+        "name": "purple",
+        "extended": false,
+        "sass": {
+            "new": "$tp-color__purple",
+            "old": [
+                "$tp-color__ui__crafty"
+            ]
+        },
+        "js": {
+            "new": "tpColorPurple",
+            "old": [
+                "tpColorUiCrafty"
+            ]
+        },
+        "hex": {
+            "new": "#a97ff0",
+            "old": [
+                "#8b71de"
+            ]
+        }
+    },
+    {
+        "name": "purple-500",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__purple-500"
+        },
+        "js": {
+            "new": "tpColorPurple500",
+        },
+        "hex": {
+            "new": "#8a5ed6"
+        }
+    },
+    {
+        "name": "purple-600",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__purple-600"
+        },
+        "js": {
+            "new": "tpColorPurple600",
+        },
+        "hex": {
+            "new": "#783ad0"
+        }
+    },
+    {
+        "name": "green-200",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__green-200",
+            "old": [
+                "$tp-color__ui__good-news-faint",
+                "$fern3"
+            ]
+        },
+        "js": {
+            "new": "tpColorGreen200",
+            "old": [
+                "tpColorUiGoodNewsFaint"
+            ]
+        },
+        "hex": {
+            "new": "#c6f7da",
+            "old": [
+                "#93dbc2",
+                "#a6d5ae"
+            ]
+        }
+    },
+    {
+        "name": "green-300",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__green-300",
+            "old": [
+                "$tp-color__ui__good-news-light",
+                "$fern2"
+            ]
+        },
+        "js": {
+            "new": "tpColorGreen300",
+            "old": [
+                "tpColorUiGoodNewsLight"
+            ]
+        },
+        "hex": {
+            "new": "#73e4a2",
+            "old": [
+                "#62cca7"
+            ]
+        }
+    },
+    {
+        "name": "green",
+        "extended": false,
+        "sass": {
+            "new": "$tp-color__green",
+            "old": [
+                "$tp-color__ui__good-news",
+                "$tp-color__text__good-news",
+                "$fern"
+            ]
+        },
+        "js": {
+            "new": "tpColorGreen",
+            "old": [
+                "tpColorUiGoodNews",
+                "tpColorTextGoodNews"
+            ]
+        },
+        "hex": {
+            "new": "#2db783",
+            "old": [
+                "#3ac392",
+                "#63cb76"
+            ]
+        }
+    },
+    {
+        "name": "green-500",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__green-500"
+        },
+        "js": {
+            "new": "tpColorGreen500",
+        },
+        "hex": {
+            "new": "#109e78"
+        }
+    },
+    {
+        "name": "green-600",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__green-600"
+        },
+        "js": {
+            "new": "tpColorGreen600",
+        },
+        "hex": {
+            "new": "#0f6648"
+        }
+    },
+    {
+        "name": "yellow-200",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__yellow-200",
+            "old": [
+                "$tp-color__ui__gold-faint",
+                "$gold3"
+            ]
+        },
+        "js": {
+            "new": "tpColorYellow200",
+            "old": [
+                "tpColorUiGoldFaint"
+            ]
+        },
+        "hex": {
+            "new": "#ffebb3",
+            "old": [
+                "#ffcb78",
+                "#f7db92"
+            ]
+        }
+    },
+    {
+        "name": "yellow-300",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__yellow-300",
+            "old": [
+                "$tp-color__ui__gold-light",
+                "$gold2"
+            ]
+        },
+        "js": {
+            "new": "tpColorYellow300",
+            "old": [
+                "tpColorUiGoldLight"
+            ]
+        },
+        "hex": {
+            "new": "#ffdd80",
+            "old": [
+                "#ffb742",
+                "#f9cf62"
+            ]
+        }
+    },
+    {
+        "name": "yellow",
+        "extended": false,
+        "sass": {
+            "new": "$tp-color__yellow",
+            "old": [
+                "$tp-color__ui__celebrate",
+                "$tp-color__text__celebrate",
+                "$tp-color__ui__gold",
+                "$gold"
+            ]
+        },
+        "js": {
+            "new": "tpColorYellow",
+            "old": [
+                "tpColorUiCelebrate",
+                "tpColorTextCelebrate",
+                "tpColorUiGold"
+            ]
+        },
+        "hex": {
+            "new": "#febe14",
+            "old": [
+                "#fbe002",
+                "#ff9f02",
+                "#fbb90e"
+            ]
+        }
+    },
+    {
+        "name": "yellow-500",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__yellow-500"
+        },
+        "js": {
+            "new": "tpColorYellow500",
+        },
+        "hex": {
+            "new": "#d48300"
+        }
+    },
+    {
+        "name": "yellow-600",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__yellow-600"
+        },
+        "js": {
+            "new": "tpColorYellow600",
+        },
+        "hex": {
+            "new": "#a16300"
+        }
+    },
+    {
+        "name": "red-200",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__red-200",
+            "old": [
+                "$tp-color__ui__bad-news-faint",
+                "$coral3"
+            ]
+        },
+        "js": {
+            "new": "tpColorRed200",
+            "old": [
+                "tpColorUiBadNewsFaint"
+            ]
+        },
+        "hex": {
+            "new": "#ffd9d9",
+            "old": [
+                "#f2a494",
+                "#ff9796"
+            ]
+        }
+    },
+    {
+        "name": "red-300",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__red-300",
+            "old": [
+                "$tp-color__ui__bad-news-light",
+                "$tp-color__text__bad-news-light",
+                "$coral2"
+            ]
+        },
+        "js": {
+            "new": "tpColorRed300",
+            "old": [
+                "tpColorUiBadNewsLight",
+                "tpColorTextBadNewsLight"
+            ]
+        },
+        "hex": {
+            "new": "#ffb0b0",
+            "old": [
+                "#f28974",
+                "#ff6e6d"
+            ]
+        }
+    },
+    {
+        "name": "red",
+        "extended": false,
+        "sass": {
+            "new": "$tp-color__red",
+            "old": [
+                "$tp-color__ui__bad-news",
+                "$tp-color__text__bad-news",
+                "$tp-color__link__bad-news",
+                "$coral"
+            ]
+        },
+        "js": {
+            "new": "tpColorRed",
+            "old": [
+                "tpColorUiBadNews",
+                "tpColorTextBadNews",
+                "tpColorLinkBadNews"
+            ]
+        },
+        "hex": {
+            "new": "#ff5a5f",
+            "old": [
+                "#f16a4f",
+                "#ff4847"
+            ]
+        }
+    }
+    {
+        "name": "red-500",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__red-500"
+        },
+        "js": {
+            "new": "tpColorRed500",
+        },
+        "hex": {
+            "new": "#cc3553"
+        }
+    },
+    {
+        "name": "red-600",
+        "extended": true,
+        "sass": {
+            "new": "$tp-color__red-600"
+        },
+        "js": {
+            "new": "tpColorRed600",
+        },
+        "hex": {
+            "new": "#76012c"
+        }
+    },
+    {
         "name": "black-300",
+        "extended": false,
         "sass": {
             "new": "$tp-color__black-300",
             "old": [
@@ -11,7 +588,15 @@
                 "$steel"
             ]
         },
-        "js": {},
+        "js": {
+            "new": "tpColorBlack300",
+            "old": [
+                "tpColorUiSlate",
+                "tpColorUiMuted",
+                "tpColorTextSlate",
+                "tpColorTextMuted"
+            ]
+        },
         "hex": {
             "new": "#526166",
             "old": [
@@ -23,6 +608,7 @@
     },
     {
         "name": "black",
+        "extended": false,
         "sass": {
             "new": "$tp-color__black",
             "old": [
@@ -34,7 +620,15 @@
                 "$slate"
             ]
         },
-        "js": {},
+        "js": {
+            "new": "tpColor__black",
+            "old": [
+                "tpColorUiDark",
+                "tpColorTextBase",
+                "tpColorTextDark",
+                "tpColorUiBlack"
+            ]
+        },
         "hex": {
             "new": "#001c26",
             "old": [
@@ -48,7 +642,33 @@
         }
     },
     {
+        "name": "gray-200",
+        "extended": false,
+        "sass": {
+            "new": "$tp-color__gray-200",
+            "old": [
+                "$tp-color__ui__faint",
+                "$fog",
+                "$snow"
+            ]
+        },
+        "js": {
+            "new": "tpColorGray200",
+            "old": [
+                "tpColorUiFaint",
+            ]
+        },
+        "hex": {
+            "new": "#fafafa",
+            "old": [
+                "#f7fafb",
+                "#f4f4f4"
+            ]
+        }
+    },
+    {
         "name": "gray-300",
+        "extended": false,
         "sass": {
             "new": "$tp-color__gray-300",
             "old": [
@@ -58,7 +678,13 @@
                 "$pebble"
             ]
         },
-        "js": {},
+        "js": {
+            "new": "tpColorGray300",
+            "old": [
+                "tpColorUiBase",
+                "tpColorUiLight"
+            ]
+        },
         "hex": {
             "new": "#e9eced",
             "old": [
@@ -70,26 +696,8 @@
         }
     },
     {
-        "name": "gray-200",
-        "sass": {
-            "new": "$tp-color__gray-200",
-            "old": [
-                "$tp-color__ui__faint",
-                "$fog",
-                "$snow"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#fafafa",
-            "old": [
-                "#f7fafb",
-                "#f4f4f4"
-            ]
-        }
-    },
-    {
         "name": "gray",
+        "extended": false,
         "sass": {
             "new": "$tp-color__gray",
             "old": [
@@ -98,7 +706,13 @@
                 "$aluminum"
             ]
         },
-        "js": {},
+        "js": {
+            "new": "tpColorGray",
+            "old": [
+                "tpColorUiPale",
+                "tpColorTextPale"
+            ]
+        },
         "hex": {
             "new": "#d3d4d5",
             "old": [
@@ -109,6 +723,7 @@
     },
     {
         "name": "white",
+        "extended": false,
         "sass": {
             "new": "$tp-color__white",
             "old": [
@@ -117,288 +732,17 @@
                 "$white"
             ]
         },
-        "js": {},
+        "js": {
+            "new": "tpColorWhite",
+            "old": [
+                "tpColorUiWhite",
+                "tpColorLinkWhite"
+            ]
+        },
         "hex": {
             "new": "#ffffff",
             "old": [
                 "#fff"
-            ]
-        }
-    },
-    {
-        "name": "blue-200",
-        "sass": {
-            "new": "$tp-color__blue-200",
-            "old": [
-                "$tp-color__ui__sky_faint",
-                "$tp-color__link__faint",
-                "$sky3"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#b3ebff",
-            "old": [
-                "#94beee"
-            ]
-        }
-    },
-    {
-        "name": "blue-300",
-        "sass": {
-            "new": "$tp-color__blue-300",
-            "old": [
-                "$tp-color__ui__sky_light",
-                "$tp-color__link__light",
-                "$sky2"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#79d2f2",
-            "old": [
-                "#70acf1"
-            ]
-        }
-    },
-    {
-        "name": "blue-500",
-        "sass": {
-            "new": "$tp-color__blue-500",
-            "old": [
-                "$tp-color__ui__sky_dark",
-                "$tp-color__link__dark",
-                "$sky4"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#007fad",
-            "old": [
-                "#287ddd"
-            ]
-        }
-    },
-    {
-        "name": "blue",
-        "sass": {
-            "new": "$tp-color__blue",
-            "old": [
-                "$tp-color__ui__main",
-                "$tp-color__text__main",
-                "$tp-color__ui__sky",
-                "$tp-color__text__sky",
-                "$tp-color__link__base",
-                "$sky"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#009fd9",
-            "old": [
-                "#0abae6",
-                "#3f93f3"
-            ]
-        }
-    },
-    {
-        "name": "green-200",
-        "sass": {
-            "new": "$tp-color__green-200",
-            "old": [
-                "$tp-color__ui__good-news-faint",
-                "$fern3"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#c6f7da",
-            "old": [
-                "#93dbc2",
-                "#a6d5ae"
-            ]
-        }
-    },
-    {
-        "name": "green-300",
-        "sass": {
-            "new": "$tp-color__green-300",
-            "old": [
-                "$tp-color__ui__good-news-light",
-                "$fern2"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#73e4a2",
-            "old": [
-                "#62cca7"
-            ]
-        }
-    },
-    {
-        "name": "green",
-        "sass": {
-            "new": "$tp-color__green",
-            "old": [
-                "$tp-color__ui__good-news",
-                "$tp-color__text__good-news",
-                "$fern"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#2db783",
-            "old": [
-                "#3ac392",
-                "#63cb76"
-            ]
-        }
-    },
-    {
-        "name": "yellow-200",
-        "sass": {
-            "new": "$tp-color__yellow-200",
-            "old": [
-                "$tp-color__ui__gold-faint",
-                "$gold3"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#ffebb3",
-            "old": [
-                "#ffcb78",
-                "#f7db92"
-            ]
-        }
-    },
-    {
-        "name": "yellow-300",
-        "sass": {
-            "new": "$tp-color__yellow-300",
-            "old": [
-                "$tp-color__ui__gold-light",
-                "$gold2"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#ffdd80",
-            "old": [
-                "#ffb742",
-                "#f9cf62"
-            ]
-        }
-    },
-    {
-        "name": "yellow",
-        "sass": {
-            "new": "$tp-color__yellow",
-            "old": [
-                "$tp-color__ui__celebrate",
-                "$tp-color__text__celebrate",
-                "$tp-color__ui__gold",
-                "$gold"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#febe14",
-            "old": [
-                "#fbe002",
-                "#ff9f02",
-                "#fbb90e"
-            ]
-        }
-    },
-    {
-        "name": "red-200",
-        "sass": {
-            "new": "$tp-color__red-200",
-            "old": [
-                "$tp-color__ui__bad-news-faint",
-                "$coral3"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#ffd9d9",
-            "old": [
-                "#f2a494",
-                "#ff9796"
-            ]
-        }
-    },
-    {
-        "name": "red-300",
-        "sass": {
-            "new": "$tp-color__red-300",
-            "old": [
-                "$tp-color__ui__bad-news-light",
-                "$tp-color__text__bad-news-light",
-                "$coral2"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#ffb0b0",
-            "old": [
-                "#f28974",
-                "#ff6e6d"
-            ]
-        }
-    },
-    {
-        "name": "red",
-        "sass": {
-            "new": "$tp-color__red",
-            "old": [
-                "$tp-color__ui__bad-news",
-                "$tp-color__text__bad-news",
-                "$tp-color__link__bad-news",
-                "$coral"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#ff5a5f",
-            "old": [
-                "#f16a4f",
-                "#ff4847"
-            ]
-        }
-    },
-    {
-        "name": "indigo",
-        "sass": {
-            "new": "$tp-color__indigo",
-            "old": [
-                "$tp-color__ui__betterment",
-                "$tp-color__text__betterment"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#5968e2",
-            "old": [
-                "#455fcf"
-            ]
-        }
-    },
-    {
-        "name": "purple",
-        "sass": {
-            "new": "$tp-color__purple",
-            "old": [
-                "$tp-color__ui__crafty"
-            ]
-        },
-        "js": {},
-        "hex": {
-            "new": "#a97ff0",
-            "old": [
-                "#8b71de"
             ]
         }
     }

@@ -183,28 +183,20 @@ td {
     margin-bottom: 20px;
 }
 
-.entries > li {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .entry-empty {
-    height: 54px;
+    color: #fff;
 }
 
-.name,
+.sass,
+.js,
 .hex {
     font-family: 'Source Code Pro';
     font-size: 12px;
     cursor: pointer;
 }
 
-
-.hex {
-    margin-left: auto;
-}
-
-.name:hover,
+.sass:hover,
+.js:hover,
 .hex:hover {
     color: #009fd9;
 }
@@ -245,11 +237,9 @@ td {
     text-align: center;
     display: block;
     width: 100%;
-    position: absolute;
-    top: 16px;
     font-weight: 700;
-    left: 0;
-    top: 60px;
+    margin-bottom: -20px;
+    margin-top: 5px;
 }
 
 .old-color-data > li:not(:last-child) {
