@@ -50,6 +50,12 @@ input, textarea, select,
 
 /* specific overrides */
 
+
+.tp-button--secondary {
+    border-color: #009fd9;
+    color: #009fd9;
+}
+
 a.links__Anchor-iPcyAn.idlCmN,
 a.links__Anchor-iPcyAn.fFnBNb {
     box-shadow: 0 -2px 0 #009fd9 inset;
