@@ -4,29 +4,14 @@ console.log("---------");
 
 var colorMap = [
     {
-        "name": "black",
-        "old": ["#333333", "#000000"],
-        "new": "#001c26"
+        "name": "blue-200",
+        "old": ["#94beee"],
+        "new": "#b3ebff"
     },
     {
-        "name": "black-300",
-        "old": ["#6d7273", "#858b8c"],
-        "new": "#526166"
-    },
-    {
-        "name": "gray",
-        "old": ["#ced6d9"],
-        "new": "#d3d4d5"
-    },
-    {
-        "name": "gray-300",
-        "old": ["#e6f0f2", "#f0f6f7"],
-        "new": "#e9eced"
-    },
-    {
-        "name": "gray-200",
-        "old": ["#f7fafb"],
-        "new": "#fafafa"
+        "name": "blue-300",
+        "old": ["#70acf1"],
+        "new": "#79d2f2"
     },
     {
         "name": "blue",
@@ -34,19 +19,9 @@ var colorMap = [
         "new": "#009fd9"
     },
     {
-        "name": "green",
-        "old": ["#3ac392"],
-        "new": "#2db783"
-    },
-    {
-        "name": "yellow",
-        "old": ["#fbe002", "#ff9f02"],
-        "new": "#febe14"
-    },
-    {
-        "name": "red",
-        "old": ["#f16a4f"],
-        "new": "#ff5a5f"
+        "name": "blue-500",
+        "old": ["#287ddd"],
+        "new": "#007fad"
     },
     {
         "name": "indigo",
@@ -57,6 +32,71 @@ var colorMap = [
         "name": "purple",
         "old": ["#8b71de"],
         "new": "#a97ff0"
+    },
+    {
+        "name": "green-200",
+        "old": ["#93dbc2","#a6d5ae"],
+        "new": "#c6f7da"
+    },
+    {
+        "name": "green-300",
+        "old": ["#62cca7"],
+        "new": "#73e4a2"
+    },
+    {
+        "name": "green",
+        "old": ["#3ac392"],
+        "new": "#2db783"
+    },
+    {
+        "name": "yellow-200",
+        "old": ["#ffb742","#f9cf62"],
+        "new": "#ffebb3"
+    },
+    {
+        "name": "yellow",
+        "old": ["#fbe002","#ff9f02","#fbb90e"],
+        "new": "#febe14"
+    },
+    {
+        "name": "red-200",
+        "old": ["#f2a494","#ff9796"],
+        "new": "#ffd9d9"
+    },
+    {
+        "name": "red-300",
+        "old": ["#f28974","#ff6e6d"],
+        "new": "#ffb0b0"
+    },
+    {
+        "name": "red",
+        "old": ["#f16a4f","#ff4847"],
+        "new": "#ff5a5f"
+    },
+    {
+        "name": "black-300",
+        "old": ["#6d7273", "#858b8c","#8d9494"],
+        "new": "#526166"
+    },
+    {
+        "name": "black",
+        "old": ["#333333", "#000000","#312f2f","#4e4d4d"],
+        "new": "#001c26"
+    },
+    {
+        "name": "gray-200",
+        "old": ["#f7fafb","#f4f4f4"],
+        "new": "#fafafa"
+    },
+    {
+        "name": "gray-300",
+        "old": ["#e6f0f2", "#f0f6f7","#e1e3e3","#edeeee"],
+        "new": "#e9eced"
+    },
+    {
+        "name": "gray",
+        "old": ["#ced6d9","#bdc4c4"],
+        "new": "#d3d4d5"
     }
 ]
 
