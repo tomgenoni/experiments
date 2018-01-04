@@ -56,9 +56,16 @@ input, textarea, select,
     color: #009fd9;
 }
 
+.tp-checkbox-input:checked + .tp-checkbox-image {
+    border-color: #009fd9;
+    background-color: #009fd9;
+}
+
 .StarRating-stars-fill {
     fill: rgb(254, 190, 20);
 }
+
+
 
 a.links__Anchor-iPcyAn.idlCmN,
 a.links__Anchor-iPcyAn.fFnBNb {

@@ -45,7 +45,7 @@ var colorMap = [
     },
     {
         "name": "green",
-        "old": ["#3ac392"],
+        "old": ["#3ac392","#63cb76"],
         "new": "#2db783"
     },
     {
