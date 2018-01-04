@@ -2,7 +2,8 @@ const replace            = require('replace');
 
 const color              = require('./json/color.json');
 const colorImport        = require('./json/colorImport.json');
-const paths              = ['./styles/'];
+const paths              = ['/Users/tom/Sites/website/thumbprint/'];
+//const paths              = ['./test/'];
 
 color.forEach(function(entry){
 
