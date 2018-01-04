@@ -71,3 +71,12 @@ a.links__Anchor-iPcyAn.idlCmN,
 a.links__Anchor-iPcyAn.fFnBNb {
     box-shadow: 0 -2px 0 #009fd9 inset;
 }
+
+.InputCheckbox.theme-round input:checked + .InputCheckbox-label::before {
+    border: 2px solid #009fd9;
+    background: url(/media/checkmark-round-checkbox.png) #009fd9 no-repeat center;
+}
+
+.InputCheckbox input:checked.theme-primary + .InputCheckbox-label::before, .InputCheckbox input:checked + .InputCheckbox-label::before {
+    border: 2px solid #009fd9;
+}
