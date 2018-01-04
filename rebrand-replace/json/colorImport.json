@@ -1,0 +1,10 @@
+{
+    "new": "@thumbtack/thumbprint-tokens/dist/scss/_index",
+    "old": [
+        "../../../../../globals/styles/includes/color",
+        "../../../../globals/styles/includes/color",
+        "../../../globals/styles/includes/color",
+        "../../globals/styles/includes/color",
+        "../globals/styles/includes/color"
+    ]
+}
