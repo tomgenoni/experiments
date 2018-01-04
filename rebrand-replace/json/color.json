@@ -64,7 +64,7 @@
             ]
         },
         "js": {
-            "new": "tpColor__blue",
+            "new": "tpColorBlue",
             "old": [
                 "tpColorUiMain",
                 "tpColorTextMain",
@@ -621,7 +621,7 @@
             ]
         },
         "js": {
-            "new": "tpColor__black",
+            "new": "tpColorBlack",
             "old": [
                 "tpColorUiDark",
                 "tpColorTextBase",

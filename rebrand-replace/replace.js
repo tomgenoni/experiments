@@ -8,10 +8,10 @@ color.forEach(function(entry){
         entry.sass.old.forEach(function(oldValue){
 
             replace({
-                regex: "\\" + oldValue,
+                regex: "\\" + oldValue + "(?=;| )", // for exact matches
                 replacement: entry.sass.new,
                 paths: [
-                    '/Users/tom/Sites/website/thumbprint/globals'
+                    './styles/'
                 ],
                 excludeList: 'exclude.txt',
                 include: '*.scss',
@@ -22,4 +22,26 @@ color.forEach(function(entry){
 
         })
     }
+
+    if (entry.js.old) {
+
+        entry.js.old.forEach(function(oldValue){
+
+            replace({
+                regex: oldValue,
+                replacement: entry.js.new,
+                paths: [
+                    './styles/'
+                ],
+                excludeList: 'exclude.txt',
+                include: '*.js',
+                recursive: true,
+                count: true,
+                silent: false,
+            });
+
+        })
+    }
+
+
 });
