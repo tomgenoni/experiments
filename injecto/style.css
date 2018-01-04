@@ -56,6 +56,10 @@ input, textarea, select,
     color: #009fd9;
 }
 
+.StarRating-stars-fill {
+    fill: rgb(254, 190, 20);
+}
+
 a.links__Anchor-iPcyAn.idlCmN,
 a.links__Anchor-iPcyAn.fFnBNb {
     box-shadow: 0 -2px 0 #009fd9 inset;
