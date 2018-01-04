@@ -140,6 +140,7 @@ function testSelectors(arr) {
 
         var color = rgbToHex(window.getComputedStyle(el).color);
         var bkgColor = rgbToHex(window.getComputedStyle(el).backgroundColor);
+        var fillColor = rgbToHex(window.getComputedStyle(el).fill);
 
         // Only assign borderColor value if borderWidth is something other than "0px"
         // "0px" is returned when no borderWidth has been declared
@@ -181,6 +182,10 @@ function testSelectors(arr) {
                 if (bkgColor == oldColor) {
                     el.style.backgroundColor = newColor;
                     doConsole("backgroud-color", el, oldColor, newColor, newVarName, "    ");
+                }
+                if (fillColor == oldColor) {
+                    el.style.fill = newColor;
+                    doConsole("fill", el, oldColor, newColor, newVarName, "               ");
                 }
 
                 if (borderTopColor && borderTopColor == oldColor) {
