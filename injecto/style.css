@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Mark';
     font-weight: 400;
     src: url(https://fonts.thumbtack.com/mark/mark-tt.woff2) format("woff2"), url(https://fonts.thumbtack.com/mark/mark-tt.woff) format("woff");
@@ -45,7 +45,7 @@ input, textarea, select,
 .tp-button,
 .Button {
     font-weight: 700;
-}
+} */
 
 
 /* specific overrides */
