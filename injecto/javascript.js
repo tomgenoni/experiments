@@ -104,7 +104,7 @@ var els = [
     'html','body','div','span','strong','form',
     'h1','h2','h3','h4','h5','h6',
     'a','button','table','tr','td',
-    'figure','nav','ol','ul','li',
+    'figure','nav','ol','ul','li','section',
     'svg','rect','input'
 ];
 
