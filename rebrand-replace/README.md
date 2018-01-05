@@ -19,7 +19,11 @@ After running `node replace.js import`
 1. open `thumbprint/globals/styles/includes/_color.scss`
 2. remove everything except for `$modal-backdrop` and the Facebook colors
 3. re-add the reference to `../globals/styles/includes/color` on the 6 or so pages that still need it
-
+    - modals.scss
+    - modal-standard.scss
+    - modal-basic.scss
+    - media-viewer.scss
+    - modal-flyover.scss
 
 ## Opertions
 
