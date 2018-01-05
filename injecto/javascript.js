@@ -111,7 +111,7 @@ var els = [
 // Functions
 
 function rgbToHex(rgb) {
-    console.log(a);
+    console.log(rgb);
     var a = rgb.split("(")[1].split(")")[0];
     a = a.split(",");
     if (a.length <= 3 ) {
