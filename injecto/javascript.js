@@ -137,11 +137,17 @@ function doConsole(property, el, oldColor, newColor, newVarName, spacer) {
 function testSelectors(arr) {
     arr.forEach(function(el) {
 
-        var color = rgbToHex(window.getComputedStyle(el).color);
-        var bkgColor = rgbToHex(window.getComputedStyle(el).backgroundColor);
-        var fillColor = rgbToHex(window.getComputedStyle(el).fill);
+        if (window.getComputedStyle(el).color != "none") {
+            var color = rgbToHex(window.getComputedStyle(el).color);
+        }
 
-        console.log(color, bkgColor, fillColor);
+        if (window.getComputedStyle(el).backgroundColor != "none") {
+            var bkgColor = rgbToHex(window.getComputedStyle(el).backgroundColor);
+        }
+
+        if (window.getComputedStyle(el).fill != "none") {
+            var fillColor = rgbToHex(window.getComputedStyle(el).fill);
+        }
 
         // Only assign borderColor value if borderWidth is something other than "0px"
         // "0px" is returned when no borderWidth has been declared
