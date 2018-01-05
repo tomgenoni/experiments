@@ -105,7 +105,7 @@ var els = [
     'h1','h2','h3','h4','h5','h6',
     'a','button','table','tr','td',
     'figure','nav','ol','ul','li',
-    'svg','rect'
+    'svg','rect','input'
 ];
 
 // Functions
