@@ -180,7 +180,7 @@ function testSelectors(arr) {
                     doConsole("color", el, oldColor, newColor, newVarName, "              ");
                 }
                 if (bkgColor == oldColor) {
-                    el.style.backgroundColor = newColor;
+                    el.style.backgroundColor = newColor + " !important";
                     doConsole("backgroud-color", el, oldColor, newColor, newVarName, "    ");
                 }
                 if (fillColor == oldColor) {
