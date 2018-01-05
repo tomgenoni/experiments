@@ -111,7 +111,6 @@ var els = [
 // Functions
 
 function rgbToHex(rgb) {
-    console.log(rgb);
     var a = rgb.split("(")[1].split(")")[0];
     a = a.split(",");
     if (a.length <= 3 ) {
@@ -141,6 +140,8 @@ function testSelectors(arr) {
         var color = rgbToHex(window.getComputedStyle(el).color);
         var bkgColor = rgbToHex(window.getComputedStyle(el).backgroundColor);
         var fillColor = rgbToHex(window.getComputedStyle(el).fill);
+
+        console.log(color, bkgColor, fillColor);
 
         // Only assign borderColor value if borderWidth is something other than "0px"
         // "0px" is returned when no borderWidth has been declared
