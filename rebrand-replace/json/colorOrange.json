@@ -1,0 +1,30 @@
+[
+    {
+        "name": "orange",
+        "sass": {
+            "new": "$tp-color__ui__brand",
+            "old": [
+                "$thumbtack-orange",
+                "$orange"
+            ]
+        }
+    },
+    {
+        "name": "orange2",
+        "sass": {
+            "new": "$tp-color__ui__brand-light",
+            "old": [
+                "$orange2"
+            ]
+        }
+    },
+    {
+        "name": "orange3",
+        "sass": {
+            "new": "$tp-color__ui__brand-faint",
+            "old": [
+                "$orange3"
+            ]
+        }
+    }
+]

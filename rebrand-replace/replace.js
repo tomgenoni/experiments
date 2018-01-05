@@ -2,6 +2,7 @@ const replace            = require('replace');
 
 const color              = require('./json/color.json');
 const colorImport        = require('./json/colorImport.json');
+const colorOrange        = require('./json/colorOrange.json');
 const paths              = ['/Users/tom/Sites/website/thumbprint/'];
 //const paths              = ['./test/'];
 
@@ -22,6 +23,24 @@ function replaceValues(regex, replacement, include) {
 
 // Change all the Sass color variables
 if ( process.argv.includes("scss") ) {
+
+    // Swap out TPv1 orange variables for TPv2 orange variables
+    // eg. $orange > $tp-color__ui__brand
+    // These will eventually be replaced by indigo or blue
+
+    colorOrange.forEach(function(entry){
+        if (entry.sass.old) {
+            entry.sass.old.forEach(function(oldValue){
+                var regex = "\\" + oldValue + "(?=;| )";
+                var replacement = entry.sass.new;
+                var include = '*.scss';
+
+                replaceValues(regex, replacement, include);
+            })
+        }
+    });
+
+
     color.forEach(function(entry){
         if (entry.sass.old) {
             entry.sass.old.forEach(function(oldValue){
