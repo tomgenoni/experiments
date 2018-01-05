@@ -361,6 +361,7 @@
                 "$tp-color__ui__bad-news",
                 "$tp-color__text__bad-news",
                 "$tp-color__link__bad-news",
+                "$coral4",
                 "$coral"
             ]
         },
@@ -390,7 +391,8 @@
                 "$tp-color__ui__muted",
                 "$tp-color__text__slate",
                 "$tp-color__text__muted",
-                "$steel"
+                "$steel",
+                "$slate2"
             ]
         },
         "js": {

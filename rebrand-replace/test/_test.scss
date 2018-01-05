@@ -1,2 +1,61 @@
-$tp-color__black);
-$tp-color__black,
+@import "../../../globals/styles/includes/mixins";
+@import "@thumbtack/thumbprint-tokens/dist/scss/_index";
+@import "../../../components/chat-bubble/styles/includes/_chat-bubble";
+@import '@thumbtack/tp-ui-core-function/_index';
+@import "@thumbtack/thumbprint-tokens/dist/scss/_index";
+
+.quote-pricing-chat-bubble {
+
+    .ChatBubble-contentContainer {
+        width: 100%;
+        max-width: $structured-bubble-max-width;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        flex-shrink: 0;
+    }
+
+    &__header-text {
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__pricing-summary, &__needs-more-info {
+        margin-top: tp-spacer(1);
+    }
+
+    &__pricing-summary {
+        $max-lines: 3;
+
+        .has-white-background & {
+            @include clamp-lines(
+                $line-height,
+                $max-lines,
+                $content: '…Details'
+            );
+        }
+
+        .has-pebble-background & {
+            @include clamp-lines(
+                $line-height,
+                $max-lines,
+                $content: '…Details',
+                // TODO(tim): TUI does not actually have pebble but this needs to be consistent with
+                // the background color of the chat bubble.
+                $background-color: $tp-color__gray-300
+            );
+        }
+    }
+}

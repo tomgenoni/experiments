@@ -6,6 +6,7 @@
         "../../../globals/styles/includes/color",
         "../../globals/styles/includes/color",
         "../globals/styles/includes/color",
-        "./includes/color"
+        "./includes/color",
+        "./color"
     ]
 }
