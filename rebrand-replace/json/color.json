@@ -107,45 +107,6 @@
         }
     },
     {
-        "name": "blue-600",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__blue-600"
-        },
-        "js": {
-            "new": "tpColorBlue600"
-        },
-        "hex": {
-            "new": "#005a7a"
-        }
-    },
-    {
-        "name": "indigo-200",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__indigo-200"
-        },
-        "js": {
-            "new": "tpColorBlue200"
-        },
-        "hex": {
-            "new": "#cce1ff"
-        }
-    },
-    {
-        "name": "indigo-300",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__indigo-300"
-        },
-        "js": {
-            "new": "tpColorBlue300"
-        },
-        "hex": {
-            "new": "#96c2ff"
-        }
-    },
-    {
         "name": "indigo",
         "extended": false,
         "sass": {
@@ -170,58 +131,6 @@
         }
     },
     {
-        "name": "indigo-500",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__indigo-500"
-        },
-        "js": {
-            "new": "tpColorBlue500"
-        },
-        "hex": {
-            "new": "#4f54b3"
-        }
-    },
-    {
-        "name": "indigo-600",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__indigo-600"
-        },
-        "js": {
-            "new": "tpColorBlue600"
-        },
-        "hex": {
-            "new": "#383c80"
-        }
-    },
-    {
-        "name": "purple-200",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__purple-200"
-        },
-        "js": {
-            "new": "tpColorPurple200"
-        },
-        "hex": {
-            "new": "#dfccff"
-        }
-    },
-    {
-        "name": "purple-300",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__purple-300"
-        },
-        "js": {
-            "new": "tpColorPurple300"
-        },
-        "hex": {
-            "new": "#d3baff"
-        }
-    },
-    {
         "name": "purple",
         "extended": false,
         "sass": {
@@ -241,32 +150,6 @@
             "old": [
                 "#8b71de"
             ]
-        }
-    },
-    {
-        "name": "purple-500",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__purple-500"
-        },
-        "js": {
-            "new": "tpColorPurple500"
-        },
-        "hex": {
-            "new": "#8a5ed6"
-        }
-    },
-    {
-        "name": "purple-600",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__purple-600"
-        },
-        "js": {
-            "new": "tpColorPurple600"
-        },
-        "hex": {
-            "new": "#783ad0"
         }
     },
     {
@@ -340,32 +223,6 @@
                 "#3ac392",
                 "#63cb76"
             ]
-        }
-    },
-    {
-        "name": "green-500",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__green-500"
-        },
-        "js": {
-            "new": "tpColorGreen500"
-        },
-        "hex": {
-            "new": "#109e78"
-        }
-    },
-    {
-        "name": "green-600",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__green-600"
-        },
-        "js": {
-            "new": "tpColorGreen600"
-        },
-        "hex": {
-            "new": "#0f6648"
         }
     },
     {
@@ -446,32 +303,6 @@
         }
     },
     {
-        "name": "yellow-500",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__yellow-500"
-        },
-        "js": {
-            "new": "tpColorYellow500"
-        },
-        "hex": {
-            "new": "#d48300"
-        }
-    },
-    {
-        "name": "yellow-600",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__yellow-600"
-        },
-        "js": {
-            "new": "tpColorYellow600"
-        },
-        "hex": {
-            "new": "#a16300"
-        }
-    },
-    {
         "name": "red-200",
         "extended": true,
         "sass": {
@@ -547,33 +378,6 @@
                 "#f16a4f",
                 "#ff4847"
             ]
-        }
-    },
-    {
-        "name": "red-500",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__red-500",
-            "old": "coral"
-        },
-        "js": {
-            "new": "tpColorRed500"
-        },
-        "hex": {
-            "new": "#cc3553"
-        }
-    },
-    {
-        "name": "red-600",
-        "extended": true,
-        "sass": {
-            "new": "$tp-color__red-600"
-        },
-        "js": {
-            "new": "tpColorRed600"
-        },
-        "hex": {
-            "new": "#76012c"
         }
     },
     {
