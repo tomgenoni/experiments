@@ -5,61 +5,59 @@ const colorImport        = require('./json/colorImport.json');
 const paths              = ['/Users/tom/Sites/website/thumbprint/'];
 //const paths              = ['./test/'];
 
-color.forEach(function(entry){
+// node replace.js js sass import
 
-    if (entry.sass.old) {
-
-        entry.sass.old.forEach(function(oldValue){
-
-            replace({
-                regex: "\\" + oldValue + "(?=;| )", // for exact matches
-                replacement: entry.sass.new,
-                paths: paths,
-                excludeList: 'exclude.txt',
-                include: '*.scss',
-                recursive: true,
-                count: true,
-                silent: false,
-            });
-
-        })
-
-    }
-
-    if (entry.js.old) {
-
-        entry.js.old.forEach(function(oldValue){
-
-            replace({
-                regex: oldValue,
-                replacement: entry.js.new,
-                paths: paths,
-                excludeList: 'exclude.txt',
-                include: '*.jsx',
-                recursive: true,
-                count: true,
-                silent: false,
-            });
-
-        })
-    }
-
-});
-
-// Change old color @imports to new tokens @import
-// @import "@thumbtack/thumbprint-tokens/dist/scss/_index";
-
-colorImport.old.forEach(function(oldValue){
-
+function replaceValues(regex, replacement, include) {
     replace({
-        regex: oldValue,
-        replacement: colorImport.new,
+        regex: regex, // for exact matches
+        replacement: replacement,
         paths: paths,
         excludeList: 'exclude.txt',
-        include: '*.scss',
+        include: include,
         recursive: true,
         count: true,
         silent: false,
     });
+}
 
-})
+// Change all the Sass color variables
+if ( process.argv.includes("scss") ) {
+    color.forEach(function(entry){
+        if (entry.sass.old) {
+            entry.sass.old.forEach(function(oldValue){
+                var regex = "\\" + oldValue + "(?=;| )";
+                var replacement = entry.sass.new;
+                var include = '*.scss';
+
+                replaceValues(regex, replacement, include);
+            })
+        }
+    });
+}
+
+// Change all the React color variables
+if ( process.argv.includes("react") ) {
+    color.forEach(function(entry){
+        if (entry.js.old) {
+            entry.js.old.forEach(function(oldValue){
+                var regex = oldValue;
+                var replacement = entry.js.new;
+                var include = '*.jsx, *.js';
+
+                replaceValues(regex, replacement, include);
+            })
+        }
+    });
+}
+
+// Change old color @imports to new tokens @import
+// @import "@thumbtack/thumbprint-tokens/dist/scss/_index";
+if ( process.argv.includes("import") ) {
+    colorImport.old.forEach(function(oldValue){
+        var regex = oldValue;
+        var replacement = colorImport.new;
+        var include = '*.scss';
+
+        replaceValues(regex, replacement, include);
+    });
+}

@@ -553,7 +553,8 @@
         "name": "red-500",
         "extended": true,
         "sass": {
-            "new": "$tp-color__red-500"
+            "new": "$tp-color__red-500",
+            "old": "coral"
         },
         "js": {
             "new": "tpColorRed500"
