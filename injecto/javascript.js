@@ -111,9 +111,9 @@ var els = [
 // Functions
 
 function rgbToHex(rgb) {
+    console.log(a);
     var a = rgb.split("(")[1].split(")")[0];
     a = a.split(",");
-    console.log(a);
     if (a.length <= 3 ) {
         var b = a.map(function(x){             // For each array element
             x = parseInt(x).toString(16);      // Convert to a base16 string
