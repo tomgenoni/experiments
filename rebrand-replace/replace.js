@@ -31,7 +31,8 @@ if ( process.argv.includes("scss") || process.argv.includes("all") ) {
     colorOrange.forEach(function(entry){
         if (entry.sass.old) {
             entry.sass.old.forEach(function(oldValue){
-                var regex = "\\" + oldValue + "(?=;| )";
+                // this matches: $foo; $foo, and $foo[space]
+                var regex = "\\" + oldValue + "(?=;|,|\\)| )";
                 var replacement = entry.sass.new;
                 var include = '*.scss';
                 var excludeList = 'excludeList.txt';
@@ -41,11 +42,11 @@ if ( process.argv.includes("scss") || process.argv.includes("all") ) {
         }
     });
 
-
     color.forEach(function(entry){
         if (entry.sass.old) {
             entry.sass.old.forEach(function(oldValue){
-                var regex = "\\" + oldValue + "(?=;| )";
+                // this matches: $foo; $foo, and $foo[space]
+                var regex = "\\" + oldValue + "(?=;|,|\\)| )";
                 var replacement = entry.sass.new;
                 var include = '*.scss';
                 var excludeList = 'excludeList.txt';

@@ -422,7 +422,8 @@
                 "$tp-color__text__dark",
                 "$tp-color__ui__black",
                 "$chalkboard",
-                "$slate"
+                "$slate",
+                "$black"
             ]
         },
         "js": {

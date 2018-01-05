@@ -1,23 +1,2 @@
-@import "@thumbtack/thumbprint-tokens/dist/scss/_index";
-@import "@thumbtack/thumbprint-tokens/dist/scss/_index";
-@import "@thumbtack/thumbprint-tokens/dist/scss/_index";
-@import "@thumbtack/thumbprint-tokens/dist/scss/_index";
-
-zoo
-
-//// A collection of utilities for accessibility
-//// @group Accessibility
-
-/// See https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
-/// @author Seamus Leahy
-.u-visuallyHidden {
-    position: $tp-color__blue-500;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    overflow: $tp-color__blue;
-    position: $tp-color__blue-500;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-}
+$tp-color__black);
+$tp-color__black,
