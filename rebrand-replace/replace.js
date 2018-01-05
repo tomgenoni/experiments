@@ -8,12 +8,12 @@ const paths              = ['/Users/tom/Sites/website/thumbprint/'];
 
 // node replace.js js sass import
 
-function replaceValues(regex, replacement, include) {
+function replaceValues(regex, replacement, include, excludeList) {
     replace({
         regex: regex, // for exact matches
         replacement: replacement,
         paths: paths,
-        excludeList: 'exclude.txt',
+        excludeList: excludeList,
         include: include,
         recursive: true,
         count: true,
@@ -22,7 +22,7 @@ function replaceValues(regex, replacement, include) {
 }
 
 // Change all the Sass color variables
-if ( process.argv.includes("scss") ) {
+if ( process.argv.includes("scss") || process.argv.includes("all") ) {
 
     // Swap out TPv1 orange variables for TPv2 orange variables
     // eg. $orange > $tp-color__ui__brand
@@ -34,8 +34,9 @@ if ( process.argv.includes("scss") ) {
                 var regex = "\\" + oldValue + "(?=;| )";
                 var replacement = entry.sass.new;
                 var include = '*.scss';
+                var excludeList = 'excludeList.txt';
 
-                replaceValues(regex, replacement, include);
+                replaceValues(regex, replacement, include, excludeList);
             })
         }
     });
@@ -47,23 +48,25 @@ if ( process.argv.includes("scss") ) {
                 var regex = "\\" + oldValue + "(?=;| )";
                 var replacement = entry.sass.new;
                 var include = '*.scss';
+                var excludeList = 'excludeList.txt';
 
-                replaceValues(regex, replacement, include);
+                replaceValues(regex, replacement, include, excludeList);
             })
         }
     });
 }
 
 // Change all the React color variables
-if ( process.argv.includes("react") ) {
+if ( process.argv.includes("react") || process.argv.includes("all") ) {
     color.forEach(function(entry){
         if (entry.js.old) {
             entry.js.old.forEach(function(oldValue){
                 var regex = oldValue;
                 var replacement = entry.js.new;
                 var include = '*.jsx, *.js';
+                var excludeList = 'excludeList.txt';
 
-                replaceValues(regex, replacement, include);
+                replaceValues(regex, replacement, include, excludeList);
             })
         }
     });
@@ -71,12 +74,13 @@ if ( process.argv.includes("react") ) {
 
 // Change old color @imports to new tokens @import
 // @import "@thumbtack/thumbprint-tokens/dist/scss/_index";
-if ( process.argv.includes("import") ) {
+if ( process.argv.includes("import") || process.argv.includes("all") ) {
     colorImport.old.forEach(function(oldValue){
         var regex = oldValue;
         var replacement = colorImport.new;
         var include = '*.scss';
+        var excludeList = 'excludeListImport.txt';
 
-        replaceValues(regex, replacement, include);
+        replaceValues(regex, replacement, include, excludeList);
     });
 }
