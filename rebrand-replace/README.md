@@ -12,19 +12,6 @@ To run them individually:
 - `node replace.js react`
 - `node replace.js import`
 
-## Manual Steps
-
-After running `node replace.js import`
-
-1. open `thumbprint/globals/styles/includes/_color.scss`
-2. remove everything except for `$modal-backdrop` and the Facebook colors
-3. re-add the reference to `../globals/styles/includes/color` on the 6 or so pages that still need it
-    - modals.scss
-    - components/modal-standard/styles/modal-standard.scss
-    - modal-basic.scss
-    - media-viewer.scss
-    - modal-flyover.scss
-
 ## Opertions
 
 - `node replace.js scss`
@@ -39,3 +26,16 @@ Note: The orange color variables will not be mapped as those will have to be det
 
 - `node replace.js import`
     - Replaces all `../globals/styles/includes/color` with `@thumbtack/thumbprint-tokens/dist/scss/_index`
+
+## Manual Steps
+
+### Website
+
+1. open `thumbprint/globals/styles/includes/_color.scss`
+2. remove everything except for `$modal-backdrop` and the Facebook colors
+3. re-add the import `../globals/styles/includes/color` in:
+    - legacy-css/thumbprint/patterns/global/modals.scss
+    - components/modal-standard/styles/modal-standard.scss
+    - components/modal-basic/styles/modal-basic.scss
+    - modules/media-viewer/styles/media-viewer.scss
+    - components/modal-flyover/styles/modal-flyover.scss

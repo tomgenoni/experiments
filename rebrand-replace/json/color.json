@@ -30,7 +30,7 @@
         "sass": {
             "new": "$tp-color__blue-300",
             "old": [
-                "$tp-color__ui__sky_light",
+                "$tp-color__ui__sky-light",
                 "$tp-color__link__light",
                 "$sky2"
             ]
@@ -87,7 +87,7 @@
         "sass": {
             "new": "$tp-color__blue-500",
             "old": [
-                "$tp-color__ui__sky_dark",
+                "$tp-color__ui__sky-dark",
                 "$tp-color__link__dark",
                 "$sky4"
             ]
@@ -537,6 +537,7 @@
             "old": [
                 "$tp-color__ui__white",
                 "$tp-color__link__white",
+                "$tp-color__text__white",
                 "$white"
             ]
         },

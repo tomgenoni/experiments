@@ -3,10 +3,8 @@ const replace            = require('replace');
 const color              = require('./json/color.json');
 const colorImport        = require('./json/colorImport.json');
 const colorOrange        = require('./json/colorOrange.json');
-const paths              = ['/Users/tom/Sites/website/thumbprint/'];
+const paths              = ['/Users/tom/Sites/thumbprint-ui/packages'];
 //const paths              = ['./test/'];
-
-// node replace.js js sass import
 
 function replaceValues(regex, replacement, include, excludeList) {
     replace({
@@ -31,8 +29,8 @@ if ( process.argv.includes("scss") || process.argv.includes("all") ) {
     colorOrange.forEach(function(entry){
         if (entry.sass.old) {
             entry.sass.old.forEach(function(oldValue){
-                // this matches: $foo; $foo, $foo) $foo[space]
-                var regex = "\\" + oldValue + "(?=;|,|\\)|\\n| )";
+                // negative lookahead to distinguish beteeen $sky4 and $sky
+                var regex = "\\" + oldValue + "(?![0-9]|-)";
                 var replacement = entry.sass.new;
                 var include = '*.scss';
                 var excludeList = 'excludeList.txt';
@@ -45,8 +43,8 @@ if ( process.argv.includes("scss") || process.argv.includes("all") ) {
     color.forEach(function(entry){
         if (entry.sass.old) {
             entry.sass.old.forEach(function(oldValue){
-                // this matches: $foo; $foo, $foo) $foo[space]
-                var regex = "\\" + oldValue + "(?=;|,|\\)|\\n| )";
+                // negative lookahead to distinguish beteeen $sky4 and $sky and $sky-
+                var regex = "\\" + oldValue + "(?![0-9]|-)";
                 var replacement = entry.sass.new;
                 var include = '*.scss';
                 var excludeList = 'excludeList.txt';
