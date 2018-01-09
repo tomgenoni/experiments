@@ -70,6 +70,19 @@ table {
     border-spacing: 0;
 }
 
+body {
+    font-size: 16px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: #009fd9;
+}
+
 .f3 {
     font-size: 30px;
 }
@@ -91,6 +104,10 @@ table {
 }
 
 .weight--700 {
+    font-weight: 700;
+}
+
+.tp-weight--bold {
     font-weight: 700;
 }
 
@@ -145,8 +162,20 @@ p {
     width: 33.33%
 }
 
+.w-1 {
+    width: 1%;
+}
+
 .va-m {
     vertical-align: middle;
+}
+
+.ta-r {
+    text-align: right;
+}
+
+.ta-c {
+    text-align: center;
 }
 
 
@@ -157,6 +186,7 @@ table {
 
 th {
     padding-bottom: 50px;
+    white-space: nowrap;
 }
 
 th {
@@ -167,9 +197,19 @@ th {
 
 td {
     padding: 0 20px 70px 0;
-    font-size: 12px;
     vertical-align: middle;
 }
+
+.table--lined tr {
+    border-bottom: 1px solid #ddd;
+}
+.table--lined tbody td {
+    padding: 20px 20px 20px 0;
+}
+.table--lined th {
+    padding: 0 20px 10px 0;
+}
+
 
 .new-swatches td {
     vertical-align: top;
@@ -187,14 +227,18 @@ td {
     color: #fff;
 }
 
+code,
+.html,
 .sass,
 .js,
 .hex {
     font-family: 'Source Code Pro';
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
+.html:hover,
 .sass:hover,
 .js:hover,
 .hex:hover {
@@ -246,9 +290,15 @@ td {
     margin-bottom: 20px;
 }
 
+.check:after {
+    content: "✓";
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 18px;
+}
+
 .arrow {
     border-bottom: 1px solid #e9eced;
-    min-width: 100px;
+    min-width: 50px;
     width: 90%;
     position: relative;
     margin: auto;
@@ -304,4 +354,12 @@ td {
     background-repeat: no-repeat;
     background-size: auto 18px;
     max-width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.pl-50 {
+    padding-left: 50px;
 }

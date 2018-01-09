@@ -5,7 +5,7 @@ $(document).ready(function(){
         $(this).next('.swatch').css({backgroundColor: hex})
     });
 
-    var clipboard = new Clipboard('.hex, .sass, .js', {
+    var clipboard = new Clipboard('.hex, .sass, .js, .html', {
         text: function(trigger) {
             return trigger.textContent;
         }

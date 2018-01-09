@@ -39,3 +39,8 @@ Note: The orange color variables will not be mapped as those will have to be det
     - components/modal-basic/styles/modal-basic.scss
     - modules/media-viewer/styles/media-viewer.scss
     - components/modal-flyover/styles/modal-flyover.scss
+4. remove colors dupes in:
+    - pages/customer-profile/components/footer/footer.jsx
+    - pages/customer-profile/components/mini-profile/mini-profile.jsx
+    - pages/pro-profile/subcomponents/pro-profile-media/pro-profile-media-edit.jsx
+    - pages/settings-page/components/service-tab-educational/service-tab-educational.jsx
