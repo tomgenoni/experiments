@@ -3,7 +3,8 @@ const replace            = require('replace');
 const color              = require('./json/color.json');
 const colorImport        = require('./json/colorImport.json');
 const colorOrange        = require('./json/colorOrange.json');
-const paths              = ['/Users/tom/Sites/thumbprint-ui/packages'];
+const font               = require('./json/font.json');
+const paths              = ['/Users/tom/Sites/website/thumbprint'];
 //const paths              = ['./test/'];
 
 function replaceValues(regex, replacement, include, excludeList) {
@@ -79,6 +80,17 @@ if ( process.argv.includes("import") || process.argv.includes("all") ) {
         var replacement = colorImport.new;
         var include = '*.scss';
         var excludeList = 'excludeListImport.txt';
+
+        replaceValues(regex, replacement, include, excludeList);
+    });
+}
+
+if ( process.argv.includes("font") ) {
+    font.forEach(function(entry){
+        var regex = entry.old;
+        var replacement = entry.new;
+        var include = '*.scss, *.jsx, *.html';
+        var excludeList = 'excludeList.txt';
 
         replaceValues(regex, replacement, include, excludeList);
     });

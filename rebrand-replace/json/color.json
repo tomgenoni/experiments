@@ -88,6 +88,7 @@
             "new": "$tp-color__blue-500",
             "old": [
                 "$tp-color__ui__sky-dark",
+                "tp-color__text__sky-dark",
                 "$tp-color__link__dark",
                 "$sky4"
             ]
