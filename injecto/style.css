@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
     font-family: 'Mark';
     font-weight: 400;
     src: url(https://fonts.thumbtack.com/mark/mark-tt.woff2) format("woff2"), url(https://fonts.thumbtack.com/mark/mark-tt.woff) format("woff");
@@ -45,8 +45,107 @@ input, textarea, select,
 .tp-button,
 .Button {
     font-weight: 700;
-} */
+}
 
+/* .tp-title-1 */
+.tp-heading-1,
+.tp-heading-2 {
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+@media (min-width: 701px) {
+    .tp-heading-1,
+    .tp-heading-2 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+}
+
+/* .tp-title-2 unused in mapping*/
+
+/* .tp-title-3, .tp-text-1 */
+.tp-heading-3,
+.tp-text-1 {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+@media (min-width: 701px) {
+    .tp-heading-3,
+    .tp-text-1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+/* .tp-title-4, .tp-text-1--static */
+.tp-heading-4,
+.tp-text-static--1 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+}
+@media (min-width: 701px) {
+    .tp-heading-4,
+    .tp-text-static--1 {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 700;
+    }
+}
+
+
+/* .tp-title-5 */
+.tp-heading-5 {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+@media (min-width: 701px) {
+    .tp-heading-5 {
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 700;
+    }
+}
+
+/* tp-body-1 */
+.tp-heading-6 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+@media (min-width: 701px) {
+    .tp-heading-6 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+    }
+}
+
+
+/* .tp-body-1 */
+.tp-text-2--static {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* .tp-body-2 */
+.tp-text-3--static {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* .tp-body-3 */
+.tp-text-4--static {
+    font-size: 12px;
+    line-height: 18px;
+}
 
 /* specific overrides */
 
