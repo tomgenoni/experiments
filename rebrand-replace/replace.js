@@ -85,13 +85,19 @@ if ( process.argv.includes("import") || process.argv.includes("all") ) {
     });
 }
 
-if ( process.argv.includes("font") ) {
-    font.forEach(function(entry){
-        var regex = entry.old;
-        var replacement = entry.new;
-        var include = '*.scss, *.jsx, *.html';
-        var excludeList = 'excludeList.txt';
+// Change any hex code in SVGs
+if ( process.argv.includes("svg") ) {
+    color.forEach(function(entry){
+        if (entry.hex.old) {
+            entry.hex.old.forEach(function(oldValue){
+                // negative lookahead to distinguish beteeen $sky4 and $sky
+                var regex = oldValue;
+                var replacement = entry.hex.new;
+                var include = '*.svg';
+                var excludeList = 'excludeList.txt';
 
-        replaceValues(regex, replacement, include, excludeList);
+                replaceValues(regex, replacement, include, excludeList);
+            })
+        }
     });
 }
