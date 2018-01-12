@@ -193,3 +193,850 @@
     font-size: 12px;
     line-height: 1.6;
 }
+
+.H1-R {
+    font-size: 48px;
+    line-height: 56px;
+    font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+@media (max-width:767px) {
+    .H1-R {
+        font-size: 32px;
+        line-height: 40px;
+        font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif
+    }
+}
+
+.H1-R.theme-secondary {
+    color: #8d9494
+}
+
+.H1-R.theme-tertiary {
+    color: #bdc4c4
+}
+
+.H1-R.theme-inverted {
+    color: #fff
+}
+
+.H1-R.theme-success {
+    color: #63cb76
+}
+
+.H1-R.theme-caution {
+    color: #ff4847
+}
+
+.H1-R.theme-highlight {
+    color: #f27802
+}
+
+.H1-R.theme-equal-line-height {
+    line-height: 1
+}
+
+.H2-R {
+    font-size: 40px;
+    line-height: 48px;
+    font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+@media (max-width:767px) {
+    .H2-R {
+        font-size: 32px;
+        line-height: 40px;
+        font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif
+    }
+}
+
+.H2-R.theme-secondary {
+    color: #8d9494
+}
+
+.H2-R.theme-tertiary {
+    color: #bdc4c4
+}
+
+.H2-R.theme-inverted {
+    color: #fff
+}
+
+.H2-R.theme-success {
+    color: #63cb76
+}
+
+.H2-R.theme-caution {
+    color: #ff4847
+}
+
+.H2-R.theme-highlight {
+    color: #f27802
+}
+
+.H2-R.theme-equal-line-height {
+    line-height: 1
+}
+
+.H3-R {
+    font-size: 32px;
+    line-height: 40px;
+    font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+@media (max-width:767px) {
+    .H3-R {
+        font-size: 24px;
+        line-height: 32px;
+        font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif
+    }
+}
+
+.H3-R.theme-secondary {
+    color: #8d9494
+}
+
+.H3-R.theme-tertiary {
+    color: #bdc4c4
+}
+
+.H3-R.theme-inverted {
+    color: #fff
+}
+
+.H3-R.theme-success {
+    color: #63cb76
+}
+
+.H3-R.theme-caution {
+    color: #ff4847
+}
+
+.H3-R.theme-highlight {
+    color: #f27802
+}
+
+.H3-R.theme-equal-line-height {
+    line-height: 1
+}
+
+.H4-R {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+@media (max-width:767px) {
+    .H4-R {
+        font-size: 20px;
+        line-height: 28px;
+        font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif
+    }
+}
+
+.H4-R.theme-secondary {
+    color: #8d9494
+}
+
+.H4-R.theme-tertiary {
+    color: #bdc4c4
+}
+
+.H4-R.theme-inverted {
+    color: #fff
+}
+
+.H4-R.theme-success {
+    color: #63cb76
+}
+
+.H4-R.theme-caution {
+    color: #ff4847
+}
+
+.H4-R.theme-highlight {
+    color: #f27802
+}
+
+.H4-R.theme-equal-line-height {
+    line-height: 1
+}
+
+.T1-R {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+@media (max-width:767px) {
+    .T1-R {
+        font-size: 16px;
+        line-height: 22px;
+        font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif
+    }
+}
+
+.T1-R.theme-secondary {
+    color: #8d9494
+}
+
+.T1-R.theme-tertiary {
+    color: #bdc4c4
+}
+
+.T1-R.theme-inverted {
+    color: #fff
+}
+
+.T1-R.theme-success {
+    color: #63cb76
+}
+
+.T1-R.theme-caution {
+    color: #ff4847
+}
+
+.T1-R.theme-highlight {
+    color: #f27802
+}
+
+.T1-R.theme-equal-line-height {
+    line-height: 1
+}
+
+.T2-R {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+@media (max-width:767px) {
+    .T2-R {
+        font-size: 14px;
+        line-height: 20px;
+        font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif
+    }
+}
+
+.T2-R.theme-secondary {
+    color: #8d9494
+}
+
+.T2-R.theme-tertiary {
+    color: #bdc4c4
+}
+
+.T2-R.theme-inverted {
+    color: #fff
+}
+
+.T2-R.theme-success {
+    color: #63cb76
+}
+
+.T2-R.theme-caution {
+    color: #ff4847
+}
+
+.T2-R.theme-highlight {
+    color: #f27802
+}
+
+.T2-R.theme-equal-line-height {
+    line-height: 1
+}
+
+.T3-R {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+@media (max-width:767px) {
+    .T3-R {
+        font-size: 12px;
+        line-height: 16px;
+        font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif
+    }
+}
+
+.T3-R.theme-secondary {
+    color: #8d9494
+}
+
+.T3-R.theme-tertiary {
+    color: #bdc4c4
+}
+
+.T3-R.theme-inverted {
+    color: #fff
+}
+
+.T3-R.theme-success {
+    color: #63cb76
+}
+
+.T3-R.theme-caution {
+    color: #ff4847
+}
+
+.T3-R.theme-highlight {
+    color: #f27802
+}
+
+.T3-R.theme-equal-line-height {
+    line-height: 1
+}
+
+.T1-S {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+.T1-S.theme-secondary {
+    color: #8d9494
+}
+
+.T1-S.theme-tertiary {
+    color: #bdc4c4
+}
+
+.T1-S.theme-inverted {
+    color: #fff
+}
+
+.T1-S.theme-success {
+    color: #63cb76
+}
+
+.T1-S.theme-caution {
+    color: #ff4847
+}
+
+.T1-S.theme-highlight {
+    color: #f27802
+}
+
+.T1-S.theme-equal-line-height {
+    line-height: 1
+}
+
+.T2-S {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+.T2-S.theme-secondary {
+    color: #8d9494
+}
+
+.T2-S.theme-tertiary {
+    color: #bdc4c4
+}
+
+.T2-S.theme-inverted {
+    color: #fff
+}
+
+.T2-S.theme-success {
+    color: #63cb76
+}
+
+.T2-S.theme-caution {
+    color: #ff4847
+}
+
+.T2-S.theme-highlight {
+    color: #f27802
+}
+
+.T2-S.theme-equal-line-height {
+    line-height: 1
+}
+
+.T3-S {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+.T3-S.theme-secondary {
+    color: #8d9494
+}
+
+.T3-S.theme-tertiary {
+    color: #bdc4c4
+}
+
+.T3-S.theme-inverted {
+    color: #fff
+}
+
+.T3-S.theme-success {
+    color: #63cb76
+}
+
+.T3-S.theme-caution {
+    color: #ff4847
+}
+
+.T3-S.theme-highlight {
+    color: #f27802
+}
+
+.T3-S.theme-equal-line-height {
+    line-height: 1
+}
+
+.T4-S {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+.T4-S.theme-secondary {
+    color: #8d9494
+}
+
+.T4-S.theme-tertiary {
+    color: #bdc4c4
+}
+
+.T4-S.theme-inverted {
+    color: #fff
+}
+
+.T4-S.theme-success {
+    color: #63cb76
+}
+
+.T4-S.theme-caution {
+    color: #ff4847
+}
+
+.T4-S.theme-highlight {
+    color: #f27802
+}
+
+.T4-S.theme-equal-line-height {
+    line-height: 1
+}
+
+.T5-S {
+    font-size: 10px;
+    line-height: 14px;
+    font-family: AvenirNext-Medium, AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+.T5-S.theme-secondary {
+    color: #8d9494
+}
+
+.T5-S.theme-tertiary {
+    color: #bdc4c4
+}
+
+.T5-S.theme-inverted {
+    color: #fff
+}
+
+.T5-S.theme-success {
+    color: #63cb76
+}
+
+.T5-S.theme-caution {
+    color: #ff4847
+}
+
+.T5-S.theme-highlight {
+    color: #f27802
+}
+
+.T5-S.theme-equal-line-height {
+    line-height: 1
+}
+
+.B1-R {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+@media (max-width:767px) {
+    .B1-R {
+        font-size: 20px;
+        line-height: 28px;
+        font-family: AvenirNext-Regular, Arial, sans-serif
+    }
+}
+
+.B1-R.theme-secondary {
+    color: #8d9494
+}
+
+.B1-R.theme-tertiary {
+    color: #bdc4c4
+}
+
+.B1-R.theme-inverted {
+    color: #fff
+}
+
+.B1-R.theme-success {
+    color: #63cb76
+}
+
+.B1-R.theme-caution {
+    color: #ff4847
+}
+
+.B1-R.theme-highlight {
+    color: #f27802
+}
+
+.B1-R.theme-equal-line-height {
+    line-height: 1
+}
+
+.B1-S {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+.B1-S.theme-secondary {
+    color: #8d9494
+}
+
+.B1-S.theme-tertiary {
+    color: #bdc4c4
+}
+
+.B1-S.theme-inverted {
+    color: #fff
+}
+
+.B1-S.theme-success {
+    color: #63cb76
+}
+
+.B1-S.theme-caution {
+    color: #ff4847
+}
+
+.B1-S.theme-highlight {
+    color: #f27802
+}
+
+.B1-S.theme-equal-line-height {
+    line-height: 1
+}
+
+.B2-R {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+@media (max-width:767px) {
+    .B2-R {
+        font-size: 14px;
+        line-height: 20px;
+        font-family: AvenirNext-Regular, Arial, sans-serif
+    }
+}
+
+.B2-R.theme-secondary {
+    color: #8d9494
+}
+
+.B2-R.theme-tertiary {
+    color: #bdc4c4
+}
+
+.B2-R.theme-inverted {
+    color: #fff
+}
+
+.B2-R.theme-success {
+    color: #63cb76
+}
+
+.B2-R.theme-caution {
+    color: #ff4847
+}
+
+.B2-R.theme-highlight {
+    color: #f27802
+}
+
+.B2-R.theme-equal-line-height {
+    line-height: 1
+}
+
+.B2-S {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+.B2-S.theme-secondary {
+    color: #8d9494
+}
+
+.B2-S.theme-tertiary {
+    color: #bdc4c4
+}
+
+.B2-S.theme-inverted {
+    color: #fff
+}
+
+.B2-S.theme-success {
+    color: #63cb76
+}
+
+.B2-S.theme-caution {
+    color: #ff4847
+}
+
+.B2-S.theme-highlight {
+    color: #f27802
+}
+
+.B2-S.theme-equal-line-height {
+    line-height: 1
+}
+
+.B3-R {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+@media (max-width:767px) {
+    .B3-R {
+        font-size: 12px;
+        line-height: 16px;
+        font-family: AvenirNext-Regular, Arial, sans-serif
+    }
+}
+
+.B3-R.theme-secondary {
+    color: #8d9494
+}
+
+.B3-R.theme-tertiary {
+    color: #bdc4c4
+}
+
+.B3-R.theme-inverted {
+    color: #fff
+}
+
+.B3-R.theme-success {
+    color: #63cb76
+}
+
+.B3-R.theme-caution {
+    color: #ff4847
+}
+
+.B3-R.theme-highlight {
+    color: #f27802
+}
+
+.B3-R.theme-equal-line-height {
+    line-height: 1
+}
+
+.B3-S {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+.B3-S.theme-secondary {
+    color: #8d9494
+}
+
+.B3-S.theme-tertiary {
+    color: #bdc4c4
+}
+
+.B3-S.theme-inverted {
+    color: #fff
+}
+
+.B3-S.theme-success {
+    color: #63cb76
+}
+
+.B3-S.theme-caution {
+    color: #ff4847
+}
+
+.B3-S.theme-highlight {
+    color: #f27802
+}
+
+.B3-S.theme-equal-line-height {
+    line-height: 1
+}
+
+.B4-S {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+.B4-S.theme-secondary {
+    color: #8d9494
+}
+
+.B4-S.theme-tertiary {
+    color: #bdc4c4
+}
+
+.B4-S.theme-inverted {
+    color: #fff
+}
+
+.B4-S.theme-success {
+    color: #63cb76
+}
+
+.B4-S.theme-caution {
+    color: #ff4847
+}
+
+.B4-S.theme-highlight {
+    color: #f27802
+}
+
+.B4-S.theme-equal-line-height {
+    line-height: 1
+}
+
+.B5-S {
+    font-size: 10px;
+    line-height: 14px;
+    font-family: AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+.B5-S.theme-secondary {
+    color: #8d9494
+}
+
+.B5-S.theme-tertiary {
+    color: #bdc4c4
+}
+
+.B5-S.theme-inverted {
+    color: #fff
+}
+
+.B5-S.theme-success {
+    color: #63cb76
+}
+
+.B5-S.theme-caution {
+    color: #ff4847
+}
+
+.B5-S.theme-highlight {
+    color: #f27802
+}
+
+.B5-S.theme-equal-line-height {
+    line-height: 1
+}
+
+.B6-R {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: AvenirNext-Regular, Arial, sans-serif;
+    color: #4e4d4d
+}
+
+@media (max-width:767px) {
+    .B6-R {
+        font-size: 16px;
+        line-height: 22px;
+        font-family: AvenirNext-Regular, Arial, sans-serif
+    }
+}
+
+.B6-R.theme-secondary {
+    color: #8d9494
+}
+
+.B6-R.theme-tertiary {
+    color: #bdc4c4
+}
+
+.B6-R.theme-inverted {
+    color: #fff
+}
+
+.B6-R.theme-success {
+    color: #63cb76
+}
+
+.B6-R.theme-caution {
+    color: #ff4847
+}
+
+.B6-R.theme-highlight {
+    color: #f27802
+}
+
+.B6-R.theme-equal-line-height {
+    line-height: 1
+}
+
+.H1-R+.B1-S {
+    margin-top: 8px
+}
+
+.H1-R+.B2-S {
+    margin-top: 11px
+}
+
+.H2-R+.B2-S {
+    margin-top: 8px
+}
+
+.H3-R+.B2-S {
+    margin-top: 5px
+}
+
+.H4-R+.B2-S {
+    margin-top: 2px
+}
+
+.T2-S+.B3-S {
+    margin-top: 3px
+}
