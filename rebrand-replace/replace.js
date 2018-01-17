@@ -101,3 +101,17 @@ if ( process.argv.includes("svg") ) {
         }
     });
 }
+
+if ( process.argv.includes("font") ) {
+    font.forEach(function(entry){
+        entry.old.forEach(function(oldValue){
+            // negative lookahead to distinguish beteeen $sky4 and $sky
+            var regex = oldValue;
+            var replacement = entry.new;
+            var include = '*.html, *.js, *.jsx, *.scss';
+            var excludeList = 'excludeList.txt';
+
+            replaceValues(regex, replacement, include, excludeList);
+        })
+    });
+}

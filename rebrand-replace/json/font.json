@@ -1,59 +1,34 @@
 [
     {
         "new": "tp-title-1",
-        "old": [
-            "tp-heading-1",
-            "tp-heading-2"
-        ]
+        "old": ["tp-heading-1", "tp-heading-2", "H1-R", "H2-R"]
     },
     {
         "new": "tp-title-2",
-        "old": [
-            "tp-heading-3"
-        ]
+        "old": ["tp-heading-3", "H3-R"]
     },
     {
         "new": "tp-title-3",
-        "old": [
-            "tp-heading-4"
-        ]
+        "old": ["tp-text-1", "H4-R", "B1-S", "B1-R"]
     },
     {
         "new": "tp-title-4",
-        "old": [
-            "tp-heading-5"
-        ]
+        "old": ["tp-heading-4", "tp-text-1--static", "T1-R", "T1-S", "B6-R"]
+    },
+    {
+        "new": "tp-title-5",
+        "old": ["tp-heading-5"]
     },
     {
         "new": "tp-body-1",
-        "old": [
-            "tp-heading-5"
-        ]
-    },
-    {
-        "new": "tp-body-1",
-        "old": [
-            "tp-heading-6"
-        ]
-    },
-    {
-        "new": "tp-body-1",
-        "old": [
-            "tp-text-1",
-            "tp-text-1--static",
-            "tp-text-2--static"
-        ]
+        "old": ["tp-heading-6", "tp-text-2--static", "T2-R", "T2-S", "B2-R", "B2-S"]
     },
     {
         "new": "tp-body-2",
-        "old": [
-            "tp-text-3--static"
-        ]
+        "old": ["tp-text-3--static", "T3-R", "T3-S", "B3-R", "B3-S"]
     },
     {
         "new": "tp-body-4",
-        "old": [
-            "tp-text-4--static"
-        ]
+        "old": ["tp-text-4--static", "T4-S", "T5-S", "B4-S", "B5-S"]
     }
 ]
