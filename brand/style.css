@@ -363,3 +363,6 @@ code,
 .pl-50 {
     padding-left: 50px;
 }
+ .no-border {
+     border-bottom: none !important;
+ }
