@@ -4,16 +4,22 @@ const color              = require('./json/color.json');
 const colorImport        = require('./json/colorImport.json');
 const colorOrange        = require('./json/colorOrange.json');
 const font               = require('./json/font.json');
+const theme              = require('./json/theme.json');
 const fontWeight         = require('./json/fontWeight.json');
-const paths              = ['/Users/tom/Sites/thumbprint-ui/packages'];
+const fontStack          = require('./json/fontStack.json');
+const paths              = ['/Users/tom/Sites/website/template'];
 //const paths              = ['./test/'];
+
+function escapeRegExp(text) {
+  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+}
 
 function replaceValues(regex, replacement, include, excludeList) {
     replace({
         regex: regex, // for exact matches
         replacement: replacement,
         paths: paths,
-        excludeList: excludeList,
+        excludeList: 'excludeList.txt',
         include: include,
         recursive: true,
         count: true,
@@ -22,39 +28,74 @@ function replaceValues(regex, replacement, include, excludeList) {
 }
 
 
-if ( process.argv.includes("font") ) {
+if ( process.argv.includes("font:html") ) {
     font.forEach(function(entry){
-        entry.html.old.forEach(function(oldValue){
-            var regex = oldValue + "(?!-)";
-            var replacement = entry.html.new;
-            var include = '*.html, *.js, *.jsx, *.scss';
-            var excludeList = 'excludeList.txt';
+        if (entry.html) {
+            entry.html.old.forEach(function(oldValue){
+                var regex = oldValue + "(?!-)";
+                var replacement = entry.html.new;
+                var include = '*.html, *.js, *.jsx, *.scss';
 
-            replaceValues(regex, replacement, include, excludeList);
-        })
+                replaceValues(regex, replacement, include);
+            })
+        }
+    });
+}
 
+if ( process.argv.includes("font:js") ) {
+    font.forEach(function(entry){
         entry.js.old.forEach(function(oldValue){
             var regex = oldValue;
             var replacement = entry.js.new;
-            var include = '*.html, *.js, *.jsx, *.scss';
-            var excludeList = 'excludeList.txt';
+            var include = '*.js, *.jsx,';
 
-            replaceValues(regex, replacement, include, excludeList);
+            replaceValues(regex, replacement, include);
         })
     });
 }
 
-if ( process.argv.includes("weight") ) {
+if ( process.argv.includes("font:sass") ) {
+    font.forEach(function(entry){
+        entry.sass.old.forEach(function(oldValue){
+            var regex = escapeRegExp(oldValue);
+            var replacement = entry.sass.new;
+            var include = '*.scss,';
+
+            replaceValues(regex, replacement, include);
+        })
+    });
+}
+
+if ( process.argv.includes("font:weight") ) {
     fontWeight.forEach(function(entry){
         entry.old.forEach(function(oldValue){
             // Lookahead for colon
             var regex = "font-weight: " + oldValue + ";";
             var replacement = "font-weight: " + entry.new + ";";
             var include = '*.html, *.js, *.jsx, *.scss';
-            var excludeList = 'excludeList.txt';
 
-            replaceValues(regex, replacement, include, excludeList);
+            replaceValues(regex, replacement, include);
         })
+    });
+}
+
+if ( process.argv.includes("theme") ) {
+    theme.forEach(function(entry){
+        var regex = escapeRegExp(entry.old);
+        var replacement = entry.new;
+        var include = '*.html, *.js, *.jsx, *.scss';
+
+        replaceValues(regex, replacement, include);
+    });
+}
+
+if ( process.argv.includes("font:stack") ) {
+    fontStack.forEach(function(entry){
+        var regex = escapeRegExp(entry.old);
+        var replacement = entry.new;
+        var include = '*.scss';
+
+        replaceValues(regex, replacement, include);
     });
 }
 

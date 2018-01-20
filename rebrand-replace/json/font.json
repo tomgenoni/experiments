@@ -4,9 +4,43 @@
             "new": "tp-title-1",
             "old": ["tp-heading-1", "tp-heading-2", "H1-R", "H2-R"]
         },
+        "sass": {
+            "new": "$tp-font__title__1__size",
+            "old": ["$tp-font__heading__1__size", "$tp-font__heading__2__size"]
+        },
         "js": {
             "new": "tpFontTitle1Size",
             "old": ["tpFontHeading1Size", "tpFontHeading2Size"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__title__1__line-height",
+            "old": ["$tp-font__heading__1__line-height", "$tp-font__heading__2__line-height"]
+        },
+        "js": {
+            "new": "tpFontTitle1LineHeight",
+            "old": ["tpFontHeading1LineHeight", "tpFontHeading2LineHeight"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__title__1__responsive__size",
+            "old": ["$tp-font__heading__1__responsive__size", "$tp-font__heading__2__responsive__size"]
+        },
+        "js": {
+            "new": "tpFontTitle1RespsonsiveSize",
+            "old": ["tpFontHeading1ResponsiveSize", "tpFontHeading2ResponsiveSize"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__title__1__responsive__size",
+            "old": ["$tp-font__heading__1__responsive__size", "$tp-font__heading__2__responsive__size"]
+        },
+        "js": {
+            "new": "tpFontTitle1RespsonsiveLineHeight",
+            "old": ["tpFontHeading1ResponsiveLineHeight", "tpFontHeading2ResponsiveLineHeight"]
         }
     },
     {
@@ -14,9 +48,43 @@
             "new": "tp-title-2",
             "old": ["tp-heading-3", "H3-R"]
         },
+        "sass": {
+            "new": "$tp-font__title__3__size",
+            "old": ["$tp-font__heading__3__size"]
+        },
         "js": {
             "new": "tpFontTitle2Size",
             "old": ["tpFontHeading3Size"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__title__2__line-height",
+            "old": ["$tp-font__heading__3__line-height"]
+        },
+        "js": {
+            "new": "tpFontTitle2LineHeight",
+            "old": ["tpFontHeading3LineHeight"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__title__2__responsive__size",
+            "old": ["$tp-font__heading__3__responsive__size"]
+        },
+        "js": {
+            "new": "tpFontTitle2ResponsiveSize",
+            "old": ["tpFontHeading3ResponsiveSize"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__title__2__responsive__line-height",
+            "old": ["$tp-font__heading__3__responsive__line-height"]
+        },
+        "js": {
+            "new": "tpFontTitle2ResponsiveSize",
+            "old": ["tpFontHeading3ResponsiveSize"]
         }
     },
     {
@@ -24,9 +92,43 @@
             "new": "tp-title-3",
             "old": ["tp-text-1", "H4-R", "B1-S", "B1-R"]
         },
+        "sass": {
+            "new": "$tp-font__title__3__size",
+            "old": ["$tp-font__text__1__size"]
+        },
         "js": {
             "new": "tpFontTitle3Size",
             "old": ["tpFontText1Size"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__title__3__line-height",
+            "old": ["$tp-font__text__1__line-height"]
+        },
+        "js": {
+            "new": "tpFontTitle3LineHeight",
+            "old": ["tpFontText1LineHeight"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__title__3__responsive__size",
+            "old": ["$tp-font__text__1__responsive__size"]
+        },
+        "js": {
+            "new": "tpFontTitle3ResponsiveSize",
+            "old": ["tpFontText1ResponsiveSize"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__title__3__responsive__line-height",
+            "old": ["$tp-font__text__1__responsive__line-height"]
+        },
+        "js": {
+            "new": "tpFontTitle3ResponsiveLineHeight",
+            "old": ["tpFontText1ResponsiveLineHeight"]
         }
     },
     {
@@ -34,9 +136,23 @@
             "new": "tp-title-4",
             "old": ["tp-heading-4", "tp-text-1--static", "T1-R", "T1-S", "B6-R"]
         },
+        "sass": {
+            "new": "$tp-font__title__4__size",
+            "old": ["$tp-font__heading__4__size"]
+        },
         "js": {
             "new": "tpFontTitle4Size",
             "old": ["tpFontHeading4Size"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__title__4__line-height",
+            "old": ["$tp-font__heading__4__line-height"]
+        },
+        "js": {
+            "new": "tpFontTitle4LineHeight",
+            "old": ["tpFontHeading4LineHeight"]
         }
     },
     {
@@ -44,9 +160,23 @@
             "new": "tp-title-5",
             "old": ["tp-heading-5"]
         },
+        "sass": {
+            "new": "$tp-font__title__5__size",
+            "old": ["$tp-font__heading__5__size"]
+        },
         "js": {
             "new": "tpFontTitle5Size",
             "old": ["tpFontHeading5Size"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__title__5__line-height",
+            "old": ["$tp-font__heading__5__line-height"]
+        },
+        "js": {
+            "new": "tpFontTitle5LineHeight",
+            "old": ["tpFontHeading5LineHeight"]
         }
     },
     {
@@ -54,9 +184,23 @@
             "new": "tp-body-1",
             "old": ["tp-heading-6", "tp-text-2--static", "T2-R", "T2-S", "B2-R", "B2-S"]
         },
+        "sass": {
+            "new": "$tp-font__body__1__size",
+            "old": ["$tp-font__heading__6__size"]
+        },
         "js": {
             "new": "tpFontBody1Size",
             "old": ["tpFontText2Size"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__body__1__line-height",
+            "old": ["$tp-font__heading__6__line-height"]
+        },
+        "js": {
+            "new": "tpFontBody1LineHeight",
+            "old": ["tpFontText2LineHeight"]
         }
     },
     {
@@ -64,9 +208,23 @@
             "new": "tp-body-2",
             "old": ["tp-text-3--static", "T3-R", "T3-S", "B3-R", "B3-S"]
         },
+        "sass": {
+            "new": "$tp-font__body__2__size",
+            "old": ["$tp-font__text__3__size"]
+        },
         "js": {
             "new": "tpFontBody2Size",
             "old": ["tpFontText3Size"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__body__2__line-height",
+            "old": ["$tp-font__text__3__line-height"]
+        },
+        "js": {
+            "new": "tpFontBody2LineHeight",
+            "old": ["tpFontText3LineHeight"]
         }
     },
     {
@@ -74,9 +232,23 @@
             "new": "tp-body-3",
             "old": ["tp-text-4--static", "T4-S", "T5-S", "B4-S", "B5-S"]
         },
+        "sass": {
+            "new": "$tp-font__body__3__size",
+            "old": ["$tp-font__text__4__size"]
+        },
         "js": {
             "new": "tpFontBody3Size",
             "old": ["tpFontText4Size"]
+        }
+    },
+    {
+        "sass": {
+            "new": "$tp-font__body__3__line-height",
+            "old": ["$tp-font__text__4__line-height"]
+        },
+        "js": {
+            "new": "tpFontBody3LineHeight",
+            "old": ["tpFontText4LineHeight"]
         }
     }
 ]

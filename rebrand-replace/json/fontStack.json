@@ -1,0 +1,14 @@
+[
+    {
+        "new": "font-weight: 400;",
+        "old": "font-family: $AvenirMediumStack;"
+    },
+    {
+        "new": "font-weight: 700;",
+        "old": "font-family: $AvenirDemiStack;"
+    },
+    {
+        "new": "font-weight: 400;",
+        "old": "font-family: $AvenirRegularStack;"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "new": "tp-color--white",
+        "old": "theme-inverted"
+    },
+    {
+        "new": "tp-color--black-300",
+        "old": "theme-secondary"
+    },
+    {
+        "new": "tp-color--black-300",
+        "old": "theme-tertiary"
+    },
+    {
+        "new": "tp-color--red",
+        "old": "theme-caution"
+    },
+    {
+        "new": "tp-color--green",
+        "old": "theme-success"
+    },
+    {
+        "new": "tp-color--brand",
+        "old": "theme-highlight"
+    }
+]
