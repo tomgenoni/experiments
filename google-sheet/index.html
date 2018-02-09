@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Status</title>
+
+    <!-- Load jQuery and Sheetrock from CDNJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+
+    <style>
+
+
+    @font-face {
+        font-family: 'Mark';
+        font-weight: 400;
+        src: url(https://fonts.thumbtack.com/mark/mark-tt.woff2) format('woff2'),
+        url(https://fonts.thumbtack.com/mark/mark-tt.woff) format('woff');
+    }
+
+    @font-face {
+        font-family: 'Mark';
+        font-weight: 700;
+        src: url(https://fonts.thumbtack.com/mark/mark-tt-bold.woff2) format('woff2'),
+        url(https://fonts.thumbtack.com/mark/mark-tt-bold.woff) format('woff');
+    }
+
+    body {
+        margin: 50px;
+        font-family: Mark;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    tr:first-child td {
+        font-weight: 700;
+    }
+
+    tr {
+        border-bottom: 1px solid #ddd;
+    }
+
+    td {
+        padding: 10px 0;
+    }
+
+    ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: flex;
+        border-bottom: 1px solid #ddd;
+    }
+
+    li div {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .is-done {
+        background: lightgreen;
+        color: lightgreen;
+    }
+
+    .is-progress {
+        background: yellow;
+    }
+
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Design Systems Toolkit Status</h1>
+
+    <ol id="status">
+        <script id="StatusTemplate" type="text/x-handlebars-template">
+            <li>
+                <div>{{cells.Toolkit}}</div>
+                <div
+                    {{#ifCond cells.Design '==' "X"}}class='is-done'{{/ifCond}}
+                    {{#ifCond cells.Design '==' "in progress"}}class='is-progress'{{/ifCond}}
+                >{{cells.Design}}</div>
+                <div
+                    {{#ifCond cells.Build '==' "X"}}class='is-done'{{/ifCond}}
+                    {{#ifCond cells.Build '==' "in progress"}}class='is-progress'{{/ifCond}}
+                >{{cells.Build}}</div>
+                <div {{#ifCond cells.Doc '==' "X"}}class='is-done'{{/ifCond}}>{{cells.Doc}}</div>
+                <div {{#ifCond cells.Publish '==' "X"}}class='is-done'{{/ifCond}}>{{cells.Publish}}</div>
+                <div>{{cells.Notes}}</div>
+            </li>
+        </script>
+    </ol>
+
+<script>
+
+
+    Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
+
+        switch (operator) {
+            case '==':
+                return (v1 == v2) ? options.fn(this) : options.inverse(this);
+            case '===':
+                return (v1 === v2) ? options.fn(this) : options.inverse(this);
+            case '!=':
+                return (v1 != v2) ? options.fn(this) : options.inverse(this);
+            case '!==':
+                return (v1 !== v2) ? options.fn(this) : options.inverse(this);
+            case '<':
+                return (v1 < v2) ? options.fn(this) : options.inverse(this);
+            case '<=':
+                return (v1 <= v2) ? options.fn(this) : options.inverse(this);
+            case '>':
+                return (v1 > v2) ? options.fn(this) : options.inverse(this);
+            case '>=':
+                return (v1 >= v2) ? options.fn(this) : options.inverse(this);
+            case '&&':
+                return (v1 && v2) ? options.fn(this) : options.inverse(this);
+            case '||':
+                return (v1 || v2) ? options.fn(this) : options.inverse(this);
+            default:
+                return options.inverse(this);
+        }
+    });
+
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1j0JCMK06S4fX5uKyEz9uLEdZxm6WaWQJQNA3KM9G9L4/edit#gid=0';
+    var StatusTemplate = Handlebars.compile($('#StatusTemplate').html());
+
+    // Load top ten switch hitters.
+    $('#status').sheetrock({
+        url: mySpreadsheet,
+        rowTemplate: StatusTemplate
+    });
+
+</script>
+
+</body>
+</html>
