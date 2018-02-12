@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider</title>
+
+    <style>
+
+    html {
+        box-sizing: border-box;
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    .wrap {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    @media (max-width: 900px) {
+        .wrap {
+            margin-left: 100px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .wrap {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    .thing {
+        overflow-y: scroll;
+    }
+
+    .row {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-left: -16px;
+    }
+
+    .row__item {
+        padding-left: 16px;
+        min-width: 33.33%;
+    }
+
+    @media (max-width: 900px) {
+        .row__item {
+            min-width: 38%;
+        }
+    }
+
+    .block {
+        background: #000;
+        height: 80px;
+        border-radius: 4px;
+    }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="thing">
+            <ul class="row">
+                <li class="row__item">
+                    <div class="block"></div>
+                </li>
+                <li class="row__item">
+                    <div class="block"></div>
+                </li>
+                <li class="row__item">
+                    <div class="block"></div>
+                </li>
+                <li class="row__item">
+                    <div class="block"></div>
+                </li>
+                <li class="row__item">
+                    <div class="block"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+</html>
