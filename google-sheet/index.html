@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<table id="roadmap-table"></table>
+
+<script>
+
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1j0JCMK06S4fX5uKyEz9uLEdZxm6WaWQJQNA3KM9G9L4/edit#gid=0';
+
+// Load top ten roadmap-table hitters.
+$('#roadmap-table').sheetrock({
+  url: mySpreadsheet,
+  query: "select A,B,C,D,E",
+  callback: dataHandler
+});
+
+function dataHandler(error, options, response) {
+    $("#roadmap-table td").each(function() {
+        var text = this.textContent;
+        console.log(text);
+
+        if (text.startsWith("Q")) {
+            $(this).addClass("is-quarter")
+        }
+        if (text == "progress") {
+            $(this).addClass("is-progress")
+        }
+        if (text == "done") {
+            $(this).addClass("is-done")
+        }
+    })
+}
+
+</script>
+
+</body>
+</html>

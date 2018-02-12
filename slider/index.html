@@ -23,21 +23,23 @@
 
     .wrap {
         max-width: 800px;
-        margin: auto;
+        margin-left: 20px;
+        margin-right: 0;
     }
 
-    @media (max-width: 900px) {
+    @media (min-width: 500px) {
         .wrap {
             margin-left: 100px;
         }
     }
 
-    @media (max-width: 500px) {
+    @media (min-width: 900px) {
         .wrap {
-            margin-left: 20px;
-            margin-right: 20px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
+
 
     .thing {
         overflow-y: scroll;
@@ -53,12 +55,12 @@
 
     .row__item {
         padding-left: 16px;
-        min-width: 33.33%;
+        min-width: 38%;
     }
 
-    @media (max-width: 900px) {
+    @media (min-width: 900px) {
         .row__item {
-            min-width: 38%;
+            min-width: 33.33%;
         }
     }
 
