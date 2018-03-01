@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="core.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+
+    <script>
+
+    $(document).ready(function(){
+
+        function getSize() {
+            var width = $(document).width();
+            var ar4x3 = "i/4x3.jpg";
+            var ar16x9 = "i/16x9.jpg";
+
+            if ( width > 800) {
+                 $(".arimg").attr("src", ar16x9);
+                 $("h4").text("16x9")
+            } else {
+                $(".arimg").attr("src", ar4x3)
+                $("h4").text("4x3")
+            }
+        }
+
+        $( window ).resize(function() {
+            getSize();
+        });
+
+        getSize();
+
+    });
+
+    </script>
+
+    <style>
+
+        .wrap {
+            padding-left: 30px;
+            padding-right: 30px;
+            overflow-x: auto;
+        }
+
+        .caro {
+            min-width: 500px;
+            padding-bottom: 20px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        h4 {
+            padding-top: 30px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .tp-body-2 {
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="wrap">
+        <h4></h4>
+        <div class="caro">
+            <div class="tp-grid">
+                <div class="tp-col tp-col--4">
+                    <div class="card">
+                        <img class="arimg" src="i/4x3.jpg" alt="">
+                        <div class="tp-title-5">Title</div>
+                        <div class="tp-body-2">Some text goes underneath</div>
+                    </div>
+                </div>
+                <div class="tp-col tp-col--4">
+                    <div class="card">
+                        <img class="arimg" src="i/4x3.jpg" alt="">
+                        <div class="tp-title-5">Title</div>
+                        <div class="tp-body-2">Some text goes underneath</div>
+                    </div>
+                </div>
+                <div class="tp-col tp-col--4">
+                    <div class="card">
+                        <img class="arimg" src="i/4x3.jpg" alt="">
+                        <div class="tp-title-5">Title</div>
+                        <div class="tp-body-2">Some text goes underneath</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
