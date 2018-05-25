@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="root.css">
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        .box {
+            min-height: 20px;
+            background: lightblue;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="grid">
+        <div class="col w-1/2 mb3 m:mb0 m:w-1/4">
+            <div class="aspect-ratio aspect-ratio--8x5 br2 mb1" style="background: orange">
+
+            </div>
+            <div class="b">foo</div>
+        </div>
+        <div class="col w-1/2 mb3 m:mb0 m:w-1/4">
+            <div class="aspect-ratio aspect-ratio--8x5 br2 mb1" style="background: orange">
+
+            </div>
+            <div class="b">foo</div>
+        </div>
+        <div class="col w-1/2 m:w-1/4">
+            <div class="aspect-ratio aspect-ratio--8x5 br2 mb1" style="background: orange">
+
+            </div>
+            <div class="b">foo</div>
+        </div>
+        <div class="col w-1/2 m:w-1/4">
+            <div class="aspect-ratio aspect-ratio--8x5 br2 mb1" style="background: orange">
+
+            </div>
+            <div class="b">foo</div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="s:flex">
+        <input type="text" class="tp-text-input mb3 s:mb0 s:br--left s:br-0" placeholder="Enter an address" />
+        <button class="tp-button w-100 s:w-auto s:br--right">Let's go</button>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="grid">
+        <div class="col flex-auto mb3 m:mb0">
+            <input type="text" class="tp-text-input" placeholder="Enter an address" />
+        </div>
+        <div class="col w-100 m:w-auto">
+            <button class="tp-button w-100">foobar</button>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="grid l:grid--wide">
+        <div class="col w-100 m:w-1/3">
+            <div class="box mb3 m:mb0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates libero architecto eius maiores non quaerat reiciendis ex animi ullam iure labore saepe numquam, ab sunt aliquid magnam similique officia! Qui!
+            </div>
+        </div>
+        <div class="col w-100 m:w-1/3">
+            <div class="box mb3 m:mb0"></div>
+        </div>
+        <div class="col w-100 m:w-1/3">
+            <div class="box"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
