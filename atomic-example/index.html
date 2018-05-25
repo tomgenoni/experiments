@@ -17,40 +17,80 @@
             background: lightblue;
             border-radius: 2px;
         }
+
+        .wrap {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
     </style>
 </head>
 
 <body>
 
 
+    <div class="wrap">
+        <h3>This examples switches to stacked on mobile with proper spacing.</h3>
+        <br>
+        <ol class="tp-form-fields">
+            <li class="mb3">
+                <input type="text" class="tp-text-input" />
+            </li>
+            <li class="mb3">
+                <div class="grid">
+                    <div class="col w-100 mb3 m:mb0 m:w-1/2">
+                        <input type="text" class="tp-text-input" />
+                    </div>
+                    <div class="col w-100 m:w-1/2">
+                        <input type="text" class="tp-text-input" />
+                    </div>
+                </div>
+            </li>
+            <li class="mb3">
+                <input type="text" class="tp-text-input" />
+            </li>
+        </ol>
+    </div>
+
+
+    <br>
+    <br>
+
+    <h3>This card example on website currently uses custom classes.</h3>
+    <br>
+
     <div class="grid">
         <div class="col w-1/2 mb3 m:mb0 m:w-1/4">
             <div class="aspect-ratio aspect-ratio--8x5 br2 mb1" style="background: orange">
 
             </div>
-            <div class="b">foo</div>
+            <div class="b">This is the title</div>
         </div>
         <div class="col w-1/2 mb3 m:mb0 m:w-1/4">
             <div class="aspect-ratio aspect-ratio--8x5 br2 mb1" style="background: orange">
 
             </div>
-            <div class="b">foo</div>
+            <div class="b">This is the title</div>
         </div>
         <div class="col w-1/2 m:w-1/4">
             <div class="aspect-ratio aspect-ratio--8x5 br2 mb1" style="background: orange">
 
             </div>
-            <div class="b">foo</div>
+            <div class="b">This is the title</div>
         </div>
         <div class="col w-1/2 m:w-1/4">
             <div class="aspect-ratio aspect-ratio--8x5 br2 mb1" style="background: orange">
 
             </div>
-            <div class="b">foo</div>
+            <div class="b">This is the title</div>
         </div>
     </div>
 
     <br>
+    <br>
+
+    <h3>Button with inputs.</h3>
     <br>
 
     <div class="s:flex">
@@ -73,6 +113,8 @@
     <br>
     <br>
 
+    <h3>Simple responsive grid that has wide margin above "large" breakpoint</h3>
+    <br>
     <div class="grid l:grid--wide">
         <div class="col w-100 m:w-1/3">
             <div class="box mb3 m:mb0">
