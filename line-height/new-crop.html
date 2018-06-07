@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Line Heights</title>
+
+    <link rel="stylesheet" href="https://thumbtack.github.io/thumbprint-ui-playground/css/root.css">
+
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        .tp-rule {
+            border-color: red;
+            margin: 0;
+        }
+
+        .pad {
+            height: 16px;
+            background: #ccc;
+        }
+
+        .tp-title-1 {
+            line-height: 1.2;
+        }
+
+        .tp-title-1--crop:before {
+            content: '';
+            display: block;
+            margin-top: -7px;
+        }
+
+        .tp-title-1--crop:after {
+            content: '';
+            display: block;
+            margin-bottom: -6px;
+        }
+
+        @media (min-width: 701px) {
+            .tp-title-1 {
+                line-height: 1.1
+            }
+
+            .tp-title-1--crop:before {
+                margin-top: -9px;
+            }
+
+            .tp-title-1--crop:after {
+                margin-bottom: -7px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="pad"></div>
+    <hr class="tp-rule">
+    <div class="tp-title-1">
+        The quick brown fox jumps over the lazy dog and again the quick brown fox jumps over the lazy dog.
+    </div>
+    <hr class="tp-rule">
+    <div class="pad"></div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="pad"></div>
+    <hr class="tp-rule">
+    <div class="tp-title-1 tp-title-1--crop">
+        The quick brown fox jumps over the lazy dog and again the quick brown fox jumps over the lazy dog.
+    </div>
+    <hr class="tp-rule">
+    <div class="pad"></div>
+
+
+
+</body>
+
+</html>
