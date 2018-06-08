@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+	<style>
+		html,
+		body {
+			height: 100%;
+		}
+
+		html {
+			box-sizing: border-box;
+		}
+
+		*,
+		*:before,
+		*:after {
+			box-sizing: inherit;
+		}
+
+
+		body {
+			margin: 50px;
+		}
+
+		ul {
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -16px;
+		}
+
+		.swa-wrap {
+			list-style: none;
+			padding-left: 16px;
+			width: 12.5%;
+		}
+
+		.swa {
+			height: 30px;
+			margin-bottom: 16px;
+			border-radius: 3px;
+		}
+
+		.swa-r {
+			border-radius: 3px;
+			opacity: 0;
+			height: 0;
+			margin-bottom: 0;
+			transition: height .2s .4s, margin-bottom .2s .4s, opacity .4s;
+			transition-timing-function: ease-out;
+		}
+
+		.full .swa-r {
+			opacity: 1;
+			height: 30px;
+			margin-bottom: 16px;
+			transition: height .2s, margin-bottom .2s, opacity .6s .2s;
+			transition-timing-function: ease-out;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<button id="toggle">Show/Hide</button>
+
+	<br>
+	<br>
+
+	<ul>
+		<li class="swa-wrap">
+			<div style="background: #b3ebff" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #cce1ff" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #dfccff" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #c6f7da" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #ffebb3" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #ffd9d9" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: transparent" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #fafafa" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #79d2f2" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #96c2ff" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #d3baff" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #73e4a2" class="swa-r"></div>
+		</li>
+
+		<li class="swa-wrap">
+			<div style="background: #ffdd80" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #ffb0b0" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #676d73" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #e9eced" class="swa-r"></div>
+		</li>
+
+
+
+		<li class="swa-wrap">
+			<div style="background: #009fd9" class="swa"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #5968e2" class="swa"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #a97ff0" class="swa"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #2db783" class="swa"></div>
+		</li>
+
+		<li class="swa-wrap">
+			<div style="background: #febe14" class="swa"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #ff5a5f" class="swa"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #2f3033" class="swa"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #d3d4d5" class="swa"></div>
+		</li>
+
+
+
+
+		<li class="swa-wrap">
+			<div style="background: #007fad" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #4f54b3" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #8a5ed6" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #109e78" class="swa-r"></div>
+		</li>
+
+		<li class="swa-wrap">
+			<div style="background: #d48300" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #cc3553" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: transparent" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: transparent" class="swa-r"></div>
+		</li>
+
+
+		<li class="swa-wrap">
+			<div style="background: #005a7a" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #383c80" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #783ad0" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #0f6648" class="swa-r"></div>
+		</li>
+
+		<li class="swa-wrap">
+			<div style="background: #a16300" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: #76012c" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: transparent" class="swa-r"></div>
+		</li>
+		<li class="swa-wrap">
+			<div style="background: transparent" class="swa-r"></div>
+		</li>
+
+	</ul>
+
+	<script>
+		const btn = document.querySelector("#toggle");
+		const body = document.querySelector("body");
+
+		btn.addEventListener("click", function(){
+			body.classList.toggle("full");
+		});
+	</script>
+
+
+</body>
+
+</html>
