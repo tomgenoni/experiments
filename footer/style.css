@@ -1,0 +1,17 @@
+@media (max-width: 482px) {
+    .section-links {
+        display: none;
+    }
+
+    .section-title {
+        cursor: pointer;
+    }
+
+    .section-title.is-active .section-arrow {
+         transform: rotate(180deg);
+    }
+
+    .section-title.is-active + .section-links {
+        display: block;
+    }
+}
