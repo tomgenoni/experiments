@@ -5,6 +5,11 @@
 
     .section-title {
         cursor: pointer;
+        padding-bottom: 16px;
+    }
+
+    .section-title.is-active {
+        padding-bottom: 8px;
     }
 
     .section-title.is-active .section-arrow {
