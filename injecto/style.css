@@ -1,180 +1,62 @@
-@font-face {
-    font-family: 'Mark';
-    font-weight: 400;
-    src: url(https://fonts.thumbtack.com/mark/mark-tt.woff2) format("woff2"), url(https://fonts.thumbtack.com/mark/mark-tt.woff) format("woff");
+.body {
+    font-family: Verdana !important;
 }
 
-@font-face {
-    font-family: 'AvenirNext-Regular';
-    font-weight: 400;
-    src: url(https://fonts.thumbtack.com/mark/mark-tt.woff2) format("woff2"), url(https://fonts.thumbtack.com/mark/mark-tt.woff) format("woff");
-}
-
-@font-face {
-    font-family: 'Mark';
-    font-weight: 700;
-    src: url(https://fonts.thumbtack.com/mark/mark-tt-bold.woff2) format("woff2"), url(https://fonts.thumbtack.com/mark/mark-tt-bold.woff) format("woff");
-}
-
-@font-face {
-    font-family: 'AvenirNext-Medium';
-    font-weight: 700;
-    src: url(https://fonts.thumbtack.com/mark/mark-tt-bold.woff2) format("woff2"), url(https://fonts.thumbtack.com/mark/mark-tt-bold.woff) format("woff");
-}
-
-body,
-input, textarea, select,
-.H1-R, .H2-R, .H3-R, .H4-R,
-.T1-R, .T2-R, .T3-R, .T4-R, .T5-R,
-.T1-S, .T2-S, .T3-S, .T4-S, .T5-S,
-.B1-S, .B2-S, .B3-S, .B4-S, .B5-S,
-.B1-R, .B2-R, .B3-R, .B4-R, .B5-R,
-.Button {
-    font-family: 'Mark', Helvetica, Arial, sans-serif !important;
-}
-
-.tp-heading-1,
-.tp-heading-2,
-.tp-heading-3,
-.tp-heading-4,
-.tp-heading-5,
-.tp-heading-6,
-.H1-R, .H2-R, .H3-R, .H4-R,
-.T1-R, .T2-R, .T3-R, .T4-R, .T5-R,
-.T1-S, .T2-S, .T3-S, .T4-S, .T5-S,
-.tp-button,
-.Button {
-    font-weight: 700;
-}
-
-/* .tp-title-1 */
-.H2-R,
-.H1-R,
-.tp-heading-1,
-.tp-heading-2 {
-    font-size: 28px;
-    line-height: 32px;
-    font-weight: 700;
+.tp-title-1 {
+    letter-spacing: -.8px !important;
+    font-size: 25px !important;
 }
 
 @media (min-width: 701px) {
-    .H2-R,
-    .H1-R,
-    .tp-heading-1,
-    .tp-heading-2 {
-        font-size: 40px;
-        line-height: 44px;
+    .tp-title-1 {
+        letter-spacing: -.8px !important;
+        font-size: 35px !important;
     }
 }
 
-/* .tp-title-2 */
-
-.H3-R,
-.tp-heading-3 {
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 700;
+.tp-title-2 {
+    letter-spacing: -.45px !important;
+    font-size: 21px !important;
 }
 
 @media (min-width: 701px) {
-    .H3-R,
-    .tp-heading-3 {
-        font-size: 32px;
-        line-height: 40px;
+    .tp-title-2 {
+        letter-spacing: -.6px !important;
+        font-size: 28px !important;
     }
 }
 
-/* .tp-title-3, .tp-text-1 */
-.H3-R,
-.B1-S,
-.B1-R,
-.tp-text-1 {
-    font-size: 22px;
-    line-height: 28px;
-    font-weight: 700;
+.tp-title-3 {
+    letter-spacing: -.8px !important;
+    font-size: 20px !important;
 }
 
 @media (min-width: 701px) {
-    .H3-R,
-    .B1-S,
-    .B1-R,
-    .tp-text-1{
-        font-size: 24px;
-        line-height: 32px;
+    .tp-title-3 {
+        letter-spacing: -.4px !important;
+        font-size: 21px !important;
     }
 }
 
-/* .tp-title-4, .tp-text-1--static */
-.T1-R,
-.T1-S,
-.B6-R,
-.tp-heading-4,
-.tp-text-static--1 {
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 700;
-}
-@media (min-width: 701px) {
-    .T1-R,
-    .T1-S,
-    .B6-R,
-    .tp-heading-4,
-    .tp-text-static--1 {
-        font-size: 20px;
-        line-height: 24px;
-        font-weight: 700;
-    }
+.tp-title-4 {
+    letter-spacing: -.6px !important;
+    font-size: 18px !important;
 }
 
-
-/* .tp-title-5 */
-.tp-heading-5 {
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 700;
+.tp-title-5 {
+    font-size: 15px !important;
 }
 
-@media (min-width: 701px) {
-    .tp-heading-5 {
-        font-size: 18px;
-        line-height: 20px;
-        font-weight: 700;
-    }
+.tp-body-1 {
+    font-size: 15px !important;
 }
 
-
-/* .tp-body-1 */
-.T2-R,
-.T2-S,
-.B2-R,
-.B2-S,
-.tp-heading-6,
-.tp-text-2--static {
-    font-size: 16px;
-    line-height: 24px;
+.tp-body-2 {
+    font-size: 13px !important;
+    letter-spacing: .14px !important;
 }
 
-/* bold extra for tp-body-1 */
-.tp-heading-6 {
-    font-weight: 700;
-}
-
-/* .tp-body-2 */
-.T3-R,
-.T3-S,
-.B3-R,
-.B3-S,
-.tp-text-3--static {
-    font-size: 14px;
-    line-height: 20px;
-}
-
-/* .tp-body-3 */
-.T4-S,
-.T5-S,
-.B4-S,
-.B5-S,
-.tp-text-4--static {
-    font-size: 12px;
-    line-height: 18px;
+.tp-body-3 {
+    font-size: 11px !important;
+    letter-spacing: .15px !important;
 }
