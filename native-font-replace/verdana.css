@@ -1,46 +1,47 @@
 .native {
     font-family: Verdana;
+    color: #009fd9;
     opacity: 0;
 }
 
 .native.tp-title-1 {
-    letter-spacing: -.8px;
+    letter-spacing: -0.8px;
     font-size: 25px;
 }
 
 @media (min-width: 701px) {
     .native.tp-title-1 {
-        letter-spacing: -.8px;
+        letter-spacing: -0.8px;
         font-size: 35px;
     }
 }
 
 .native.tp-title-2 {
-    letter-spacing: -.45px;
+    letter-spacing: -0.45px;
     font-size: 21px;
 }
 
 @media (min-width: 701px) {
     .native.tp-title-2 {
-        letter-spacing: -.6px;
+        letter-spacing: -0.6px;
         font-size: 28px;
     }
 }
 
 .native.tp-title-3 {
-    letter-spacing: -.8px;
+    letter-spacing: -0.8px;
     font-size: 20px;
 }
 
 @media (min-width: 701px) {
     .native.tp-title-3 {
-        letter-spacing: -.4px;
+        letter-spacing: -0.4px;
         font-size: 21px;
     }
 }
 
 .native.tp-title-4 {
-    letter-spacing: -.6px;
+    letter-spacing: -0.6px;
     font-size: 18px;
 }
 
@@ -54,10 +55,10 @@
 
 .native.tp-body-2 {
     font-size: 13px;
-    letter-spacing: .14px;
+    letter-spacing: 0.14px;
 }
 
 .native.tp-body-3 {
     font-size: 11px;
-    letter-spacing: .15px;
+    letter-spacing: 0.15px;
 }

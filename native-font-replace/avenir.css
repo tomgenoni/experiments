@@ -1,0 +1,43 @@
+.native {
+    font-family: Avenir;
+    color: #009fd9;
+    opacity: 0;
+}
+
+.native.tp-title-1 {
+    letter-spacing: 0.1px;
+}
+
+@media (min-width: 701px) {
+    .native.tp-title-1 {
+        letter-spacing: 0.4px;
+    }
+}
+
+.native.tp-title-2 {
+    letter-spacing: 0.1px;
+}
+
+.native.tp-title-3 {
+    letter-spacing: 0.15px;
+}
+
+.native.tp-title-4 {
+    letter-spacing: 0.1px;
+}
+
+.native.tp-title-5 {
+    letter-spacing: 0.1px;
+}
+
+.native.tp-body-1 {
+    letter-spacing: 0.45px;
+}
+
+.native.tp-body-2 {
+    letter-spacing: 0.5px;
+}
+
+.native.tp-body-3 {
+    letter-spacing: 0.4px;
+}
