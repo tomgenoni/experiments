@@ -4,9 +4,6 @@ boxes.forEach(function(box, i){
     let boxClasses = box.className.split(" ");
     boxClasses.shift();
 
-    // const boxWrap = box.parentElement;
-    // console.log(boxWrap);
-
     boxClasses.forEach(function(item){
         if (item.includes("db")) {
             const boxWrap = box.parentElement;
@@ -14,7 +11,7 @@ boxes.forEach(function(box, i){
         }
     });
 
-    const code = box.parentElement.previousElementSibling;
+    const code = box.parentElement.previousElementSibling.querySelector(".code");
     const codeClasses = boxClasses.join(' ');
     code.innerHTML = codeClasses;
 })

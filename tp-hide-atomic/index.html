@@ -28,13 +28,20 @@
             border-color: red;
         }
 
-        .code {
-            display: block;
-            font-size: 13px;
-            color: #000;
+        .code-wrap {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+        .code {
+            font-size: 13px;
+            color: #000;
+        }
+
+        .instances {
+            font-weight: bold;
+            font-size: 13px;
         }
 
         p code {
@@ -58,20 +65,37 @@
 <div class="tp-wrap mb6">
     <h1 class="tp-title-3 mb3">Replace Layout with Atomic</h1>
 
-    <p class="mb2 mw8">In the left column are the deprecated utility classes and on the right are the Atomic equivalents. As you resize your browser the solid gray boxes will show and hide to demonstrate that the deprecated utility classes and the Atomic replacements are operating as expected.</p>
+    <div class="mw8 mb6">
+        <p class="mb2">As part of the effort to migrate deprecated <code>tp</code> utility classes to Atomic, I put together this conversion chart.</p>
 
-    <p class="mb6 mw8">The examples outlined in red that use a <code>db</code> class could instead be <code>flex</code>, <code>inline-flex</code>, <code>di</code>, <code>di</code>, <code>dt</code>, or <code>dib</code>. Each instance of this would require manual conversion.</p>
+        <p class="mb2">In the left column are the deprecated utility classes along with the number of found instances in <code>website</code> and on the right are the Atomic equivalents. As you resize your browser the solid gray boxes will show and hide to demonstrate that the deprecated utility classes and the Atomic replacements are operating as expected.</p>
+
+        <p>The examples outlined in red that use a <code>db</code> class could instead be <code>flex</code>, <code>inline-flex</code>, <code>di</code>, <code>di</code>, <code>dt</code>, or <code>dib</code>. This is because the deprecated classes only hid in specific range and left the display value to another class or in the Sass. Each instance of this would require manual conversion.</p>
+    </div>
 
     <h2 class="tp-title-4 mb5">Responsive display classes</h2>
+    <div class="grid mb3">
+        <div class="col-6">
+            <div class="b black">Deprecated class</div>
+        </div>
+        <div class="col-6">
+            <div class="b black">Atomic class</div>
+        </div>
+    </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(14)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-display--none--small"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box dn s_db"></div>
             </div>
@@ -79,13 +103,18 @@
     </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(8)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-display--none--medium"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box s_dn m_db"></div>
             </div>
@@ -93,13 +122,18 @@
     </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(2)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-display--none--large"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box m_dn l_db"></div>
             </div>
@@ -107,13 +141,18 @@
     </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(1)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-display--none--large-plus"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box l_dn"></div>
             </div>
@@ -121,13 +160,18 @@
     </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(11)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-display--block--small"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box s_dn"></div>
             </div>
@@ -135,13 +179,18 @@
     </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(8)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-display--block--medium"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box dn s_db m_dn"></div>
             </div>
@@ -149,13 +198,18 @@
     </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(1)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-display--block--large"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box dn m_db l_dn"></div>
             </div>
@@ -163,13 +217,18 @@
     </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(3)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-display--block--large-plus"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box dn l_db"></div>
             </div>
@@ -180,15 +239,28 @@
 
 <div class="tp-wrap">
     <h2 class="tp-title-4 mb5">Hide only</h2>
+    <div class="grid mb3">
+        <div class="col-6">
+            <div class="b black">Deprecated class</div>
+        </div>
+        <div class="col-6">
+            <div class="b black">Atomic class</div>
+        </div>
+    </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(7)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-hide--sm"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box dn s_db"></div>
             </div>
@@ -196,13 +268,18 @@
     </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(9)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-hide--sm-md"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box dn m_db"></div>
             </div>
@@ -210,13 +287,18 @@
     </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(2)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-hide--sm-md-lg"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box dn l_db"></div>
             </div>
@@ -224,13 +306,18 @@
     </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(4)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-hide--md-lg-lgp"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box s_dn"></div>
             </div>
@@ -238,13 +325,18 @@
     </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(6)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-hide--lg-lgp"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box m_dn"></div>
             </div>
@@ -252,13 +344,18 @@
     </div>
     <div class="grid mb5">
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+                <code class="instances">(2)</code>
+            </div>
             <div class="box-wrap">
                 <div class="box tp-hide--lgp"></div>
             </div>
         </div>
         <div class="col-6">
-            <code class="code mb1"></code>
+            <div class="code-wrap">
+                <code class="code mb1"></code>
+            </div>
             <div class="box-wrap">
                 <div class="box l_dn"></div>
             </div>
