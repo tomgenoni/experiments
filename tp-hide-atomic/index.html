@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="tui.css">
+    <link rel="stylesheet" href="atomic.css">
+
+    <style>
+
+        .box-wrap {
+            position: relative;
+            border: 1px solid #ddd;
+            height: 30px;
+        }
+
+        .box {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            background: #009fd9;
+        }
+
+
+        .code {
+            display: block;
+            font-size: 13px;
+            color: #000;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        p code {
+            display: inline-block;
+            font-size: 14px;
+            border: 1px solid #eee;
+            background: #f9f9f9;
+            line-height: 1;
+            padding: 2px;
+            color: #000;
+        }
+
+    </style>
+
+    <title>Replace Layout with Atomic</title>
+</head>
+<body class="pv6">
+
+
+<div class="tp-wrap mb6">
+    <h1 class="tp-title-3 mb3">Replace Layout with Atomic</h1>
+
+    <p class="mb6 mw8">Note that any examples below using any <code>db</code> class could instead be <code>flex</code>, <code>inline-flex</code>, <code>di</code>, <code>di</code>, <code>dt</code>, or <code>dib</code>. Each instance of this would require manual inspection.</p>
+
+    <h2 class="tp-title-4 mb5">Responsive display classes</h2>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-display--none--small"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box dn s_db"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-display--none--medium"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box s_dn m_db"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-display--none--large"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box m_dn l_db"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-display--none--large-plus"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box l_dn"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-display--block--small"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box s_dn"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-display--block--medium"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box dn s_db m_dn"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-display--block--large"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box dn m_db l_dn"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-display--block--large-plus"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box dn l_db"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="tp-wrap">
+    <h2 class="tp-title-4 mb5">Hide only</h2>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-hide--sm"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box dn s_db"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-hide--sm-md"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box dn m_db"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-hide--sm-md-lg"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box dn l_db"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-hide--md-lg-lgp"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box s_dn"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-hide--lg-lgp"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box m_dn"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grid mb5">
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box tp-hide--lgp"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <code class="code mb1"></code>
+            <div class="box-wrap">
+                <div class="box l_dn"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="classnames.js"></script>
+
+</body>
+</html>

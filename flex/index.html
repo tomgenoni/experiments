@@ -4,47 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Flex Test</title>
+    <link rel="stylesheet" href="https://thumbprint-atomic.netlify.com/css/tui.css">
+    <link rel="stylesheet" href="https://thumbprint-atomic.netlify.com/css/utils.css">
 
     <style>
 
-    @font-face {
-        font-family: 'ave';
-        src: url("https://thumbprint.thumbtack.com/test/ave.woff2") format("woff2");
+    * {
+        outline: 1px solid blue;
     }
 
-    @font-face {
-        font-family: 'Lato';
-        src: url("https://fonts.gstatic.com/s/lato/v13/MDadn8DQ_3oT6kvnUq_2r_esZW2xOQ-xsNqO47m55DA.woff2") format('woff2');
+    .flex-1 {
+        -ms-flex: 1 1 0%;
     }
 
-    body {
-        margin: 100px;
-        line-height: 1.6;
+    .flex-2 {
+        -ms-flex: 2 1 0%;
     }
-
-    p {
-        margin: 0 0 20px;
-    }
-
-    .lato {
-        font-family: 'Lato';
-    }
-
-    .ave {
-        font-family: 'ave';
-    }
-
 
     </style>
+
 
 </head>
 <body>
 
-    <p class="lato">Lato ipsum dolor sit amet, consectetur adipisicing elit. Impedit repudiandae eveniet laboriosam vel aliquam voluptate, officiis iure debitis quisquam rem ullam reiciendis fugit amet, eos ad quae nemo corporis consequatur.</p>
-    <p class="ave">Foobar ipsum dolor sit amet, consectetur adipisicing elit. Impedit repudiandae eveniet laboriosam vel aliquam voluptate, officiis iure debitis quisquam rem ullam reiciendis fugit amet, eos ad quae nemo corporis consequatur.</p>
-
-    <a href="index.html">reload</a>
+        <div class="flex ma5">
+            <div class="flex-1 pa2">flex 1</div>
+            <div class="flex-2 pa2">flex 1</div>
+        </div>
 
 </body>
 </html>
