@@ -12,6 +12,6 @@ const b = [
     }
 ];
 
-var result = _.values(_.merge(_.keyBy(a, "name"), _.keyBy(b, "name")));
+const result = a.concat(b);
 
 console.log(result);
