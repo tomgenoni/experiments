@@ -55,13 +55,29 @@
             font-size: 32px !important;
         }
 
+        .content {
+            max-width: 1050px;
+        }
+
+        .content h1,
+        .content h2,
+        .content h3,
+        .content h4,
+        .content h5,
+        .content h6,
+        .content p,
+        .content ul li
+        .content .text {
+            max-width: 736px;
+        }
+
     </style>
 </head>
 
 <body>
 
     <div class="flex h-100">
-        <div id="sidebar" class="br b-gray-300 w6 flex flex-column">
+        <div id="sidebar" class="br b-gray-300 w6 dn l_flex flex-column flex-none">
             <div class="ph4 mv5">
                 <div class="b black tp-title-4">Thumbprint</div>
                 <div class="tp-body-3">Design System</div>
@@ -160,8 +176,8 @@
                 </li>
             </ul>
         </div>
-        <div id="content" class="overflow-y-auto flex-auto">
-            <div class="center mw8 ph3 l_ph0 pv6">
+        <div id="main" class="overflow-y-auto flex-auto">
+            <div class="content center ph4 s_ph5 pv6">
                 <h1 class="tp-title-1">Avatar</h1>
                 <div class="black-300 mt3 tp-title-4 normal mb4">Display user images and badges on Thumbtack.</div>
                 <nav class="flex bb bw-3 b-gray-300">
