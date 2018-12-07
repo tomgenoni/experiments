@@ -1,479 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>thumbprint</title>
+        <link rel="stylesheet" href="tui.css" />
+        <link rel="stylesheet" href="atomic.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>thumbprint</title>
-    <link rel="stylesheet" href="tui.css">
-    <link rel="stylesheet" href="atomic.css">
+        <style>
+            html,
+            body {
+                height: 100%;
+            }
 
-    <style>
-        html,
-        body {
-            height: 100%;
-        }
+            .section,
+            .link {
+                position: relative;
+            }
 
-        .section,
-        .link {
-            position: relative;
-        }
+            .section:after {
+                content: "";
+                font-weight: 400;
+                position: absolute;
+                top: 9px;
+                right: 24px;
+                width: 0;
+                height: 0;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-top: 6px solid #222;
+            }
 
-        .section:after {
-            content:"";
-            font-weight: 400;
-            position: absolute;
-            top: 9px;
-            right: 24px;
-            width: 0;
-             height: 0;
-             border-left: 4px solid transparent;
-             border-right: 4px solid transparent;
-             border-top: 6px solid #222;
-        }
+            .section-active:after {
+                transform: rotate(180deg);
+            }
 
-        .section-active:after {
-            transform: rotate(180deg);
-        }
+            .link-active {
+                font-weight: 700;
+            }
 
-        .link-active {
-            font-weight: 700;
-        }
+            .link-active:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 4px;
+                background: #009fd9;
+            }
 
-        .link-active:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            width: 4px;
-            background: #009fd9;
-        }
+            h2 {
+                font-size: 32px !important;
+            }
 
-        h2 {
-            font-size: 32px !important;
-        }
+            .content {
+                max-width: 1050px;
+            }
 
-        .content {
-            max-width: 1050px;
-        }
+            .content h1,
+            .content h2,
+            .content h3,
+            .content h4,
+            .content h5,
+            .content h6,
+            .content p,
+            .content ul li .content .text {
+                max-width: 736px;
+            }
 
-        .content h1,
-        .content h2,
-        .content h3,
-        .content h4,
-        .content h5,
-        .content h6,
-        .content p,
-        .content ul li
-        .content .text {
-            max-width: 736px;
-        }
+            :not(pre) > code {
+              background: #f9f9f9 !important;
+              border: 1px solid #e2e2e2;
+              padding: 1px 4px;
+              border-radius: 2px;
+            }
 
-    </style>
-</head>
 
-<body>
+        </style>
+    </head>
 
-    <div class="flex h-100">
-        <div id="sidebar" class="br b-gray-300 w6 dn l_flex flex-column flex-none">
-            <div class="ph4 mv5">
-                <div class="b black tp-title-4">Thumbprint</div>
-                <div class="tp-body-3">Design System</div>
-                <input type="text" id="example-basic-input" class="tp-text-input tp-text-input--small mt3" placeholder="Search" />
-            </div>
-            <ul class="tp-body-2 overflow-y-auto">
-                <li>
-                    <a href="#" class="section section-active db hover-bg-gray-200 pv1 ph4 black b">
-                        Getting Started
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Alert</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Avatar</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Carousel</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link link-active db hover-bg-gray-200 pv1 pl5 pr4 black hover-black">Alert</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Avatar</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Carousel</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Alert</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Avatar</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Carousel</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Avatar</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Carousel</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Alert</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Avatar</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Carousel</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Modal Standard</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Carousel</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Alert</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Avatar</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Carousel</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Avatar</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black">Carousel</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="section db hover-bg-gray-200 pv1 ph4 black b">
-                        Contributing
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="section db hover-bg-gray-200 pv1 ph4 black b">
-                        Resources
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="section db hover-bg-gray-200 pv1 ph4 black b">
-                        Patterns
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="section db hover-bg-gray-200 pv1 ph4 black b">
-                        Help
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div id="main" class="overflow-y-auto flex-auto">
-            <div class="content center ph4 s_ph5 pv6">
-                <h1 class="tp-title-1">Avatar</h1>
-                <div class="black-300 mt3 tp-title-4 normal mb4">Display user images and badges on Thumbtack.</div>
-                <nav class="flex bb bw-3 b-gray-300">
-                    <a class="bb bw-3 b-blue b pv1 ph3 black relative top-3" href="#">Guidelines</a>
-                    <a class="b pv1 ph3 black relative top-3" href="#">React</a>
-                    <a class="b pv1 ph3 black relative top-3" href="#">SCSS</a>
-                </nav>
-
-                <div class="longread"><p>Buttons are one of the basic ways a user interacts with our website. There are several colors, sizes, and types. To use in Sketch, go to the Insert menu and look for “Buttons.”</p>
-                <h2 id="types">Types</h2>
-                <section>
-                    <div class="grid grid-wide">
-                        <div class="m_col-6 mb3 m_mb0">
-                            <p>
-                                Buttons change width depending on the content inside of them. See below for text padding.
-                            </p>
-                        </div>
-                        <div class="m_col-6">
-                            <div class="tp-body-2 mb2">Default</div>
-                            <div class="grid mb3">
-                                <div class="col-6">
-                                    <button class="tp-button">Default</button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="tp-button" disabled="">Disabled</button>
-                                </div>
-                            </div>
-                            <div class="tp-body-2 mb2">Secondary</div>
-                            <div class="grid mb3">
-                                <div class="col-6">
-                                    <button class="tp-button tp-button--secondary">Secondary</button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="tp-button tp-button--secondary" disabled="">Disabled</button>
-                                </div>
-                            </div>
-                            <div class="tp-body-2 mb2">Caution</div>
-                            <div class="grid mb3">
-                                <div class="col-6">
-                                    <button class="tp-button tp-button--caution">Caution</button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="tp-button tp-button--caution" disabled="">Disabled</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid grid-wide mt5">
-                        <div class="m_col-6 mb3 m_mb0">
-                            <h4>Solid</h4>
-                            <p>
-                                These buttons may only be used on top of a “Base Color” such as blue or indigo or on top of a photo.
-                            </p>
-                        </div>
-                        <div class="m_col-6">
-                            <div class="bg-indigo pa3">
-                                <div class="grid">
-                                    <div class="col-6">
-                                        <button class="tp-button tp-button--solid">Solid</button>
-                                    </div>
-                                    <div class="col-6">
-                                        <button class="tp-button tp-button--solid" disabled="">Disabled</button>
-                                    </div>
-                                </div>
-                                <div class="grid mt3">
-                                    <div class="col-6">
-                                        <button class="tp-button tp-button--small tp-button--solid">Solid</button>
-                                    </div>
-                                    <div class="col-6">
-                                        <button class="tp-button tp-button--small tp-button--solid" disabled="">Disabled</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid grid-wide mt5">
-                        <div class="m_col-6 mb3 m_mb0">
-                            <h4>Sizes</h4>
-                            <p>
-                                There are two button sizes, Large and Small. Almost always, the Large size should be used. Secondary buttons should mostly be used in the Small size, and Tertiary may not be used at the Large size.
-                            </p>
-                        </div>
-                        <div class="m_col-6">
-                            <div class="grid mb3">
-                                <div class="col-6">
-                                    <button class="tp-button">Default</button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="tp-button tp-button--small">Small</button>
-                                </div>
-                            </div>
-                            <div class="grid tp-body-3">
-                                <div class="col-6">
-                                    <div class="b">Text padding</div>
-                                    <div>Top &amp; Bottom = 14px</div>
-                                    <div>Left &amp; Right = 24px</div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="b">Text padding</div>
-                                    <div>Top &amp; Bottom = 10px</div>
-                                    <div>Left &amp; Right = 24px</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid grid-wide mt5">
-                        <div class="m_col-6 mb3 m_mb0">
-                            <h4>Full width</h4>
-                            <p>
-                                Most commonly used for mobile, full width buttons may only use the Primary &amp; Secondary styles. They can’t be in a container over 480px wide and can’t be smaller than 300px. They also should only be used on white backgrounds. Padding is set to 24px around the button
-                            </p>
-                        </div>
-                        <div class="m_col-6">
-                            <div class="ba b-gray pa3">
-                                <button class="tp-button tp-button--full">Full width</button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <h2>Variations</h2>
-                    <p>
-                        Buttons and links can be combined with other elements like inputs, icons, and other links to create unique components.
-                    </p>
-                    <div class="grid grid-wide mt5">
-                        <div class="m_col-6 mb3 m_mb0">
-                            <h4>With icons</h4>
-                            <p>
-                                Buttons may contain icons but should only appear on the left side of copy.
-                            </p>
-                        </div>
-                        <div class="m_col-6">
-                            <div class="grid mb3">
-                                <div class="col-6">
-                                    <button class="tp-button">
-                                        <span class="tp-button-icon">
-                                            <svg class="tp-button-icon__icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 18 18" data-thumbprint-id="contentmodifier-message--small">
-                                                <path fill-rule="evenodd" d="M7.5,3.00025544 C5.02,3.00025544 3,5.01951331 3,7.50083018 C3,8.84900235 3.597,10.1141639 4.637,10.9732736 L5,11.2723118 L5,13.5694972 L7.769,11.9974044 L8.014,12.0014049 C8.099,12.0024051 10.5,12.0014049 10.5,12.0014049 C12.981,12.0014049 15,9.98114693 15,7.50083018 C15,5.01951331 12.981,3.00025544 10.5,3.00025544 L7.5,3.00025544 Z M3,17.0022736 L3,12.1904291 C1.724,10.968273 1,9.28405791 1,7.50083018 C1,3.91637243 3.916,1 7.5,1 L10.5,1 C14.084,1 17,3.91637243 17,7.50083018 C17,11.0852879 14.084,14.0016604 10.5,14.0016604 L8.239,14.0016604 L3,17.0022736 Z"></path>
-                                            </svg>
-                                            <span class="tp-button-icon__text">Reply</span>
-                                        </span>
-                                    </button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="tp-button tp-button--small">
-                                        <span class="tp-button-icon">
-                                            <svg class="tp-button-icon__icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 18 18" data-thumbprint-id="contentmodifier-message--small">
-                                                <path fill-rule="evenodd" d="M7.5,3.00025544 C5.02,3.00025544 3,5.01951331 3,7.50083018 C3,8.84900235 3.597,10.1141639 4.637,10.9732736 L5,11.2723118 L5,13.5694972 L7.769,11.9974044 L8.014,12.0014049 C8.099,12.0024051 10.5,12.0014049 10.5,12.0014049 C12.981,12.0014049 15,9.98114693 15,7.50083018 C15,5.01951331 12.981,3.00025544 10.5,3.00025544 L7.5,3.00025544 Z M3,17.0022736 L3,12.1904291 C1.724,10.968273 1,9.28405791 1,7.50083018 C1,3.91637243 3.916,1 7.5,1 L10.5,1 C14.084,1 17,3.91637243 17,7.50083018 C17,11.0852879 14.084,14.0016604 10.5,14.0016604 L8.239,14.0016604 L3,17.0022736 Z"></path>
-                                            </svg>
-                                            <span class="tp-button-icon__text">Reply</span>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="grid mb3">
-                                <div class="col-6">
-                                    <button class="tp-button tp-button--secondary">
-                                        <span class="tp-button-icon">
-                                            <svg class="tp-button-icon__icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 18 18" data-thumbprint-id="contentmodifier-message--small">
-                                                <path fill-rule="evenodd" d="M7.5,3.00025544 C5.02,3.00025544 3,5.01951331 3,7.50083018 C3,8.84900235 3.597,10.1141639 4.637,10.9732736 L5,11.2723118 L5,13.5694972 L7.769,11.9974044 L8.014,12.0014049 C8.099,12.0024051 10.5,12.0014049 10.5,12.0014049 C12.981,12.0014049 15,9.98114693 15,7.50083018 C15,5.01951331 12.981,3.00025544 10.5,3.00025544 L7.5,3.00025544 Z M3,17.0022736 L3,12.1904291 C1.724,10.968273 1,9.28405791 1,7.50083018 C1,3.91637243 3.916,1 7.5,1 L10.5,1 C14.084,1 17,3.91637243 17,7.50083018 C17,11.0852879 14.084,14.0016604 10.5,14.0016604 L8.239,14.0016604 L3,17.0022736 Z"></path>
-                                            </svg>
-                                            <span class="tp-button-icon__text">Reply</span>
-                                        </span>
-                                    </button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="tp-button tp-button--secondary tp-button--small">
-                                        <span class="tp-button-icon">
-                                            <svg class="tp-button-icon__icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 18 18" data-thumbprint-id="contentmodifier-message--small">
-                                                <path fill-rule="evenodd" d="M7.5,3.00025544 C5.02,3.00025544 3,5.01951331 3,7.50083018 C3,8.84900235 3.597,10.1141639 4.637,10.9732736 L5,11.2723118 L5,13.5694972 L7.769,11.9974044 L8.014,12.0014049 C8.099,12.0024051 10.5,12.0014049 10.5,12.0014049 C12.981,12.0014049 15,9.98114693 15,7.50083018 C15,5.01951331 12.981,3.00025544 10.5,3.00025544 L7.5,3.00025544 Z M3,17.0022736 L3,12.1904291 C1.724,10.968273 1,9.28405791 1,7.50083018 C1,3.91637243 3.916,1 7.5,1 L10.5,1 C14.084,1 17,3.91637243 17,7.50083018 C17,11.0852879 14.084,14.0016604 10.5,14.0016604 L8.239,14.0016604 L3,17.0022736 Z"></path>
-                                            </svg>
-                                            <span class="tp-button-icon__text">Reply</span>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="grid mb3">
-                                <div class="col-6">
-                                    <button class="tp-button tp-button--solid">
-                                        <span class="tp-button-icon">
-                                            <svg class="tp-button-icon__icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 18 18" data-thumbprint-id="contentmodifier-message--small">
-                                                <path fill-rule="evenodd" d="M7.5,3.00025544 C5.02,3.00025544 3,5.01951331 3,7.50083018 C3,8.84900235 3.597,10.1141639 4.637,10.9732736 L5,11.2723118 L5,13.5694972 L7.769,11.9974044 L8.014,12.0014049 C8.099,12.0024051 10.5,12.0014049 10.5,12.0014049 C12.981,12.0014049 15,9.98114693 15,7.50083018 C15,5.01951331 12.981,3.00025544 10.5,3.00025544 L7.5,3.00025544 Z M3,17.0022736 L3,12.1904291 C1.724,10.968273 1,9.28405791 1,7.50083018 C1,3.91637243 3.916,1 7.5,1 L10.5,1 C14.084,1 17,3.91637243 17,7.50083018 C17,11.0852879 14.084,14.0016604 10.5,14.0016604 L8.239,14.0016604 L3,17.0022736 Z"></path>
-                                            </svg>
-                                            <span class="tp-button-icon__text">Reply</span>
-                                        </span>
-                                    </button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="tp-button tp-button--solid tp-button--small">
-                                        <span class="tp-button-icon">
-                                            <svg class="tp-button-icon__icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 18 18" data-thumbprint-id="contentmodifier-message--small">
-                                                <path fill-rule="evenodd" d="M7.5,3.00025544 C5.02,3.00025544 3,5.01951331 3,7.50083018 C3,8.84900235 3.597,10.1141639 4.637,10.9732736 L5,11.2723118 L5,13.5694972 L7.769,11.9974044 L8.014,12.0014049 C8.099,12.0024051 10.5,12.0014049 10.5,12.0014049 C12.981,12.0014049 15,9.98114693 15,7.50083018 C15,5.01951331 12.981,3.00025544 10.5,3.00025544 L7.5,3.00025544 Z M3,17.0022736 L3,12.1904291 C1.724,10.968273 1,9.28405791 1,7.50083018 C1,3.91637243 3.916,1 7.5,1 L10.5,1 C14.084,1 17,3.91637243 17,7.50083018 C17,11.0852879 14.084,14.0016604 10.5,14.0016604 L8.239,14.0016604 L3,17.0022736 Z"></path>
-                                            </svg>
-                                            <span class="tp-button-icon__text">Reply</span>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid grid-wide mt5">
-                        <div class="m_col-6 mb3 m_mb0">
-                            <h4>Loading</h4>
-                            <p>
-                               Buttons support loading states without changing the width of the button and only available in the primary style.
-                            </p>
-                        </div>
-                        <div class="m_col-6">
-                            <div class="grid mb3">
-                                <div class="col-6">
-                                    <button class="tp-button">
-                                        <ul class="scope tp-loader tp-loader--small tp-loader--inverse">
-                                            <li class="scope"></li>
-                                            <li class="scope"></li>
-                                            <li class="scope"></li>
-                                        </ul>
-                                    </button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="tp-button tp-button--small">
-                                        <ul class="scope tp-loader tp-loader--small tp-loader--inverse">
-                                            <li class="scope"></li>
-                                            <li class="scope"></li>
-                                            <li class="scope"></li>
-                                        </ul>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid grid-wide mt5">
-                        <div class="m_col-6 mb3 m_mb0">
-                            <h4>Button row</h4>
-                            <p>
-                                Multiple related actions can be grouped in a row with default horizontal spacing.
-                            </p>
-                        </div>
-                        <div class="m_col-6">
-                            <div class="ba b-gray pa3 mb3">
-                                <div class="tp-button-row tp-button-row--right">
-                                    <button class="tp-button tp-button--solid">Cancel</button>
-                                    <button class="tp-button">Skip</button>
-                                </div>
-                            </div>
-                            <div class="ba b-gray pa3 mb3">
-                                <div class="tp-button-row">
-                                    <button class="tp-button">Save</button>
-                                    <button class="tp-button tp-button--secondary">Skip</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt5">
-                        <h2>Copy</h2>
+    <body>
+        <div class="flex h-100">
+            <div
+                id="sidebar"
+                class="br b-gray-300 w6 dn l_flex flex-column flex-none"
+            >
+                <div class="ph4 mv5">
+                    <div class="b black tp-title-4">Thumbprint</div>
+                    <div class="tp-body-3">Design System</div>
+                    <input
+                        type="text"
+                        id="example-basic-input"
+                        class="tp-text-input tp-text-input--small mt3"
+                        placeholder="Search"
+                    />
+                </div>
+                <ul class="tp-body-2 overflow-y-auto">
+                    <li>
+                        <a
+                            href="#"
+                            class="section section-active db hover-bg-gray-200 pv1 ph4 black b"
+                        >
+                            Getting Started
+                        </a>
                         <ul>
-                            <li>Buttons should be sentence case with exceptions for proper nouns</li>
-                            <li>Buttons should be limited to 3 words where possible</li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Alert</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Avatar</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Carousel</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link link-active db hover-bg-gray-200 pv1 pl5 pr4 black hover-black"
+                                    >Alert</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Avatar</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Carousel</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Alert</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Avatar</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Carousel</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Avatar</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Carousel</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Alert</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Avatar</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Carousel</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Modal Standard</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Carousel</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Alert</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Avatar</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Carousel</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Avatar</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="link db hover-bg-gray-200 pv1 pl5 pr4 black-300 hover-black"
+                                    >Carousel</a
+                                >
+                            </li>
                         </ul>
-                    </div>
-                    <div class="grid grid-wide mt3">
-                        <div class="s_col-6 mb4 s_mb0">
-                            <div class="flex items-center mb3"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 18 18" data-thumbprint-id="inputs-thumbs-up--small"><path fill-rule="evenodd" d="M15.0205123,10.4667 L12.9299429,14.6077 C12.7869723,14.8877 12.7219857,14.9767 12.7049892,14.9937 C12.7039894,14.9937 12.6340038,15.0247 12.4060508,15.0247 L8.06294531,15.0247 C6.84719571,15.0247 5.99937033,14.1317 5.99937033,12.8537 L5.99937033,7.5717 L8.19191874,3.6097 C8.41787221,3.1567 8.61883082,3.0127 8.64282587,2.9977 C8.66082217,2.9877 8.68681681,2.9837 8.70781249,2.9927 C8.73180755,3.0057 8.74380508,3.0107 8.74980384,3.0357 C8.76780013,3.1067 8.8067921,3.4047 8.6048337,4.2777 L7.62803488,9.0087 L15.0205123,9.0087 L15.0205123,10.4667 Z M1.9968947,7 C2.54878103,7 2.99568898,7.4470431 2.99568898,7.99933177 L2.99568898,14.9986635 C2.99568898,15.5519546 2.54878103,16 1.9968947,16 C1.44700795,16 1.0001,15.5519546 1.0001,14.9986635 L1.0001,7.99933177 C1.0001,7.4470431 1.44700795,7 1.9968947,7 Z M15.8647902,6.99938184 L10.0740354,6.99938184 L10.5481965,4.69895474 C10.7648133,3.76540468 11.2150168,1.82142397 9.3283547,1.12250949 C8.45689651,0.799011931 7.23206352,1.0496227 6.4185029,2.67409964 L3.99978217,7.0473074 L3.99978217,12.8353178 C3.99978217,15.2096301 5.74369679,16.9998496 8.05660472,16.9998496 L12.3929328,16.9998496 C13.8074302,16.9998496 14.2885789,16.2879553 14.6958583,15.4911928 L16.9997822,10.9282797 L16.9997822,8.10865897 C16.9997822,7.55751498 16.6484038,6.99938184 15.8647902,6.99938184 L15.8647902,6.99938184 Z"></path></svg><h4 class="b ml2">Do's</h4></div>
-                            <div class="do-box tc">
-                                <div class="mb2">
-                                    <button class="tp-button">Log in</button>
-                                </div>
-                                <div class="mb2">
-                                    <button class="tp-button">Ask for reviews</button>
-                                </div>
-                                <div>
-                                    <button class="tp-button">Sign up</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="s_col-6">
-                            <div class="flex items-center mb3"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 18 18" data-thumbprint-id="inputs-thumbs-down--small"><path fill-rule="evenodd" d="M15.999,11 C16.549,11 16.996,10.5519546 16.996,9.99966589 L16.996,3.00133645 C16.996,2.44804544 16.549,2 15.999,2 C15.447,2 15,2.44804544 15,3.00133645 L15,9.99966589 C15,10.5519546 15.447,11 15.999,11 M3,7.5572 L5.091,3.4162 C5.234,3.1362 5.299,3.0472 5.316,3.0302 C5.317,3.0302 5.387,2.9992 5.615,2.9992 L9.959,2.9992 C11.175,2.9992 12.023,3.8922 12.023,5.1702 L12.023,10.4522 L9.83,14.4142 C9.604,14.8672 9.403,15.0112 9.379,15.0262 C9.361,15.0372 9.335,15.0412 9.314,15.0312 C9.29,15.0192 9.278,15.0142 9.272,14.9882 C9.254,14.9172 9.215,14.6192 9.417,13.7462 L10.394,9.0152 L3,9.0152 L3,7.5572 Z M2.13499194,10.9996678 L7.92574676,10.9996678 L7.45158566,13.3000949 C7.2349689,14.233645 6.78476542,16.1776257 8.67142747,16.8765401 C9.54288566,17.2000377 10.7677187,16.9494269 11.5812793,15.32495 L14,10.9517422 L14,5.16373187 C14,2.78941952 12.2560854,0.9992 9.94317746,0.9992 L5.60684942,0.9992 C4.19235199,0.9992 3.71120326,1.71109432 3.30392383,2.50785683 L1,7.07076995 L1,9.89039067 C1,10.4415347 1.35137833,10.9996678 2.13499194,10.9996678 L2.13499194,10.9996678 Z"></path></svg><h4 class="b ml2">Dont's</h4></div>
-                            <div class="dont-box tc">
-                                <div class="mb2">
-                                    <button class="tp-button">SUBMIT</button>
-                                </div>
-                                <div class="mb2">
-                                    <button class="tp-button">Call A Pro Now</button>
-                                </div>
-                                <div>
-                                    <button class="tp-button">Sign Up </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="section db hover-bg-gray-200 pv1 ph4 black b"
+                        >
+                            Contributing
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="section db hover-bg-gray-200 pv1 ph4 black b"
+                        >
+                            Resources
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="section db hover-bg-gray-200 pv1 ph4 black b"
+                        >
+                            Patterns
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="section db hover-bg-gray-200 pv1 ph4 black b"
+                        >
+                            Help
+                        </a>
+                    </li>
+                </ul>
             </div>
+            <div id="main" class="overflow-y-auto flex-auto">
+                <div class="content center ph4 s_ph5 pv6">
+                    <h1 class="tp-title-1">Graveyard</h1>
+                    <div class="black-300 mt3 tp-title-4 normal mb4">
+                        Packages, classes, and props that are no longer with us.
+                    </div>
 
+                    <div class="longread">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Type</th>
+                                    <th>Date</th>
+                                    <th>Docs</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tp-body-2">
+                                <tr>
+                                    <td class="bn pt3 w-100">
+                                        <code>tp-ui-utility-background</code>
+                                    </td>
+                                    <td class="bn pt3">component</td>
+                                    <td class="bn pt3 nowrap">2018-12-12</td>
+                                    <td class="bn pt3 nowrap">
+                                        <a href="#" class="black-300 hover-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 18 18" data-thumbprint-id="content-actions-copy-link"> <path d="M11 12h2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h4v2H3v9h8v-3zM5 8V3a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H7a2 2 0 0 1-1.732-1H5a1 1 0 0 1 0-2v-1a1 1 0 1 1 0-2zm2-5v9h8V3H7zm2 2h4a1 1 0 0 1 0 2H9a1 1 0 1 1 0-2zm0 3h4a1 1 0 0 1 0 2H9a1 1 0 1 1 0-2z" fill-rule="nonzero"/> </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="pt0 pb3">
+                                        <div class="mw8">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bn pt3 w-100">
+                                        <code>tp-ui-react-date-picker</code>
+                                    </td>
+                                    <td class="bn pt3">prop</td>
+                                    <td class="bn pt3 nowrap">2018-12-12</td>
+                                    <td class="bn pt3 nowrap">
+                                        <a href="#" class="black-300 hover-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 18 18" data-thumbprint-id="content-actions-copy-link"> <path d="M11 12h2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h4v2H3v9h8v-3zM5 8V3a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H7a2 2 0 0 1-1.732-1H5a1 1 0 0 1 0-2v-1a1 1 0 1 1 0-2zm2-5v9h8V3H7zm2 2h4a1 1 0 0 1 0 2H9a1 1 0 1 1 0-2zm0 3h4a1 1 0 0 1 0 2H9a1 1 0 1 1 0-2z" fill-rule="nonzero"/> </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="pt0 pb3">
+                                        <div class="mw8">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
-</body>
-
+    </body>
 </html>
