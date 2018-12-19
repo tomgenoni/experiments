@@ -29,10 +29,8 @@ p {
 }
 
 @media (min-width: 701px) {
-    #toggle {
-        display: none;
-    }
-    #close {
+    #toggle,
+    #close  {
         display: none;
     }
 }
