@@ -11,6 +11,10 @@ button {
     border: 0;
 }
 
+p {
+    margin-bottom: 20px !important;
+}
+
 #toggle {
     z-index: 1;
     position: absolute;
@@ -37,18 +41,22 @@ button {
     visibility: hidden;
     margin-left: -256px;
     z-index: 2;
+}
+
+#nav.is-active {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin-left: 0;
     transition: all 100ms;
 }
 
 @media (min-width: 701px) {
     #nav {
+        position: static !important;
         visibility: visible;
         margin-left: 0;
     }
-}
-
-#nav.is-active {
-    visibility: visible;
-    margin-left: 0;
-    transition: all 100ms;
 }
