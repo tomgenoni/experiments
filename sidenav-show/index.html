@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="atomic.css" />
         <title>Show/Hide Nav</title>
     </head>
-    <body>
+    <body class="overflow-hidden">
         <div class="flex h-100">
             <div id="nav" class="flex flex-none flex-column w6 br b-gray bg-white">
                 <div class="flex-none pa3 bg-gray-200 bb b-gray">
@@ -18,7 +18,7 @@
                         <button id="close">×</button>
                     </div>
                 </div>
-                <div class="flex-1 pa3 bg-white overflow-y-auto">
+                <div class="flex-1 pa3 bg-white overflow-y-scroll smooth-scroll">
                     <ul>
                         <li>item</li>
                         <li>item</li>
@@ -67,7 +67,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="flex-1 ph4 pv6 overflow-y-auto">
+            <div class="flex-1 pa4 overflow-y-scroll smooth-scroll">
+                <button id="toggle" class="mb3">☰</button>
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
@@ -76,7 +77,6 @@
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
             </div>
         </div>
-        <button id="toggle">☰</button>
         <script async="" src="local.js"></script>
     </body>
 </html>
