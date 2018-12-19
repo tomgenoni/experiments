@@ -1,0 +1,54 @@
+html,
+body {
+    height: 100%;
+}
+
+button {
+    padding: 0;
+    line-height: 1;
+    background: none;
+    -webkit-appearance: none;
+    border: 0;
+}
+
+#toggle {
+    z-index: 1;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    font-size: 24px;
+}
+
+#close {
+    font-size: 30px;
+    line-height: .1
+}
+
+@media (min-width: 701px) {
+    #toggle {
+        display: none;
+    }
+    #close {
+        display: none;
+    }
+}
+
+#nav {
+    visibility: hidden;
+    margin-left: -256px;
+    z-index: 2;
+    transition: all 100ms;
+}
+
+@media (min-width: 701px) {
+    #nav {
+        visibility: visible;
+        margin-left: 0;
+    }
+}
+
+#nav.is-active {
+    visibility: visible;
+    margin-left: 0;
+    transition: all 100ms;
+}
