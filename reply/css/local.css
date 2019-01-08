@@ -75,3 +75,8 @@ textarea {
 #newScreen.is-active {
     transform: translateY(0);
 }
+
+#newScreen {
+    background: #fff url(../i/keyboard.png) no-repeat bottom left;
+    background-size: 100%;
+}
