@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/tui.css" />
+        <link rel="stylesheet" href="css/local.css" />
+        <link rel="stylesheet" href="css/atomic.css" />
+        <title>Saved Replies</title>
+    </head>
+    <body class="h-100">
+        <div class="h-100 flex flex-column fixed w-100">
+            <div
+                class="flex-none pa3 bb b-gray-300 black b flex items-center justify-between"
+            >
+                <button><img src="i/caret-left.svg" width="28" /></button>
+                <div class="b black">Lindsey Silverman</div>
+                <button>
+                    <img
+                        src="i/add.svg"
+                        width="28"
+                        style="visibility: hidden;"
+                    />
+                </button>
+            </div>
+            <div class="content flex-1 bg-gray-200 pa3 tp-body-2">
+                <div class="tc b mb2">Today, Aug 24th</div>
+                <div class="bg-white pa3 w-90 br3 shadow black">
+                    Thanks for following up! Your reviews look good. I’d love to
+                    know more about your experience and your services.
+                </div>
+            </div>
+            <footer class="flex-none bt b-gray-300 pa3">
+                <div class="tp-body-2 gray mb3">Type a message&hellip;</div>
+                <div class="flex items-center">
+                    <button class="mr3" id="bookmark">
+                        <img src="i/bookmark.svg" width="28" />
+                    </button>
+                    <button><img src="i/attach.svg" width="28" /></button>
+                    <button
+                        disabled
+                        class="ml-auto tp-button tp-button--small flex-none"
+                    >
+                        Send
+                    </button>
+                </div>
+            </footer>
+            <div id="shade"></div>
+            <div id="introScreen">
+                <div
+                    class="flex items-center justify-between ph4 pv3 mb4 bb b-gray-300"
+                >
+                    <button id="closeIntroScreen">
+                        <img src="i/caret-down.svg" width="28" />
+                    </button>
+                    <div class="b black">Saved Replies</div>
+                    <button id="editMessages" class="v-hidden tp-body-2">
+                        Edit
+                    </button>
+                </div>
+                <div class="mh4 ph5 pv6 br3 tc" id="introMessage">
+                    <img src="i/intro.svg" class="ml-auto mr-auto mb3" />
+                    <div class="b black mb2">New! Saved Replies</div>
+                    <div class="mb4">
+                        Create, collect and categorize the messages you send the
+                        most for even faster customer service.
+                    </div>
+                    <button id="openNewScreen" class="b blue">
+                        Create new reply
+                    </button>
+                </div>
+                <div id="firstMessage" style="display: none;">
+                    <ul class="ph3">
+                        <li class="bb b-gray-300 pv2">
+                            <a
+                                href="#"
+                                class="tp-link--inherit flex items-center db"
+                            >
+                                <div class="flex-1">
+                                    <div class="b black">My Title</div>
+                                    <div class="clamp-3 tp-body-2">
+                                        It is a long established fact that a
+                                        reader will be distracted by the
+                                        readable content of a page when looking
+                                        at its layout. The point of using Lorem
+                                        Ipsum is that it has a more-or-less
+                                        normal distribution of letters, as
+                                        opposed to using 'Content here, content
+                                        here', making it look like readable
+                                        English. Many desktop publishing
+                                        packages and web page editors now use
+                                        Lorem Ipsum as their default model text,
+                                        and a search for 'lorem ipsum' will
+                                        uncover many web sites still in their
+                                        infancy.
+                                    </div>
+                                </div>
+                                <div class="flex-none editArrow tr">
+                                    <button id="editMessage">
+                                        <img
+                                            src="i/caret-right.svg"
+                                            width="28"
+                                            class="dib"
+                                        />
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="tc pt3">
+                            <button><img src="i/add.svg" width="28" /></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="newScreen" class="ph4">
+                <div class="mv3">
+                    <button id="saveNewMessage" style="margin-left: -10px;">
+                        <img
+                            src="i/caret-right.svg"
+                            width="28"
+                            style="transform: rotate(180deg)"
+                        />
+                    </button>
+                </div>
+                <label for="" class="tp-body-2">Title</label>
+                <div class="b black mb2">My Title</div>
+                <label for="" class="tp-body-2">Text</label>
+                <textarea
+                    class="mb3"
+                    name="typeMessage"
+                    id="typeMessage"
+                    style="min-height: 106px"
+                >
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as</textarea
+                >
+                <button><img src="i/attach.svg" width="28" /></button>
+            </div>
+        </div>
+        <script async="" src="js/local.js"></script>
+    </body>
+</html>
