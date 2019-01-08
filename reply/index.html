@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/tui.css" />
+        <link rel="stylesheet" href="css/local.css" />
+        <link rel="stylesheet" href="css/atomic.css" />
+        <title>Saved Replies</title>
+    </head>
+    <body class="h-100">
+        <div class="h-100 flex flex-column fixed w-100">
+            <div
+                class="flex-none pa3 bb b-gray-300 black b flex items-center justify-between"
+            >
+                <button><img src="i/caret-left.svg" width="28" /></button>
+                <div class="b black">Lindsey Silverman</div>
+                <button>
+                    <img
+                        src="i/add.svg"
+                        width="28"
+                        style="visibility: hidden;"
+                    />
+                </button>
+            </div>
+            <div class="content flex-1 bg-gray-200 pa3 tp-body-2">
+                <div class="tc b mb2">Today, Aug 24th</div>
+                <div class="bg-white pa3 w-90 br3 shadow black">
+                    Thanks for following up! Your reviews look good. I’d love to
+                    know more about your experience and your services.
+                </div>
+            </div>
+            <footer class="flex-none bt b-gray-300 pa3">
+                <div class="tp-body-2 gray mb3">Type a message&hellip;</div>
+                <div class="flex items-center">
+                    <button class="mr3" id="bookmark">
+                        <img src="i/bookmark.svg" width="28" />
+                    </button>
+                    <button><img src="i/attach.svg" width="28" /></button>
+                    <button
+                        disabled
+                        class="ml-auto tp-button tp-button--small flex-none"
+                    >
+                        Send
+                    </button>
+                </div>
+            </footer>
+            <div id="shade"></div>
+            <div id="introScreen">
+                <div class="flex items-center justify-between ph4 pv3 mb4">
+                    <button id="closeIntroScreen">
+                        <img src="i/caret-down.svg" width="28" />
+                    </button>
+                    <div class="b black">Saved Replies</div>
+                    <button><img src="i/add.svg" width="28" /></button>
+                </div>
+                <div class="mh4 ph5 pv6 br3 shadow-big tc" id="introMessage">
+                    <img src="i/intro.svg" class="ml-auto mr-auto mb3" />
+                    <div class="b black mb2">New! Saved Replies</div>
+                    <div class="mb4">
+                        Create, collect and categorize the messages you send the
+                        most for even faster customer service.
+                    </div>
+                    <button id="openNewScreen" class="b blue">
+                        Create new reply
+                    </button>
+                </div>
+                <div id="firstMessage" style="display: none;">
+                    <div>
+                        <div class="b mh4 mb2 black">My Title</div>
+                        <div class="mh4 pa3 br3 shadow-big black">
+                            It is a long established fact that a reader will be
+                            distracted by the readable content of a page when
+                            looking at its layout. The point of using Lorem
+                            Ipsum is that it has a more-or-less normal
+                            distribution of letters, as opposed to using
+                            'Content here, content here', making it look like
+                            readable English. Many desktop publishing packages
+                            and web page editors now use Lorem Ipsum as their
+                            default model text, and a search for 'lorem ipsum'
+                            will uncover many web sites still in their infancy.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="newScreen">
+                <div class="flex items-center justify-between ph4 pv3">
+                    <button class="v-hidden">
+                        <img src="i/add.svg" width="28" />
+                    </button>
+                    <div class="b black">Untitled</div>
+                    <button id="closeNewScreen">
+                        <img src="i/close.svg" width="28" />
+                    </button>
+                </div>
+                <textarea
+                    name="typeMessage"
+                    id="typeMessage"
+                    class="ph4"
+                    style="min-height: 200px"
+                ></textarea>
+                <div class="flex items-center ph4">
+                    <button><img src="i/attach.svg" width="28" /></button>
+                    <button
+                        id="saveNewMessage"
+                        class="ml-auto tp-button tp-button--small flex-none"
+                    >
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script async="" src="js/local.js"></script>
+    </body>
+</html>

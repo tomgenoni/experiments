@@ -1,0 +1,77 @@
+button {
+    padding: 0;
+    line-height: 1;
+    background: none;
+    -webkit-appearance: none;
+    border: 0;
+}
+
+textarea {
+    border: none;
+    resize: none;
+    width: 100%;
+    border-radius: 0;
+}
+
+.smooth-scroll {
+    -webkit-overflow-scrolling: touch;
+}
+
+.v-hidden {
+    visibility: hidden;
+}
+
+.shadow {
+    box-shadow: 0 2px 4px #ccc;
+}
+.shadow-big {
+    box-shadow: 0 0 15px #ddd;
+}
+
+.clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 250ms;
+}
+
+#shade.is-active {
+    transform: translateY(0);
+    opacity: 0.5;
+}
+
+#introScreen,
+#newScreen {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    transform: translateY(100%);
+    transition: transform 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#introScreen.is-active,
+#newScreen.is-active {
+    transform: translateY(0);
+}
