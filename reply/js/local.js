@@ -1,38 +1,18 @@
-const bookmark = document.querySelector("#bookmark");
-const shade = document.querySelector("#shade");
-const introScreen = document.querySelector("#introScreen");
-const newScreen = document.querySelector("#newScreen");
-const introMessage = document.querySelector("#introMessage");
-const firstMessage = document.querySelector("#firstMessage");
-
-const closeIntroScreen = document.querySelector("#closeIntroScreen");
-const closeNewScreen = document.querySelector("#closeNewScreen");
-const openNewScreen = document.querySelector("#openNewScreen");
+const editMessage = document.querySelector("#editMessage");
+const editScreen = document.querySelector("#editScreen");
 const saveNewMessage = document.querySelector("#saveNewMessage");
+const closeNewMessage = document.querySelector("#closeNewMessage");
+const titleInput = document.querySelector("#titleInput");
 
-const typeMessage = document.querySelector("#typeMessage");
-
-bookmark.addEventListener("click", function() {
-    shade.classList.add("is-active");
-    introScreen.classList.add("is-active");
-});
-
-closeIntroScreen.addEventListener("click", function() {
-    shade.classList.remove("is-active");
-    introScreen.classList.remove("is-active");
-});
-
-openNewScreen.addEventListener("click", function(e) {
-    newScreen.classList.add("is-active");
-    // typeMessage.focus();
-});
-
-closeNewScreen.addEventListener("click", function() {
-    newScreen.classList.remove("is-active");
+editMessage.addEventListener("click", function() {
+    editScreen.classList.add("is-active");
+    titleInput.focus();
 });
 
 saveNewMessage.addEventListener("click", function() {
-    newScreen.classList.remove("is-active");
-    introMessage.style.display = "none";
-    firstMessage.style.display = "block";
+    editScreen.classList.remove("is-active");
+});
+
+closeNewMessage.addEventListener("click", function() {
+    editScreen.classList.remove("is-active");
 });

@@ -41,6 +41,11 @@ textarea {
     overflow: hidden;
 }
 
+.input-plain {
+    font-weight: 700;
+    border: 0;
+}
+
 #shade {
     position: absolute;
     top: 0;
@@ -48,18 +53,10 @@ textarea {
     bottom: 0;
     right: 0;
     background: #000;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 250ms;
-}
-
-#shade.is-active {
-    transform: translateY(0);
     opacity: 0.5;
 }
 
-#introScreen,
-#newScreen {
+#introScreen {
     position: absolute;
     top: 22px;
     left: 0;
@@ -67,16 +64,22 @@ textarea {
     right: 0;
     background: #fff;
     border-radius: 10px 10px 0 0;
-    transform: translateY(100%);
-    transition: transform 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#introScreen.is-active,
-#newScreen.is-active {
-    transform: translateY(0);
+#editScreen {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    opacity: 0;
+    z-index: -1;
+    transition: all 200ms;
 }
 
-#newScreen {
-    background: #fff url(../i/keyboard.png) no-repeat bottom left;
-    background-size: 100%;
+#editScreen.is-active {
+    opacity: 1;
+    z-index: 1;
 }
