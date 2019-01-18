@@ -8,9 +8,16 @@
         "48": "icon48.png",
         "128": "icon128.png"
     },
-    "content_scripts": [{
-        "js": ["inject.js"],
-        "matches": ["*://*.thumbtack.com/*"]
-    }],
-    "web_accessible_resources": ["https://tomgenoni.github.io/experiments/injecto/style.css", "https://tomgenoni.github.io/experiments/injecto/javascript.js"]
+    "content_scripts": [
+        {
+            "js": ["inject.js"],
+            "matches": ["*://*.thumbtack.com/*"]
+        }
+    ],
+    "web_accessible_resources": [
+        "https://tomgenoni.github.io/experiments/injecto/style.css",
+        "https://tomgenoni.github.io/experiments/injecto/javascript.js",
+        "style.css",
+        "javascript.js"
+    ]
 }

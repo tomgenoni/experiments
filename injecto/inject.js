@@ -1,27 +1,67 @@
-(function(){
+(function() {
+    console.log("injecto: start");
+    console.log("-------");
 
-    console.log("inj: css start");
+    // Indicate if local assets should be used. Change to false to use remote assets.
+    const local = true;
 
-    var head   = document.getElementsByTagName('head')[0];
-    var link   = document.createElement('link');
-    var script = document.createElement('script');
+    // Edit remove URLs as needed.
+    const source = {
+        local: {
+            css: "style.css",
+            js: "javascript.js"
+        },
+        remote: {
+            css: "https://tomgenoni.github.io/experiments/injecto/style.css",
+            js: "https://tomgenoni.github.io/experiments/injecto/javascript.js"
+        }
+    };
 
-    link.id   = 'local-css';
-    link.rel  = 'stylesheet';
-    link.type = 'text/css';
-    //link.href = chrome.extension.getURL('style.css');
-    link.href = 'https://tomgenoni.github.io/experiments/injecto/style.css';
-    link.media = 'all';
-    head.appendChild(link);
+    //----------------------------------------------
+    //------- Don't edit below this line ----------
 
-    console.log("inj: css complete");
+    const head = document.getElementsByTagName("head")[0];
+    const link = document.createElement("link");
+    const script = document.createElement("script");
+
+    //------- Build style tag to include CSS ----------
+
+    link.id = "local-css";
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.media = "all";
+
+    //------- Build script tag include js ----------
 
     script.type = "text/javascript";
-    //script.src = chrome.extension.getURL('javascript.js');
-    script.src = 'https://tomgenoni.github.io/experiments/injecto/javascript.js';
+
+    //------- Determine local or remote sources ----------
+
+    if (local) {
+        link.href = chrome.extension.getURL(source.local.css);
+        script.src = chrome.extension.getURL(source.local.js);
+    } else {
+        link.href = source.remote.css;
+        script.src = source.remote.js;
+    }
+
     script.onload = function() {
         this.remove();
     };
+
+    //------- Inject CSS & JS ----------
+
+    head.appendChild(link);
     head.appendChild(script);
 
+    if (local) {
+        console.log(`injecto: ${source.local.css} appended`);
+        console.log(`injecto: ${source.local.js} appended`);
+    } else {
+        console.log(`injecto: ${source.remote.css} appended`);
+        console.log(`injecto: ${source.remote.js} appended`);
+    }
+
+    console.log("-------");
+    console.log("injecto: end");
 })();
