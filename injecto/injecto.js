@@ -5,7 +5,8 @@
     // Indicate if local assets should be used. Change to false to use remote assets.
     const local = false;
 
-    // Edit remove URLs as needed.
+    // Edit remote URLs as needed.
+    // NOTE: Values in `web_accessible_resources` in manifest.json must match the ones below.
     const source = {
         local: {
             css: "local/style.css",
