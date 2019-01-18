@@ -8,12 +8,12 @@
     // Edit remove URLs as needed.
     const source = {
         local: {
-            css: "style.css",
-            js: "javascript.js"
+            css: "local/style.css",
+            js: "local/javascript.js"
         },
         remote: {
             css: "https://tomgenoni.github.io/experiments/injecto/style.css",
-            js: "https://tomgenoni.github.io/experiments/injecto/javascript.js"
+            js: "https://tomgenoni.github.io/experiments/injecto/js.js"
         }
     };
 
@@ -44,10 +44,6 @@
         link.href = source.remote.css;
         script.src = source.remote.js;
     }
-
-    script.onload = function() {
-        this.remove();
-    };
 
     //------- Inject CSS & JS ----------
 
