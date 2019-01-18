@@ -3,7 +3,7 @@
     console.log("-------");
 
     // Indicate if local assets should be used. Change to false to use remote assets.
-    const local = true;
+    const local = false;
 
     // Edit remove URLs as needed.
     const source = {
@@ -12,8 +12,9 @@
             js: "local/javascript.js"
         },
         remote: {
-            css: "https://tomgenoni.github.io/experiments/injecto/style.css",
-            js: "https://tomgenoni.github.io/experiments/injecto/js.js"
+            css:
+                "https://tomgenoni.github.io/experiments/injecto/local/style.css",
+            js: "https://tomgenoni.github.io/experiments/injecto/local/js.js"
         }
     };
 
