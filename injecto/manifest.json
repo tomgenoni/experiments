@@ -11,7 +11,7 @@
     "content_scripts": [
         {
             "js": ["inject.js"],
-            "matches": ["*://*.thumbtack.com/*"]
+            "matches": ["<all_urls>"]
         }
     ],
     "web_accessible_resources": [
