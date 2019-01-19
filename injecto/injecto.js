@@ -1,6 +1,5 @@
 (function() {
     console.log("injecto: start");
-    console.log("-------");
 
     // Indicate if local assets should be used. Change to false to use remote assets.
     const local = false;
@@ -10,7 +9,7 @@
     const source = {
         local: {
             css: "local/style.css",
-            js: "local/javascript.js"
+            js: "local/js.js"
         },
         remote: {
             css:
@@ -19,8 +18,9 @@
         }
     };
 
-    //----------------------------------------------
-    //------- Don't edit below this line ----------
+    //------- No need to edit below this line ----------
+
+    //------- Create elements ----------
 
     const head = document.getElementsByTagName("head")[0];
     const link = document.createElement("link");
