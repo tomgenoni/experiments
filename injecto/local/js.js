@@ -15,7 +15,7 @@ footer.innerHTML = `
         <a class="black-300 underline" href="https://teamsanfrancisco.slack.com/messages/C0GKYQVTR">#design-systems</a>
     </div>
     <div>
-        <a class="black-300 underline" href="https://thumbprint.design/notes/2018-11-06/">View online</a>
+        <a class="black-300 underline" href="${window.location}">View online</a>
     </div>
 </div>`;
 
