@@ -14,7 +14,9 @@ h2 {
     color: #2f3033;
 }
 
-p {
+p,
+ol,
+ul {
     margin-bottom: 8px;
 }
 
@@ -29,4 +31,8 @@ ul li {
 
 ul p {
     margin-bottom: 0;
+}
+
+[data-algolia="lvl0"] {
+    display: none;
 }
