@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Grid</title>
+
+        <style>
+            body {
+                margin: 30px;
+            }
+
+            .wrap {
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                outline: 1px solid blue;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(12, auto);
+                grid-gap: 16px;
+                display: -ms-grid;
+                -ms-grid-columns: repeat(12, auto);
+            }
+
+            .grid > * {
+                outline: 1px solid red;
+            }
+
+            .col-2 {
+                grid-column-end: span 2;
+            }
+            .col-3 {
+                grid-column-end: span 3;
+            }
+            .col-4 {
+                grid-column-end: span 4;
+            }
+            .col-5 {
+                grid-column-end: span 5;
+            }
+            .col-6 {
+                grid-column-end: span 6;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="grid">
+                <div class="col-4">4</div>
+                <div class="col-2">2</div>
+                <div class="col-3">3</div>
+                <div class="col-3">5</div>
+                <div class="col-6">5</div>
+                <div class="col-6">6</div>
+            </div>
+        </div>
+    </body>
+</html>
