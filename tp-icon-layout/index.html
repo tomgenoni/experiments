@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Icons</title>
+
+        <link
+            rel="stylesheet"
+            href="https://fonts.thumbtack.com/mark-subset.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/@thumbtack/thumbprint-global-css@^0.1.1/dist/thumbprint-global.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/@thumbtack/thumbprint-scss@^0.1.1/components.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/@thumbtack/thumbprint-atomic@^3.1.4/dist/atomic.css"
+        />
+
+        <style>
+            body,
+            html {
+                height: 100%;
+            }
+
+            .bkg {
+                height: 200px;
+                background: linear-gradient(90deg, #fff 20px, transparent 1%)
+                        center,
+                    linear-gradient(#fff 20px, transparent 1%) center, #ccc;
+                background-size: 22px 22px;
+            }
+
+            .icon-wrap {
+                border: 1px solid transparent;
+            }
+
+            .icon-wrap:hover {
+                border: 1px solid #009fd9;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+
+            svg {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex h-100">
+            <div class="flex-1 br b-gray-300 pa5">
+                <div class="black-300 mb3">Content Actions</div>
+                <div class="flex">
+                    <div class="icon-wrap pa2">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="28"
+                            height="28"
+                            viewBox="0 0 28 28"
+                            fill="currentColor"
+                            data-thumbprint-id="feature-bookmark"
+                        >
+                            <path
+                                d="M14.0003,21.118034 L6.4475136,24.8944272 C5.7826125,25.2268777 5.0003,24.743382 5.0003,24 L5.0003,6 C5.0003,4.34371525 6.34401525,3 8.0003,3 L20.0003,3 C21.6565847,3 23.0003,4.34371525 23.0003,6 L23.0003,24 C23.0003,24.743382 22.2179875,25.2268777 21.5530864,24.8944272 L14.0003,21.118034 Z M21.0003,6 C21.0003,5.44828475 20.5520153,5 20.0003,5 L8.0003,5 C7.44858475,5 7.0003,5.44828475 7.0003,6 L7.0003,22.381966 L13.5530864,19.1055728 C13.8346139,18.9648091 14.1659861,18.9648091 14.4475136,19.1055728 L21.0003,22.381966 L21.0003,6 Z"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div style="width:300px">
+                <div class="bkg bb b-gray-300"></div>
+                <div class="pa4">
+                    <div class="tp-input-wrap">
+                        <input
+                            class="tp-radio-input"
+                            name="input-basic-radio"
+                            type="radio"
+                            id="input-basic-radio-a"
+                            checked
+                        />
+                        <div class="tp-radio-image"></div>
+                        <label class="tp-label" for="input-basic-radio-a"
+                            >Tiny</label
+                        >
+                    </div>
+                    <div class="tp-input-wrap">
+                        <input
+                            class="tp-radio-input"
+                            name="input-basic-radio"
+                            type="radio"
+                            id="input-basic-radio-b"
+                        />
+                        <div class="tp-radio-image"></div>
+                        <label class="tp-label" for="input-basic-radio-b"
+                            >Small</label
+                        >
+                    </div>
+                    <div class="tp-input-wrap">
+                        <input
+                            class="tp-radio-input"
+                            name="input-basic-radio"
+                            type="radio"
+                            id="input-basic-radio-c"
+                        />
+                        <div class="tp-radio-image"></div>
+                        <label class="tp-label" for="input-basic-radio-c"
+                            >Medium</label
+                        >
+                    </div>
+
+                    <button
+                        class="tp-button tp-button--small tp-button--secondary"
+                    >
+                        React
+                    </button>
+                    <button
+                        class="tp-button tp-button--small tp-button--secondary"
+                    >
+                        iOS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
