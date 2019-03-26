@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Safari Tests</title>
+
+        <style>
+            #img-wrap {
+                width: 70vw;
+                outline: 1px solid red;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="img-wrap">
+            <picture>
+                <source
+                    type="image/webp"
+                    sizes="70vw"
+                    srcset="
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/120.webp   120w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/320.webp   320w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/400.webp   400w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/640.webp   640w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/768.webp   768w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/1024.webp 1024w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/1366.webp 1366w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/1600.webp 1600w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/1920.webp 1920w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/2200.webp 2200w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/2350.webp 2350w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/2560.webp 2560w
+                    "
+                />
+                <img
+                    srcset="
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/120.jpeg   120w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/320.jpeg   320w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/400.jpeg   400w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/640.jpeg   640w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/768.jpeg   768w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/1024.jpeg 1024w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/1366.jpeg 1366w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/1600.jpeg 1600w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/1920.jpeg 1920w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/2200.jpeg 2200w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/2350.jpeg 2350w,
+                        https://d1vg1gqh4nkuns.cloudfront.net/i/302055784058904755/width/2560.jpeg 2560w
+                    "
+                    src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_960_720.jpg"
+                    sizes="70vw"
+                />
+            </picture>
+        </div>
+        <!-- <script src="local.js"></script> -->
+    </body>
+</html>

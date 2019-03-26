@@ -7,9 +7,10 @@
         <title>Safari Tests</title>
 
         <style>
-            #img-wrap {
-                width: 70vw;
-                outline: 1px solid red;
+            picture {
+                width: 500px;
+                border: 1px solid red;
+                display: block;
             }
 
             img {
@@ -19,7 +20,10 @@
         </style>
     </head>
     <body>
-        <div id="img-wrap"></div>
-        <script src="local.js"></script>
+        <h1>HTML</h1>
+        <picture>
+            <source type="image/jpeg" sizes="500px" srcSet="2000.jpeg 2000w" />
+            <img alt="test case" sizes="500px" src="fallback.jpeg" />
+        </picture>
     </body>
 </html>
