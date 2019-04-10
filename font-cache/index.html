@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Font cache</title>
 
-    <style>
+        <style>
+            @font-face {
+                font-family: "sub";
+                src: url("https://fonts.thumbtack.com/mark/mark-tt-subset.woff2")
+                    format("woff2");
+            }
 
-    @font-face {
-        font-family: 's3';
-        src: url("https://s3.amazonaws.com/tt-web-fonts/leitura/leitura-tt.woff2") format("woff2");
-    }
+            @font-face {
+                font-family: "original";
+                src: url("https://fonts.thumbtack.com/mark/mark-tt.woff2")
+                    format("woff2");
+            }
 
-    @font-face {
-        font-family: 'cf';
-        src: url("https://fonts.thumbtack.com/leitura/leitura-tt.woff2") format("woff2");
-    }
+            .sub {
+                font-family: "sub";
+            }
 
-    .s3 {
-        font-family: 's3';
-    }
-
-    .cf {
-        font-family: 'cf';
-    }
-
-
-    </style>
-
-</head>
-<body>
-
-    <div class="s3">cloudfront</div>
-    <div class="cf">cloudfront</div>
-
-</body>
+            .original {
+                font-family: "original";
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sub">cloudfront</div>
+        <div class="original">cloudfront</div>
+    </body>
 </html>

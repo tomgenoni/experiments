@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flex Test</title>
-    <link rel="stylesheet" href="https://thumbprint-atomic.netlify.com/css/tui.css">
-    <link rel="stylesheet" href="https://thumbprint-atomic.netlify.com/css/utils.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Flex Test</title>
 
-    <style>
+        <style>
+            * {
+                outline: 1px solid blue;
+            }
 
-    * {
-        outline: 1px solid blue;
-    }
+            body {
+                padding: 100px;
+            }
 
-    .flex-1 {
-        -ms-flex: 1 1 0%;
-    }
+            .box {
+                height: 100px;
+            }
+        </style>
 
-    .flex-2 {
-        -ms-flex: 2 1 0%;
-    }
-
-    </style>
-
-
-</head>
-<body>
-
-        <div class="flex ma5">
-            <div class="flex-1 pa2">flex 1</div>
-            <div class="flex-2 pa2">flex 1</div>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/@thumbtack/thumbprint-global-css@^0.1.1/dist/thumbprint-global.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/@thumbtack/thumbprint-atomic@^3.1.4/dist/atomic.css"
+        />
+    </head>
+    <body>
+        <div>
+            <div class="flex">
+                <div class="w5 flex-none">image</div>
+                <div>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</div>
+            </div>
+            <div class="flex justify-between w-100">
+                <button>button</button>
+                <div>button</div>
+            </div>
         </div>
-
-</body>
+        </div>
+    </body>
 </html>
